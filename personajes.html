@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes - El Reino de los Osamentales</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .character-card {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .character-card:hover {
+            border-color: #cd853f;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(205, 133, 63, 0.2);
+        }
+        
+        .character-header {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .character-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #cd853f;
+            background-color: #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cd853f;
+            font-size: 2em;
+            font-weight: bold;
+            flex-shrink: 0;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .character-info h4 {
+            color: #cd853f;
+            margin: 0 0 5px 0;
+            font-size: 1.3em;
+        }
+        
+        .character-details {
+            color: #a0a0a0;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .character-description {
+            color: #d0d0d0;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+        
+        .character-role {
+            background-color: #8b0000;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .faction {
+            background-color: #2a2a2a;
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-size: 0.8em;
+            color: #cd853f;
+            margin-top: 5px;
+            display: inline-block;
+        }
+        
+        .category-header {
+            color: #8b0000;
+            border-bottom: 2px solid #8b0000;
+            padding-bottom: 10px;
+            margin: 40px 0 20px 0;
+            font-size: 1.8em;
+        }
+        
+        .character-status {
+            font-size: 0.85em;
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-top: 8px;
+            display: inline-block;
+        }
+        
+        .status-alive { background-color: #1a4a1a; color: #90ee90; }
+        .status-transformed { background-color: #4a3a1a; color: #ffa500; }
+        .status-deceased { background-color: #4a1a1a; color: #ff6b6b; }
+        .status-unknown { background-color: #3a3a3a; color: #c0c0c0; }
+        .status-entity { background-color: #2a1a2a; color: #da70d6; }
+        
+        .age-location {
+            color: #888;
+            font-style: italic;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="index.html">← Índice Principal</a>
+        <a href="seccion-01.html">Comenzar Lectura</a>
+    </div>
+
+    <h1>Personajes de El Reino de los Osamentales</h1>
+    
+    <div class="index-description">
+        <h3>Guía de Personajes</h3>
+        <p>Esta página contiene información detallada sobre los personajes principales y secundarios de la novela. Los personajes están organizados por categorías para facilitar la navegación. Algunas descripciones contienen spoilers menores sobre el desarrollo de sus arcos narrativos.</p>
+        <p><strong>Nota:</strong> Las imágenes de los personajes se pueden agregar colocando archivos de imagen con los nombres correspondientes en la carpeta del proyecto.</p>
+    </div>
+
+    <h2 class="category-header">Protagonistas Principales</h2>
+    <div class="characters-grid">
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/sophie-yun.jpg')">SY</div>
+                <div class="character-info">
+                    <h4>Dra. Sophie Yun</h4>
+                    <div class="character-details">
+                        <div class="age-location">34 años • Universidad Nacional de Seúl</div>
+                        <div class="faction">Reino de las Estrellas Muertas</div>
+                        <div class="character-status status-transformed">Descendiente - Embarazada</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Genetista brillante que descubre la verdad sobre los fragmentos de esencia primordial. Embarazada de seis meses, su hija está destinada a ser el puente entre el mundo viejo y el nuevo. Su linaje del Reino de las Estrellas Muertas la convierte en una de las descendientes más importantes.
+            </div>
+            <div class="character-role">Científica Clave / Descendiente Primaria</div>
+        </div>
+
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/jonathan-morales.jpg')">JM</div>
+                <div class="character-info">
+                    <h4>Cabo Jonathan Morales</h4>
+                    <div class="character-details">
+                        <div class="age-location">28 años • Tepito, México</div>
+                        <div class="faction">Fuerzas Internacionales</div>
+                        <div class="character-status status-transformed">Resistiendo Transformación</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Soldado mexicano con un pasado difícil en las calles de Tepito. Su hermandad inquebrantable con Miguel Santos le permite resistir la transformación más tiempo que otros. Representa la fuerza del amor fraternal contra lo alienígena.
+            </div>
+            <div class="character-role">Soldado / Hermano de Armas</div>
+        </div>
+
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/miguel-santos.jpg')">MS</div>
+                <div class="character-info">
+                    <h4>Miguel Santos</h4>
+                    <div class="character-details">
+                        <div class="age-location">27 años • Tepito, México</div>
+                        <div class="faction">Fuerzas Internacionales</div>
+                        <div class="character-status status-transformed">Resistiendo Transformación</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Compañero inseparable de Jonathan desde la infancia. Su lazo emocional actúa como escudo contra la transformación alienígena. Juntos representan la resistencia humana a través del amor y la lealtad.
+            </div>
+            <div class="character-role">Soldado / Hermano de Armas</div>
+        </div>
+
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/trevor-williams.jpg')">TW</div>
+                <div class="character-info">
+                    <h4>Trevor Williams</h4>
+                    <div class="character-details">
+                        <div class="age-location">35 años • Chicago, USA</div>
+                        <div class="faction">Reino de los Susurros Pétreos</div>
+                        <div class="character-status status-alive">Descendiente Secundario</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Agente de la DEA que investigaba la red del "polvo de hueso". Se sacrificó probando la droga para entender la amenaza. Su investigación es crucial para revelar el plan de recolección de descendientes.
+            </div>
+            <div class="character-role">Agente Federal / Investigador</div>
+        </div>
+    </div>
+
+    <h2 class="category-header">Líderes Militares</h2>
+    <div class="characters-grid">
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/general-kim.jpg')">GK</div>
+                <div class="character-info">
+                    <h4>General Thomas Kim</h4>
+                    <div class="character-details">
+                        <div class="age-location">58 años • Centro de Comando, Seúl</div>
+                        <div class="faction">Fuerzas Armadas de Corea del Sur</div>
+                        <div class="character-status status-alive">Liderando Resistencia</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Veterano experimentado que lidera la respuesta militar a la crisis. Testigo directo del primer contacto con la Reina de los Osamentales a través de los drones. Su decisión de cooperar en lugar de atacar es crucial para el final.
+            </div>
+            <div class="character-role">Comandante Supremo</div>
+        </div>
+
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/coronel-thompson.jpg')">CT</div>
+                <div class="character-info">
+                    <h4>Coronel Marcus Thompson</h4>
+                    <div class="character-details">
+                        <div class="age-location">45 años • Navy SEALs, USA</div>
+                        <div class="faction">Fuerzas Especiales USA</div>
+                        <div class="character-status status-alive">Operaciones Especiales</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Líder de las fuerzas especiales internacionales. Comprende que esta no es una guerra que se pueda ganar con armas convencionales. Su enfoque en el aprendizaje sobre el combate es vital.
+            </div>
+            <div class="character-role">Comandante de Fuerzas Especiales</div>
+        </div>
+
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/mayor-chen.jpg')">SC</div>
+                <div class="character-info">
+                    <h4>Mayor Sarah Chen</h4>
+                    <div class="character-details">
+                        <div class="age-location">38 años • California, USA</div>
+                        <div class="faction">Inteligencia USA</div>
+                        <div class="character-status status-alive">Analista de Inteligencia</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Analista de inteligencia estadounidense asignada como enlace. Su conocimiento de latín le permite traducir los mensajes de las entidades. Primera en reconocer los patrones de danza de las criaturas.
+            </div>
+            <div class="character-role">Analista / Traductora</div>
+        </div>
+    </div>
+
+    <h2 class="category-header">Descendientes y Guardianes</h2>
+    <div class="characters-grid">
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/grace-na.jpg')">GN</div>
+                <div class="character-info">
+                    <h4>Grace Na (Moon-hee)</h4>
+                    <div class="character-details">
+                        <div class="age-location">70 años • Seúl</div>
+                        <div class="faction">Reino de las Estrellas Muertas</div>
+                        <div class="character-status status-transformed">Guardiana Ancestral</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Anciana guardiana que conoce los secretos familiares transmitidos durante generaciones. Posee una de las vértebras originales de los veinticuatro reyes. Su sabiduría guía la decisión final de fusión.
+            </div>
+            <div class="character-role">Guardiana de los Secretos</div>
+        </div>
+
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/james-kim.jpg')">JK</div>
+                <div class="character-info">
+                    <h4>James Kim</h4>
+                    <div class="character-details">
+                        <div class="age-location">25 años • Ubicación Variable</div>
+                        <div class="faction">Reino del Hierro Helado</div>
+                        <div class="character-status status-transformed">Descendiente Consciente</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Joven descendiente que mantiene su consciencia mientras experimenta transformaciones parciales. Propone la alternativa de fusión voluntaria en lugar de consumo forzado. Clave en las negociaciones finales.
+            </div>
+            <div class="character-role">Negociador / Puente</div>
+        </div>
+
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/coronel-volkov.jpg')">DV</div>
+                <div class="character-info">
+                    <h4>Coronel Dmitri Volkov</h4>
+                    <div class="character-details">
+                        <div class="age-location">42 años • Moscú, Rusia</div>
+                        <div class="faction">Reino del Hierro Helado</div>
+                        <div class="character-status status-transformed">Revelador de Verdades</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Oficial de Spetsnaz que revela la verdadera historia de los veinticuatro reinos. Su transformación le permite acceder a memorias ancestrales y exponer que la fragmentación fue un acto de amor, no traición.
+            </div>
+            <div class="character-role">Revelador / Historiador Viviente</div>
+        </div>
+    </div>
+
+    <h2 class="category-header">Antagonistas y Figuras Complejas</h2>
+    <div class="characters-grid">
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/eloria.jpg')">E</div>
+                <div class="character-info">
+                    <h4>Eloria - La Reina de los Osamentales</h4>
+                    <div class="character-details">
+                        <div class="age-location">230 millones de años • Valle Oscuro</div>
+                        <div class="faction">Entidad Cósmica</div>
+                        <div class="character-status status-entity">Despertar / Transformación</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Entidad cósmica fragmentada que aparenta ser una amenaza pero resulta ser una refugiada que sacrificó su integridad para proteger la Tierra. Su despertar distorsionado la hace olvidar su amor original por la humanidad.
+            </div>
+            <div class="character-role">Protagonista Cósmica / Fuerza de Cambio</div>
+        </div>
+
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/carlos-mendoza.jpg')">CM</div>
+                <div class="character-info">
+                    <h4>Carlos Mendoza "El Genealogista"</h4>
+                    <div class="character-details">
+                        <div class="age-location">45 años • Red Internacional</div>
+                        <div class="faction">Reino de los Ecos Perpetuos</div>
+                        <div class="character-status status-transformed">Consumido por Fragmentos</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Distribuidor del "polvo de hueso" que resulta ser un descendiente consumido por su misión. Sacrificó a su propio hijo David para la causa. Representa la versión distorsionada del sacrificio necesario.
+            </div>
+            <div class="character-role">Antagonista Trágico / Facilitador</div>
+        </div>
+
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/torres.jpg')">MT</div>
+                <div class="character-info">
+                    <h4>Sargento Michael Torres</h4>
+                    <div class="character-details">
+                        <div class="age-location">32 años • Reino de las Lanzas Ardientes</div>
+                        <div class="faction">Transformados</div>
+                        <div class="character-status status-transformed">Heraldo de la Reina</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Veterano de guerra que se convierte en uno de los primeros transformados conscientes. Su linaje ancestral lo conecta directamente con los rituales originales. Sirve como heraldo y emisario de Eloria.
+            </div>
+            <div class="character-role">Transformado Consciente / Heraldo</div>
+        </div>
+    </div>
+
+    <h2 class="category-header">Víctimas y Testigos</h2>
+    <div class="characters-grid">
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/maya-park.jpg')">MP</div>
+                <div class="character-info">
+                    <h4>Maya Park</h4>
+                    <div class="character-details">
+                        <div class="age-location">22 años • Universidad Yonsei</div>
+                        <div class="faction">MinJung Oscura (Canal)</div>
+                        <div class="character-status status-unknown">Desaparecida</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Youtuber y estudiante de comunicación con 850K suscriptores. Su transmisión en vivo del primer encuentro con las entidades se vuelve viral mundialmente, iniciando el pánico global. Su desaparición marca el punto de no retorno.
+            </div>
+            <div class="character-role">Catalizador / Testigo</div>
+        </div>
+
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/daniel-kim.jpg')">DK</div>
+                <div class="character-info">
+                    <h4>Daniel Kim</h4>
+                    <div class="character-details">
+                        <div class="age-location">67 años • Valle Oscuro</div>
+                        <div class="faction">Agricultor Local</div>
+                        <div class="character-status status-deceased">Primera Víctima</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Agricultor de tercera generación que conocía cada sendero del Valle Oscuro. Se convierte en la primera víctima confirmada, encontrado drenado con agujeros perfectamente circulares. Su muerte inicia la investigación oficial.
+            </div>
+            <div class="character-role">Primera Víctima / Catalizador</div>
+        </div>
+
+        <div class="character-card">
+            <div class="character-header">
+                <div class="character-photo" style="background-image: url('images/sarah-mitchell.jpg')">SM</div>
+                <div class="character-info">
+                    <h4>Sarah Mitchell</h4>
+                    <div class="character-details">
+                        <div class="age-location">35 años • CNN Internacional</div>
+                        <div class="faction">Prensa Internacional</div>
+                        <div class="character-status status-unknown">Fragmentada Temporalmente</div>
+                    </div>
+                </div>
+            </div>
+            <div class="character-description">
+                Reportera de CNN que documenta la transformación de Busan. Su transmisión final muestra la fragmentación temporal que la hace existir en todas sus edades simultáneamente, evidenciando el poder de las distorsiones.
+            </div>
+            <div class="character-role">Documentalista / Víctima del Tiempo</div>
+        </div>
+    </div>
+
+    <div class="index-description" style="margin-top: 40px;">
+        <h3>Nota sobre las Imágenes</h3>
+        <p>Para agregar fotografías a los personajes, simplemente coloca archivos de imagen con los nombres correspondientes en una carpeta llamada "images" dentro del directorio del proyecto:</p>
+        <ul style="color: #d0d0d0; line-height: 1.6;">
+            <li><code>images/sophie-yun.jpg</code> - Dra. Sophie Yun</li>
+            <li><code>images/jonathan-morales.jpg</code> - Cabo Jonathan Morales</li>
+            <li><code>images/miguel-santos.jpg</code> - Miguel Santos</li>
+            <li><code>images/trevor-williams.jpg</code> - Trevor Williams</li>
+            <li><code>images/eloria.jpg</code> - La Reina de los Osamentales</li>
+            <li>... y así sucesivamente para cada personaje</li>
+        </ul>
+        <p>Las imágenes se ajustarán automáticamente al diseño circular de 80x80 píxeles. Se recomiendan imágenes cuadradas para mejor resultado.</p>
+    </div>
+
+    <div class="navigation">
+        <a href="index.html">← Índice Principal</a>
+        <a href="seccion-01.html">Comenzar Lectura</a>
+    </div>
+</body>
+</html>
