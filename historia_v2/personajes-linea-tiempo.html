@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes y Línea de Tiempo - El Reino de los Osamentales</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Override para mejor uso del espacio horizontal */
+        body {
+            max-width: 1200px !important;
+        }
+        
+        /* Estilos específicos para la página de personajes */
+        
+        .timeline-container {
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(to bottom, #8b0000, #cd853f, #8b0000);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+        }
+        
+        .timeline-event {
+            padding: 20px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            margin: 30px 0;
+        }
+        
+        .timeline-event::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background: linear-gradient(45deg, #8b0000, #cd853f);
+            border: 3px solid #0f0f0f;
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 15px rgba(139, 0, 0, 0.6);
+            animation: timelinePulse 3s infinite ease-in-out;
+        }
+        
+        @keyframes timelinePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .right::after {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            padding: 25px;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            position: relative;
+            border-radius: 12px;
+            border: 2px solid #333;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            border-color: #cd853f;
+            box-shadow: 0 12px 35px rgba(205, 133, 63, 0.3);
+        }
+        
+        .chapter-tag {
+            background: linear-gradient(45deg, #8b0000, #5a0000);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.85em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 15px;
+            border: 2px solid #cd853f;
+            box-shadow: 0 3px 10px rgba(139, 0, 0, 0.4);
+        }
+        
+        .character-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4em;
+            color: #cd853f;
+            margin: 15px 0 10px 0;
+            font-weight: 600;
+            text-shadow: 0 0 8px rgba(205, 133, 63, 0.4);
+            letter-spacing: 1px;
+        }
+        
+        .character-description {
+            font-family: 'EB Garamond', serif;
+            color: #d0d0d0;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-indent: 0;
+            font-size: 1.05em;
+        }
+        
+        .character-role {
+            background: rgba(205, 133, 63, 0.2);
+            border: 1px solid #cd853f;
+            color: #cd853f;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+        }
+        
+        .character-status {
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 10px;
+        }
+
+        .fate-event {
+            background: rgba(139, 0, 0, 0.1);
+            border: 1px solid #8b0000;
+            color: #ff9999;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin: 8px 5px 5px 0;
+            animation: fateGlow 3s infinite ease-in-out;
+        }
+
+        @keyframes fateGlow {
+            0%, 100% { 
+                box-shadow: 0 0 5px rgba(139, 0, 0, 0.3);
+            }
+            50% { 
+                box-shadow: 0 0 15px rgba(139, 0, 0, 0.6);
+            }
+        }
+
+        .fate-disappears {
+            background: rgba(244, 67, 54, 0.1);
+            border-color: #f44336;
+            color: #f44336;
+        }
+
+        .fate-transforms {
+            background: rgba(255, 152, 0, 0.1);
+            border-color: #ff9800;
+            color: #ff9800;
+        }
+
+        .fate-dies {
+            background: rgba(96, 125, 139, 0.1);
+            border-color: #607d8b;
+            color: #607d8b;
+        }
+
+        .fate-survives {
+            background: rgba(76, 175, 80, 0.1);
+            border-color: #4caf50;
+            color: #4caf50;
+        }
+
+        .narrative-purpose {
+            background: linear-gradient(135deg, rgba(205, 133, 63, 0.1), rgba(139, 0, 0, 0.05));
+            border: 1px solid #cd853f;
+            border-left: 4px solid #cd853f;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-family: 'EB Garamond', serif;
+            grid-column: 1 / -1;
+        }
+
+        .narrative-purpose-title {
+            font-family: 'Cinzel', serif;
+            color: #cd853f;
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .narrative-purpose-title::before {
+            content: '🎭';
+            font-size: 1.2em;
+        }
+
+        .narrative-purpose-text {
+            color: #d0d0d0;
+            line-height: 1.6;
+            font-size: 1.05em;
+            text-indent: 0;
+            margin: 0;
+            font-style: italic;
+        }
+        
+        .status-alive {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+            border: 1px solid #4caf50;
+        }
+        
+        .status-transformed {
+            background: rgba(255, 152, 0, 0.2);
+            color: #ff9800;
+            border: 1px solid #ff9800;
+        }
+        
+        .status-missing {
+            background: rgba(244, 67, 54, 0.2);
+            color: #f44336;
+            border: 1px solid #f44336;
+        }
+        
+        .status-dead {
+            background: rgba(96, 125, 139, 0.2);
+            color: #607d8b;
+            border: 1px solid #607d8b;
+        }
+        
+        /* Sección de personajes agrupados */
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+            max-width: 1400px;
+            margin: 40px auto;
+        }
+        
+        .character-group {
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            border: 2px solid #333;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .character-group::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8b0000, #cd853f, #8b0000);
+        }
+        
+        .character-group:hover {
+            transform: translateY(-3px);
+            border-color: #cd853f;
+            box-shadow: 0 10px 30px rgba(205, 133, 63, 0.25);
+        }
+        
+        .group-title {
+            font-family: 'Cinzel', serif;
+            color: #8b0000;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 8px rgba(139, 0, 0, 0.4);
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        
+        .character-item {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(42, 42, 42, 0.5);
+            border-radius: 12px;
+            border-left: 4px solid #555;
+            transition: all 0.3s ease;
+            display: grid;
+            gap: 15px;
+        }
+        
+        .character-item:hover {
+            border-left-color: #cd853f;
+            background: rgba(205, 133, 63, 0.1);
+        }
+        
+        .character-title {
+            font-family: 'Cinzel', serif;
+            color: #cd853f;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .character-details {
+            font-family: 'EB Garamond', serif;
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            text-indent: 0;
+        }
+        
+        .introduction-chapter {
+            background: rgba(139, 0, 0, 0.2);
+            color: #ff9999;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid #8b0000;
+        }
+        
+        /* Layout optimizado para mejor uso del espacio */
+        .character-info-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 20px;
+            align-items: start;
+            margin-bottom: 15px;
+        }
+        
+        .character-main-info {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .character-tags-status {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: flex-end;
+            min-width: 200px;
+        }
+        
+        .character-roles-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: flex-end;
+        }
+        
+        .fate-events-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: flex-end;
+            margin-top: 8px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .characters-grid {
+                grid-template-columns: 1fr;
+                max-width: 900px;
+            }
+            
+            .character-info-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .character-tags-status {
+                align-items: flex-start;
+                min-width: auto;
+            }
+            
+            .character-roles-container,
+            .fate-events-container {
+                justify-content: flex-start;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-event {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-event::after {
+                left: 21px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+            
+            .characters-grid {
+                grid-template-columns: 1fr;
+                max-width: 100%;
+                margin: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chapter-header">
+        <h1>PERSONAJES Y LÍNEA DE TIEMPO</h1>
+        <h2>El Reino de los Osamentales</h2>
+        <p class="chapter-subtitle">Guía completa de personajes y su introducción cronológica</p>
+    </div>
+
+    <!-- Introducción -->
+    <div class="section-info">
+        <h3>Sobre esta Guía</h3>
+        <p><strong>Esta página presenta todos los personajes principales</strong> de "El Reino de los Osamentales" organizados cronológicamente según su primera aparición en la historia, así como agrupados por categorías para facilitar la comprensión de las relaciones y jerarquías.</p>
+        <p><strong>La línea de tiempo</strong> te permitirá seguir la introducción progresiva de personajes a través de los capítulos, mientras que las <strong>secciones agrupadas</strong> te ayudarán a entender los diferentes bandos, organizaciones y roles en la trama.</p>
+    </div>
+
+    <!-- Sistema de Clasificación Visual -->
+    <div class="section-info">
+        <h3>🎨 Sistema de Clasificación Visual</h3>
+        <p><strong>Cada personaje incluye etiquetas codificadas por colores</strong> que indican su destino y eventos clave en la historia:</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 20px 0;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="fate-event fate-survives">🟢 Sobrevive</div>
+                <span style="color: #d0d0d0; font-size: 0.95em;">Personajes que permanecen vivos hasta el final</span>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="fate-event fate-transforms">🟣 Se Transforma</div>
+                <span style="color: #d0d0d0; font-size: 0.95em;">Personajes que sufren transformación física</span>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="fate-event fate-disappears">🟠 Desaparece</div>
+                <span style="color: #d0d0d0; font-size: 0.95em;">Personajes que desaparecen misteriosamente</span>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="fate-event fate-dies">🔴 Muere</div>
+                <span style="color: #d0d0d0; font-size: 0.95em;">Personajes que tienen muerte confirmada</span>
+            </div>
+        </div>
+
+        <div style="margin-top: 20px; padding: 15px; background: rgba(205, 133, 63, 0.1); border-left: 4px solid #cd853f; border-radius: 0 8px 8px 0;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                <span style="font-size: 1.2em;">🎭</span>
+                <strong style="color: #cd853f;">Propósito Narrativo</strong>
+            </div>
+            <p style="margin: 0; font-style: italic; color: #d0d0d0;">Cada personaje incluye una explicación de su rol en la historia y qué misión cumple dentro de la narrativa general.</p>
+        </div>
+    </div>
+
+    <!-- Línea de Tiempo Cronológica -->
+    <div class="timeline-container">
+        <h2>Línea de Tiempo de Introducción de Personajes</h2>
+        
+        <div class="timeline">
+            
+            <!-- Prólogo -->
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <div class="chapter-tag">Prólogo</div>
+                    <div class="character-name">Eloria (La Reina de los Osamentales)</div>
+                    <div class="character-description">Entidad cósmica que eligió fragmentarse por amor hace 230 millones de años. Su consciencia se dividió en 2,847 fragmentos distribuidos en descendientes específicos.</div>
+                    <div class="character-role">Entidad Primordial</div>
+                    <div class="character-role">Fragmentada</div>
+                    <span class="character-status status-transformed">Dispersa</span>
+                    <div class="fate-event fate-transforms">Se Fragmenta: Prólogo</div>
+                    
+                    <div class="narrative-purpose">
+                        <div class="narrative-purpose-title">Propósito Narrativo</div>
+                        <div class="narrative-purpose-text">
+                            Representa el amor cósmico que trasciende especies y tiempo. Su sacrificio voluntario establece la premisa fundamental: una entidad omnipotente que elige la vulnerabilidad por amor. Es la fuerza motriz de toda la trama y el símbolo del tema central sobre elegir el amor sobre el poder.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-event right">
+                <div class="timeline-content">
+                    <div class="chapter-tag">Prólogo</div>
+                    <div class="character-name">Los Veinticuatro Reinos Ancestrales</div>
+                    <div class="character-description">Civilizaciones alienígenas inmortales que se sacrificaron junto con Eloria. Incluyen los Cantantes de Huesos, Tejedores de Sueños, Guardianes del Tiempo, y otros.</div>
+                    <div class="character-role">Civilizaciones Cósmicas</div>
+                    <div class="character-role">Fragmentados</div>
+                    <span class="character-status status-transformed">Dispersos</span>
+                    <div class="fate-event fate-transforms">Se Fragmentan: Prólogo</div>
+                    
+                    <div class="narrative-purpose">
+                        <div class="narrative-purpose-title">Propósito Narrativo</div>
+                        <div class="narrative-purpose-text">
+                            Simbolizan la diversidad de formas que puede tomar el amor y el sacrificio. Cada reino aporta diferentes habilidades y perspectivas, mostrando que la salvación requiere colaboración entre diferentes tipos de consciencia. Representan la herencia genética que despertará en los descendientes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capítulo 1 -->
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <div class="chapter-tag">Capítulo 1</div>
+                    <div class="character-name">General Thomas Kim (58 años)</div>
+                    <div class="character-description">Comandante experimentado del Centro de Comando Conjunto de Seúl. Ha comandado operaciones en tres continentes y debe enfrentar una amenaza fuera de toda comprensión militar.</div>
+                    <div class="character-role">Líder Militar</div>
+                    <div class="character-role">Protagonista</div>
+                    <span class="character-status status-alive">Vivo</span>
+                    <div class="fate-event fate-survives">Sobrevive hasta: Cap. 14</div>
+                    
+                    <div class="narrative-purpose">
+                        <div class="narrative-purpose-title">Propósito Narrativo</div>
+                        <div class="narrative-purpose-text">
+                            Representa la perspectiva humana convencional enfrentando lo incomprensible. Su evolución de líder militar tradicional a testigo del horror cósmico muestra cómo la humanidad debe adaptarse ante fuerzas que desafían toda lógica militar y científica conocida.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-event right">
+                <div class="timeline-content">
+                    <div class="chapter-tag">Capítulo 1</div>
+                    <div class="character-name">Maya Park (22 años)</div>
+                    <div class="character-description">Estudiante de Antropología Cultural en Universidad Yonsei, creadora del canal YouTube "MinJung Oscura" con 850K suscriptores. Primera persona en documentar los patrones de huesos.</div>
+                    <div class="character-role">Investigadora</div>
+                    <div class="character-role">Youtuber</div>
+                    <span class="character-status status-missing">Desaparecida</span>
+                    <div class="fate-event fate-disappears">Desaparece: Cap. 1</div>
+                    <div class="fate-event fate-transforms">Regresa Transformada: Cap. 3</div>
+                    
+                    <div class="narrative-purpose">
+                        <div class="narrative-purpose-title">Propósito Narrativo</div>
+                        <div class="narrative-purpose-text">
+                            Sirve como puente entre el mundo digital moderno y el horror ancestral. Su canal de YouTube representa cómo la información se propaga globalmente, conectando fenómenos locales con patrones mundiales. Su transformación muestra el primer éxito de "reclutamiento" consciente.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <div class="chapter-tag">Capítulo 1</div>
+                    <div class="character-name">Daniel Kim (67 años)</div>
+                    <div class="character-description">Agricultor heredero de tierras en la periferia del Valle Oscuro. Primera víctima de transformación documentada, experimenta crecimiento óseo imposible mientras mantiene consciencia.</div>
+                    <div class="character-role">Primera Víctima</div>
+                    <div class="character-role">Descendiente</div>
+                    <span class="character-status status-transformed">Transformado</span>
+                    <div class="fate-event fate-transforms">Se Transforma: Cap. 1</div>
+                    
+                    <div class="narrative-purpose">
+                        <div class="narrative-purpose-title">Propósito Narrativo</div>
+                        <div class="narrative-purpose-text">
+                            Establece las "reglas" de la transformación y demuestra que el proceso puede preservar la consciencia humana. Su mansedumbre y aceptación contrastan con el horror esperado, sugiriendo que la transformación no es necesariamente destructiva sino evolutiva.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-event right">
+                <div class="timeline-content">
+                    <div class="chapter-tag">Capítulo 1</div>
+                    <div class="character-name">Mayor Sarah Chen (38 años)</div>
+                    <div class="character-description">Especialista en inteligencia arqueológica militar. Experta en artefactos anómalos de zonas de guerra y archivos clasificados del Proyecto Arqueología Profunda de la OTAN.</div>
+                    <div class="character-role">Inteligencia Militar</div>
+                    <div class="character-role">Especialista</div>
+                    <span class="character-status status-alive">Viva</span>
+                    <div class="fate-event fate-survives">Sobrevive hasta: Cap. 14</div>
+                    
+                    <div class="narrative-purpose">
+                        <div class="narrative-purpose-title">Propósito Narrativo</div>
+                        <div class="narrative-purpose-text">
+                            Aporta contexto histórico y científico, revelando que los fenómenos actuales tienen precedentes documentados. Representa la perspectiva de inteligencia militar que conecta eventos aparentemente aislados en un patrón global coordinado.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <div class="chapter-tag">Capítulo 1</div>
+                    <div class="character-name">Dr. Jason Lee (45 años)</div>
+                    <div class="character-description">Médico forense jefe del Hospital Nacional Universitario de Seúl. Descubre que el ADN de las muestras óseas contiene secuencias anteriores a la vida terrestre.</div>
+                    <div class="character-role">Médico Forense</div>
+                    <div class="character-role">Científico</div>
+                    <span class="character-status status-alive">Vivo</span>
+                    <div class="fate-event fate-survives">Sobrevive hasta: Cap. 14</div>
+                    
+                    <div class="narrative-purpose">
+                        <div class="narrative-purpose-title">Propósito Narrativo</div>
+                        <div class="narrative-purpose-text">
+                            Proporciona evidencia científica que confirma la naturaleza extraterrestre del fenómeno. Su análisis de ADN no terrestre establece que la amenaza es genuinamente alienígena, no supernatural, validando la premisa de ciencia ficción.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información adicional de otros capítulos -->
+            <div class="timeline-event right">
+                <div class="timeline-content">
+                    <div class="chapter-tag">Capítulos 2-3</div>
+                    <div class="character-name">Dra. Sophie Yun</div>
+                    <div class="character-description">Científica embarazada, descendiente clave de los antiguos reinos. Su bebé reacciona a la presencia alienígena y lucha contra el llamado de transformación usando su determinación maternal.</div>
+                    <div class="character-role">Científica</div>
+                    <div class="character-role">Descendiente Clave</div>
+                    <span class="character-status status-alive">Embarazada/Resistiendo</span>
+                    <div class="fate-event fate-survives">Resiste hasta: Cap. 14</div>
+                    
+                    <div class="narrative-purpose">
+                        <div class="narrative-purpose-title">Propósito Narrativo</div>
+                        <div class="narrative-purpose-text">
+                            Personifica la resistencia humana consciente contra la transformación. Su embarazo simboliza el futuro de la humanidad y su determinación maternal representa la fuerza del amor protector como barrera contra la influencia alienígena.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <div class="chapter-tag">Capítulos 4-5</div>
+                    <div class="character-name">Cabo Jonathan Morales (28 años)</div>
+                    <div class="character-description">Soldado mexicano de Tepito con tatuaje de la Virgen de Guadalupe. Su hermandad con Miguel actúa como ancla contra la transformación. Descendiente guardián.</div>
+                    <div class="character-role">Soldado Mexicano</div>
+                    <div class="character-role">Descendiente</div>
+                    <span class="character-status status-alive">Resistiendo</span>
+                    <div class="fate-event fate-survives">Resiste hasta: Cap. 12</div>
+                    <div class="fate-event fate-transforms">Transformación Parcial: Cap. 13</div>
+                    
+                    <div class="narrative-purpose">
+                        <div class="narrative-purpose-title">Propósito Narrativo</div>
+                        <div class="narrative-purpose-text">
+                            Demuestra cómo los vínculos emocionales profundos pueden actuar como ancla contra la transformación. Su hermandad con Miguel ilustra que el amor fraternal tiene poder real contra fuerzas cósmicas, estableciendo el tema central de conexiones humanas como resistencia.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-event right">
+                <div class="timeline-content">
+                    <div class="chapter-tag">Capítulos 4-5</div>
+                    <div class="character-name">Miguel Santos (26 años)</div>
+                    <div class="character-description">Soldado mexicano de Tepito, hermano de armas de Jonathan. Primer afectado de la pareja, desarrolla huesos cristalizados y ojos prismáticos.</div>
+                    <div class="character-role">Soldado Mexicano</div>
+                    <div class="character-role">Descendiente</div>
+                    <span class="character-status status-transformed">En Transformación</span>
+                    <div class="fate-event fate-transforms">Inicia Transformación: Cap. 4</div>
+                    <div class="fate-event fate-transforms">Transformación Completa: Cap. 10</div>
+                    
+                    <div class="narrative-purpose">
+                        <div class="narrative-purpose-title">Propósito Narrativo</div>
+                        <div class="narrative-purpose-text">
+                            Representa la tragedia de la transformación gradual y cómo incluso los lazos más fuertes pueden no ser suficientes para resistir completamente. Su proceso lento y doloroso muestra el costo emocional de la elección entre humanidad y trascendencia.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <div class="chapter-tag">Capítulos 6-7</div>
+                    <div class="character-name">Trevor Williams</div>
+                    <div class="character-description">Agente de la DEA que rastrea la red de distribución del "polvo de hueso" durante 6 meses. Tiene antebrazo con símbolos que brillan y conexión con "El Genealogista".</div>
+                    <div class="character-role">Agente DEA</div>
+                    <div class="character-role">Investigador</div>
+                    <span class="character-status status-alive">Infectado</span>
+                    <div class="fate-event fate-transforms">Se Infecta: Cap. 6</div>
+                    <div class="fate-event fate-survives">Activo hasta: Cap. 14</div>
+                    
+                    <div class="narrative-purpose">
+                        <div class="narrative-purpose-title">Propósito Narrativo</div>
+                        <div class="narrative-purpose-text">
+                            Conecta la red de distribución del polvo de hueso con "El Genealogista", revelando que el fenómeno tiene aspectos de operación de inteligencia. Su experiencia como agente aporta perspectiva de aplicación de la ley a un fenómeno sobrenatural.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-event right">
+                <div class="timeline-content">
+                    <div class="chapter-tag">Capítulos 8-10</div>
+                    <div class="character-name">Sargento Michael Torres (32 años)</div>
+                    <div class="character-description">Líder del equipo Alpha, veterano de Medio Oriente. Descendiente del Reino de las Lanzas Ardientes. Completamente transformado tras contacto con altar orgánico.</div>
+                    <div class="character-role">Sargento</div>
+                    <div class="character-role">Equipo Alpha</div>
+                    <span class="character-status status-transformed">Completamente Transformado</span>
+                    <div class="fate-event fate-transforms">Contacto con Altar: Cap. 8</div>
+                    <div class="fate-event fate-transforms">Transformación Total: Cap. 9</div>
+                    
+                    <div class="narrative-purpose">
+                        <div class="narrative-purpose-title">Propósito Narrativo</div>
+                        <div class="narrative-purpose-text">
+                            Representa la transformación de cazador a cazado - el soldado profesional que se convierte en reclutador para la causa alienígena. Su cambio de rol demuestra cómo la entidad corrompe las estructuras de poder existentes para sus propósitos.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <div class="chapter-tag">Capítulos 11-14</div>
+                    <div class="character-name">Carlos Mendoza "El Genealogista"</div>
+                    <div class="character-description">Figura misteriosa que distribuye el polvo de hueso como test de reconocimiento para descendientes. Personaje clave en el desenlace y la decisión final de los 2,847.</div>
+                    <div class="character-role">El Genealogista</div>
+                    <div class="character-role">Figura Clave</div>
+                    <span class="character-status status-alive">Activo</span>
+                    <div class="fate-event fate-survives">Activo hasta: Cap. 14</div>
+                    <div class="fate-event fate-transforms">Desenlace Final: Epílogo</div>
+                    
+                    <div class="narrative-purpose">
+                        <div class="narrative-purpose-title">Propósito Narrativo</div>
+                        <div class="narrative-purpose-text">
+                            Arquitecto del plan de selección consciente, representa la elección informada sobre el destino de la humanidad. Su papel como distribuidor del polvo de hueso lo convierte en el facilitador de la decisión final entre transformación voluntaria y extinción.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Personajes por Capítulo de Introducción -->
+    <div class="characters-grid">
+        <h2>📖 Personajes por Capítulo de Introducción</h2>
+        
+        <!-- Prólogo -->
+        <div class="character-group">
+            <h3 class="group-title">📜 Prólogo: La Fragmentación Eterna</h3>
+            
+            <div class="character-item">
+                <div class="character-title">
+                    Eloria (La Reina de los Osamentales)
+                    <span class="introduction-chapter">Prólogo</span>
+                </div>
+                <div class="character-details">
+                    Entidad cósmica que se fragmentó voluntariamente en 2,847 piezas por amor a la humanidad. Belleza imposible que oculta horror geométrico alienígena.
+                </div>
+                <div class="character-role">Consciencia Primordial</div>
+                <span class="character-status status-transformed">Fragmentada</span>
+                <div class="fate-event fate-transforms">Se Fragmenta: Prólogo</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Representa el amor cósmico que trasciende especies y tiempo. Su sacrificio voluntario establece la premisa fundamental de la historia.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Los Veinticuatro Reinos Ancestrales
+                    <span class="introduction-chapter">Prólogo</span>
+                </div>
+                <div class="character-details">
+                    Civilizaciones ancestrales inmortales: Cantantes de Huesos, Tejedores de Sueños, Guardianes del Tiempo, Bestias Sagradas, y otros 20 reinos.
+                </div>
+                <div class="character-role">Reinos Ancestrales</div>
+                <span class="character-status status-transformed">Dispersos</span>
+                <div class="fate-event fate-transforms">Se Fragmentan: Prólogo</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Simbolizan la diversidad de formas que puede tomar el amor y el sacrificio. Representan la herencia genética que despertará en los descendientes.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Capítulo 1 -->
+        <div class="character-group">
+            <h3 class="group-title">🩸 Capítulo 1: Primera Sangre</h3>
+            
+            <div class="character-item">
+                <div class="character-info-grid">
+                    <div class="character-main-info">
+                        <div class="character-title">
+                            General Thomas Kim (58 años)
+                            <span class="introduction-chapter">Cap. 1</span>
+                        </div>
+                        <div class="character-details">
+                            Comandante experimentado del Centro de Comando Conjunto de Seúl. Veterano de tres continentes enfrentando amenaza incomprensible.
+                        </div>
+                    </div>
+                    <div class="character-tags-status">
+                        <div class="character-roles-container">
+                            <div class="character-role">Comandante Principal</div>
+                        </div>
+                        <span class="character-status status-alive">Vivo</span>
+                        <div class="fate-events-container">
+                            <div class="fate-event fate-survives">Sobrevive hasta: Cap. 14</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Representa la perspectiva humana convencional enfrentando lo incomprensible. Su evolución muestra cómo la humanidad debe adaptarse ante fuerzas cósmicas.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-info-grid">
+                    <div class="character-main-info">
+                        <div class="character-title">
+                            Maya Park (22 años)
+                            <span class="introduction-chapter">Cap. 1</span>
+                        </div>
+                        <div class="character-details">
+                            Estudiante de Antropología Cultural en Universidad Yonsei, creadora del canal YouTube "MinJung Oscura" con 850K suscriptores.
+                        </div>
+                    </div>
+                    <div class="character-tags-status">
+                        <div class="character-roles-container">
+                            <div class="character-role">Investigadora</div>
+                            <div class="character-role">Youtuber</div>
+                        </div>
+                        <span class="character-status status-missing">Desaparecida</span>
+                        <div class="fate-events-container">
+                            <div class="fate-event fate-disappears">Desaparece: Cap. 1</div>
+                            <div class="fate-event fate-transforms">Regresa Transformada: Cap. 3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Puente entre el mundo digital moderno y el horror ancestral. Su canal conecta fenómenos locales con patrones mundiales.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Daniel Kim (67 años)
+                    <span class="introduction-chapter">Cap. 1</span>
+                </div>
+                <div class="character-details">
+                    Agricultor heredero de tierras en la periferia del Valle Oscuro. Primera víctima de transformación documentada.
+                </div>
+                <div class="character-role">Primera Víctima</div>
+                <div class="character-role">Descendiente</div>
+                <span class="character-status status-transformed">Transformado</span>
+                <div class="fate-event fate-transforms">Se Transforma: Cap. 1</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Establece las reglas de la transformación y demuestra que el proceso puede preservar la consciencia humana.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Mayor Sarah Chen (38 años)
+                    <span class="introduction-chapter">Cap. 1</span>
+                </div>
+                <div class="character-details">
+                    Especialista en inteligencia arqueológica militar. Experta en archivos clasificados del Proyecto Arqueología Profunda (OTAN).
+                </div>
+                <div class="character-role">Inteligencia Militar</div>
+                <span class="character-status status-alive">Viva</span>
+                <div class="fate-event fate-survives">Sobrevive hasta: Cap. 14</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Aporta contexto histórico revelando que los fenómenos tienen precedentes documentados. Conecta eventos aislados en patrón global.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Dr. Jason Lee (45 años)
+                    <span class="introduction-chapter">Cap. 1</span>
+                </div>
+                <div class="character-details">
+                    Médico forense jefe del Hospital Nacional Universitario de Seúl. Descubre ADN con secuencias anteriores a la vida terrestre.
+                </div>
+                <div class="character-role">Médico Forense</div>
+                <div class="character-role">Científico</div>
+                <span class="character-status status-alive">Vivo</span>
+                <div class="fate-event fate-survives">Sobrevive hasta: Cap. 14</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Proporciona evidencia científica que confirma la naturaleza extraterrestre del fenómeno, validando la premisa de ciencia ficción.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Capítulos 2-3 -->
+        <div class="character-group">
+            <h3 class="group-title">👁️ Capítulos 2-3: El Ojo que Todo lo Ve</h3>
+            
+            <div class="character-item">
+                <div class="character-title">
+                    Dra. Sophie Yun
+                    <span class="introduction-chapter">Cap. 2</span>
+                </div>
+                <div class="character-details">
+                    Científica embarazada, descendiente clave de los antiguos reinos. Su bebé reacciona a la presencia alienígena.
+                </div>
+                <div class="character-role">Científica</div>
+                <div class="character-role">Descendiente Clave</div>
+                <span class="character-status status-alive">Embarazada/Resistiendo</span>
+                <div class="fate-event fate-survives">Resiste hasta: Cap. 14</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Personifica la resistencia humana consciente. Su embarazo simboliza el futuro de la humanidad y su determinación maternal.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Henry Lee (28 años)
+                    <span class="introduction-chapter">Cap. 2</span>
+                </div>
+                <div class="character-details">
+                    Oficial de policía novato de Seúl. Primera respuesta a incidentes del Valle Oscuro.
+                </div>
+                <div class="character-role">Policía</div>
+                <span class="character-status status-alive">Vivo</span>
+                <div class="fate-event fate-survives">Sobrevive hasta: Cap. 14</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Representa la perspectiva de las fuerzas del orden civiles enfrentando fenómenos que desafían protocolos convencionales.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Dr. Matthew Choi
+                    <span class="introduction-chapter">Cap. 3</span>
+                </div>
+                <div class="character-details">
+                    Asistente de la Dra. Sophie Yun. Reporta transformaciones masivas en ala de cuarentena, escucha voces en idiomas inexistentes.
+                </div>
+                <div class="character-role">Asistente Médico</div>
+                <span class="character-status status-alive">Afectado</span>
+                <div class="fate-event fate-transforms">Se Afecta: Cap. 3</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Demuestra cómo la exposición indirecta puede afectar al personal médico, escalando la amenaza más allá de contacto directo.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Capítulos 4-5 -->
+        <div class="character-group">
+            <h3 class="group-title">🗂️ Capítulos 4-5: Secretos Enterrados</h3>
+            
+            <div class="character-item">
+                <div class="character-title">
+                    Cabo Jonathan Morales (28 años)
+                    <span class="introduction-chapter">Cap. 4</span>
+                </div>
+                <div class="character-details">
+                    Soldado mexicano de Tepito, tatuaje Virgen de Guadalupe. Hermandad con Miguel actúa como ancla contra transformación.
+                </div>
+                <div class="character-role">Soldado Mexicano</div>
+                <div class="character-role">Descendiente</div>
+                <span class="character-status status-alive">Resistiendo</span>
+                <div class="fate-event fate-survives">Resiste hasta: Cap. 12</div>
+                <div class="fate-event fate-transforms">Transformación Parcial: Cap. 13</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Demuestra cómo los vínculos emocionales profundos pueden actuar como ancla contra la transformación. Ilustra el poder del amor fraternal.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Miguel Santos (26 años)
+                    <span class="introduction-chapter">Cap. 4</span>
+                </div>
+                <div class="character-details">
+                    Hermano de armas de Jonathan, familia en Tepito (madre Carmen). Huesos cristalizados, ojos prismáticos en transformación.
+                </div>
+                <div class="character-role">Soldado Mexicano</div>
+                <div class="character-role">Descendiente</div>
+                <span class="character-status status-transformed">En Transformación</span>
+                <div class="fate-event fate-transforms">Inicia Transformación: Cap. 4</div>
+                <div class="fate-event fate-transforms">Transformación Completa: Cap. 10</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Representa la tragedia de la transformación gradual y cómo incluso los lazos más fuertes pueden no ser suficientes para resistir completamente.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Capítulos 6-7 -->
+        <div class="character-group">
+            <h3 class="group-title">🤖 Capítulos 6-7: El Silencio de las Máquinas</h3>
+            
+            <div class="character-item">
+                <div class="character-title">
+                    Trevor Williams
+                    <span class="introduction-chapter">Cap. 6</span>
+                </div>
+                <div class="character-details">
+                    Agente DEA rastrea red "polvo de hueso" 6 meses. Antebrazo con símbolos brillantes, conexión con "El Genealogista".
+                </div>
+                <div class="character-role">Agente DEA</div>
+                <div class="character-role">Investigador</div>
+                <span class="character-status status-alive">Infectado</span>
+                <div class="fate-event fate-transforms">Se Infecta: Cap. 6</div>
+                <div class="fate-event fate-survives">Activo hasta: Cap. 14</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Conecta la red de distribución del polvo de hueso con "El Genealogista", revelando aspectos de operación de inteligencia del fenómeno.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Soldado Park (19 años)
+                    <span class="introduction-chapter">Cap. 6</span>
+                </div>
+                <div class="character-details">
+                    El más joven del equipo militar. Transformado durante crisis del búnker, envejecimiento acelerado, símbolos pulsantes.
+                </div>
+                <div class="character-role">Soldado Joven</div>
+                <span class="character-status status-transformed">Completamente Transformado</span>
+                <div class="fate-event fate-transforms">Transformado: Cap. 6</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Representa la vulnerabilidad de la juventud ante fuerzas cósmicas y cómo la inexperiencia puede llevar a transformación más rápida.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Capítulos 8-10 -->
+        <div class="character-group">
+            <h3 class="group-title">🧩 Capítulos 8-10: Los Fragmentos Perdidos</h3>
+            
+            <div class="character-item">
+                <div class="character-title">
+                    Sargento Michael Torres (32 años)
+                    <span class="introduction-chapter">Cap. 8</span>
+                </div>
+                <div class="character-details">
+                    Líder Equipo Alpha, veterano Medio Oriente. Descendiente Reino Lanzas Ardientes. Transformado tras contacto con altar orgánico.
+                </div>
+                <div class="character-role">Sargento</div>
+                <div class="character-role">Equipo Alpha</div>
+                <span class="character-status status-transformed">Completamente Transformado</span>
+                <div class="fate-event fate-transforms">Contacto con Altar: Cap. 8</div>
+                <div class="fate-event fate-transforms">Transformación Total: Cap. 9</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Representa la transformación de cazador a cazado - el soldado profesional que se convierte en reclutador para la causa alienígena.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Grace Na
+                    <span class="introduction-chapter">Cap. 10</span>
+                </div>
+                <div class="character-details">
+                    Anciana guardiana que envejece durante la convergencia. Parte de los descendientes guardianes.
+                </div>
+                <div class="character-role">Guardiana</div>
+                <span class="character-status status-alive">Envejeciendo</span>
+                <div class="fate-event fate-transforms">Envejece Rápido: Cap. 10</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Simboliza el paso del tiempo acelerado y cómo algunos descendientes pagan el precio temporal por mantener los secretos ancestrales.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Capítulos 11-14 -->
+        <div class="character-group">
+            <h3 class="group-title">⚡ Capítulos 11-14: La Convergencia Final</h3>
+            
+            <div class="character-item">
+                <div class="character-title">
+                    Carlos Mendoza "El Genealogista"
+                    <span class="introduction-chapter">Cap. 11</span>
+                </div>
+                <div class="character-details">
+                    Distribuidor del polvo de hueso como test de reconocimiento. Figura central en decisión final de los 2,847 descendientes.
+                </div>
+                <div class="character-role">El Genealogista</div>
+                <div class="character-role">Figura Clave</div>
+                <span class="character-status status-alive">Activo</span>
+                <div class="fate-event fate-survives">Activo hasta: Cap. 14</div>
+                <div class="fate-event fate-transforms">Desenlace Final: Epílogo</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Arquitecto del plan de selección consciente, representa la elección informada sobre el destino de la humanidad.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    María Carmen Vásquez (23 años)
+                    <span class="introduction-chapter">Cap. 12</span>
+                </div>
+                <div class="character-details">
+                    Estudiante de veterinaria mexicana, descendiente reclamada durante la convergencia final.
+                </div>
+                <div class="character-role">Estudiante</div>
+                <span class="character-status status-transformed">Reclamada</span>
+                <div class="fate-event fate-transforms">Reclamada: Cap. 12</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Representa la juventud que debe elegir entre su futuro humano y la trascendencia cósmica durante la convergencia final.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Los 2,847 Descendientes
+                    <span class="introduction-chapter">Cap. 13</span>
+                </div>
+                <div class="character-details">
+                    Portadores de fragmentos de esencia primordial distribuidos por el mundo. Deben elegir entre transformación o extinción.
+                </div>
+                <div class="character-role">Descendientes</div>
+                <span class="character-status status-alive">En Decisión</span>
+                <div class="fate-event fate-transforms">Decisión Final: Cap. 14</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Representan la humanidad en su conjunto y la elección final entre extinción y evolución consciente hacia algo más grande.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Personajes Agrupados por Categorías -->
+    <div class="characters-grid">
+        <h2>🏷️ Personajes por Categorías</h2>
+        <!-- Entidades Cósmicas -->
+        <div class="character-group">
+            <h3 class="group-title">🌌 Entidades Cósmicas</h3>
+            
+            <div class="character-item">
+                <div class="character-title">
+                    Eloria (La Reina de los Osamentales)
+                    <span class="introduction-chapter">Prólogo</span>
+                </div>
+                <div class="character-details">
+                    Entidad cósmica que se fragmentó voluntariamente en 2,847 piezas por amor a la humanidad. Belleza imposible que oculta horror geométrico alienígena.
+                </div>
+                <div class="character-role">Consciencia Primordial</div>
+                <span class="character-status status-transformed">Fragmentada</span>
+                <div class="fate-event fate-transforms">Se Fragmenta: Prólogo</div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Los Veinticuatro Reinos
+                    <span class="introduction-chapter">Prólogo</span>
+                </div>
+                <div class="character-details">
+                    Civilizaciones ancestrales inmortales: Cantantes de Huesos, Tejedores de Sueños, Guardianes del Tiempo, Bestias Sagradas, y otros 20 reinos.
+                </div>
+                <div class="character-role">Reinos Ancestrales</div>
+                <span class="character-status status-transformed">Dispersos</span>
+                <div class="fate-event fate-transforms">Se Fragmentan: Prólogo</div>
+            </div>
+        </div>
+
+        <!-- Liderazgo Militar -->
+        <div class="character-group">
+            <h3 class="group-title">⭐ Liderazgo Militar</h3>
+            
+            <div class="character-item">
+                <div class="character-title">
+                    General Thomas Kim (58)
+                    <span class="introduction-chapter">Cap. 1</span>
+                </div>
+                <div class="character-details">
+                    Comandante del Centro de Comando Conjunto. Veterano de tres continentes enfrentando amenaza incomprensible.
+                </div>
+                <div class="character-role">Comandante Principal</div>
+                <span class="character-status status-alive">Vivo</span>
+                <div class="fate-event fate-survives">Sobrevive hasta: Cap. 14</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Perspectiva humana convencional enfrentando lo incomprensible. Su evolución muestra cómo la humanidad debe adaptarse ante fuerzas que desafían toda lógica conocida.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Mayor Sarah Chen (38)
+                    <span class="introduction-chapter">Cap. 1</span>
+                </div>
+                <div class="character-details">
+                    Analista de inteligencia arqueológica militar. Especialista en archivos clasificados del Proyecto Arqueología Profunda (OTAN 1987).
+                </div>
+                <div class="character-role">Inteligencia</div>
+                <span class="character-status status-alive">Viva</span>
+                <div class="fate-event fate-survives">Sobrevive hasta: Cap. 14</div>
+                <div class="narrative-purpose">
+                    <div class="narrative-purpose-title">Propósito Narrativo</div>
+                    <div class="narrative-purpose-text">
+                        Aporta contexto histórico revelando que los fenómenos tienen precedentes documentados. Conecta eventos aparentemente aislados en un patrón global.
+                    </div>
+                </div>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Ministro Samuel Park (62)
+                    <span class="introduction-chapter">Cap. 2</span>
+                </div>
+                <div class="character-details">
+                    Ministro de Defensa de Corea del Sur. Toma decisiones políticas críticas ante la crisis.
+                </div>
+                <div class="character-role">Ministro</div>
+                <span class="character-status status-alive">Vivo</span>
+            </div>
+        </div>
+
+        <!-- Soldados y Fuerzas Especiales -->
+        <div class="character-group">
+            <h3 class="group-title">🪖 Soldados y Fuerzas Especiales</h3>
+            
+            <div class="character-item">
+                <div class="character-title">
+                    Sargento Michael Torres (32)
+                    <span class="introduction-chapter">Cap. 8</span>
+                </div>
+                <div class="character-details">
+                    Líder Equipo Alpha, veterano Medio Oriente. Descendiente Reino Lanzas Ardientes. Transformado completamente, ahora recluta otros descendientes.
+                </div>
+                <div class="character-role">Equipo Alpha</div>
+                <span class="character-status status-transformed">Transformado</span>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Cabo Jonathan Morales (28)
+                    <span class="introduction-chapter">Cap. 4</span>
+                </div>
+                <div class="character-details">
+                    Soldado mexicano de Tepito, tatuaje Virgen de Guadalupe. Hermandad con Miguel actúa como ancla contra transformación.
+                </div>
+                <div class="character-role">Soldado Mexicano</div>
+                <span class="character-status status-alive">Resistiendo</span>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Miguel Santos (26)
+                    <span class="introduction-chapter">Cap. 4</span>
+                </div>
+                <div class="character-details">
+                    Hermano de armas de Jonathan, familia en Tepito (madre Carmen). Huesos cristalizados, ojos prismáticos en transformación.
+                </div>
+                <div class="character-role">Soldado Mexicano</div>
+                <span class="character-status status-transformed">Transformando</span>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Coronel Marcus Thompson (45)
+                    <span class="introduction-chapter">Cap. 2</span>
+                </div>
+                <div class="character-details">
+                    Navy SEALs, veterano múltiples conflictos. Personal del centro de comando.
+                </div>
+                <div class="character-role">Navy SEALs</div>
+                <span class="character-status status-alive">Vivo</span>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Soldado Park (19)
+                    <span class="introduction-chapter">Cap. 6</span>
+                </div>
+                <div class="character-details">
+                    El más joven del equipo militar. Transformado durante crisis del búnker, envejecimiento acelerado, símbolos pulsantes.
+                </div>
+                <div class="character-role">Soldado Joven</div>
+                <span class="character-status status-transformed">Completamente Transformado</span>
+            </div>
+        </div>
+
+        <!-- Personal Científico y Médico -->
+        <div class="character-group">
+            <h3 class="group-title">🔬 Personal Científico y Médico</h3>
+            
+            <div class="character-item">
+                <div class="character-title">
+                    Dra. Sophie Yun
+                    <span class="introduction-chapter">Cap. 2</span>
+                </div>
+                <div class="character-details">
+                    Científica embarazada, descendiente clave. Su bebé responde a presencia alienígena. Lucha contra transformación con determinación maternal.
+                </div>
+                <div class="character-role">Científica</div>
+                <span class="character-status status-alive">Embarazada/Resistiendo</span>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Dr. Jason Lee (45)
+                    <span class="introduction-chapter">Cap. 1</span>
+                </div>
+                <div class="character-details">
+                    Médico forense jefe Hospital Nacional Seúl. Descubre ADN con secuencias anteriores a la vida terrestre.
+                </div>
+                <div class="character-role">Forense</div>
+                <span class="character-status status-alive">Vivo</span>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Dr. Matthew Choi
+                    <span class="introduction-chapter">Cap. 3</span>
+                </div>
+                <div class="character-details">
+                    Asistente de Dra. Sophie Yun. Reporta transformaciones masivas en ala de cuarentena, escucha voces en idiomas inexistentes.
+                </div>
+                <div class="character-role">Asistente Médico</div>
+                <span class="character-status status-alive">Afectado</span>
+            </div>
+        </div>
+
+        <!-- Investigadores y Civiles -->
+        <div class="character-group">
+            <h3 class="group-title">🔍 Investigadores y Civiles</h3>
+            
+            <div class="character-item">
+                <div class="character-title">
+                    Maya Park (22)
+                    <span class="introduction-chapter">Cap. 1</span>
+                </div>
+                <div class="character-details">
+                    Estudiante Antropología Cultural Yonsei, youtuber "MinJung Oscura" (850K subs). Primera en documentar patrones de huesos.
+                </div>
+                <div class="character-role">Youtuber/Investigadora</div>
+                <span class="character-status status-missing">Desaparecida</span>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Trevor Williams
+                    <span class="introduction-chapter">Cap. 6</span>
+                </div>
+                <div class="character-details">
+                    Agente DEA rastrea red "polvo de hueso" 6 meses. Antebrazo con símbolos brillantes, conexión con "El Genealogista".
+                </div>
+                <div class="character-role">Agente DEA</div>
+                <span class="character-status status-alive">Infectado</span>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Henry Lee (28)
+                    <span class="introduction-chapter">Cap. 2</span>
+                </div>
+                <div class="character-details">
+                    Oficial de policía novato de Seúl. Primera respuesta a incidentes del Valle Oscuro.
+                </div>
+                <div class="character-role">Policía</div>
+                <span class="character-status status-alive">Vivo</span>
+            </div>
+        </div>
+
+        <!-- Víctimas y Transformados -->
+        <div class="character-group">
+            <h3 class="group-title">🦴 Víctimas y Transformados</h3>
+            
+            <div class="character-item">
+                <div class="character-title">
+                    Daniel Kim (67)
+                    <span class="introduction-chapter">Cap. 1</span>
+                </div>
+                <div class="character-details">
+                    Agricultor, primera víctima documentada. Transformación con consciencia intacta, estructura ósea reorganizada en patrones imposibles.
+                </div>
+                <div class="character-role">Primera Víctima</div>
+                <span class="character-status status-transformed">Transformado</span>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Grace Na
+                    <span class="introduction-chapter">Cap. 10</span>
+                </div>
+                <div class="character-details">
+                    Anciana guardiana que envejece durante la convergencia. Parte de los descendientes guardianes.
+                </div>
+                <div class="character-role">Guardiana</div>
+                <span class="character-status status-alive">Envejeciendo</span>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    María Carmen Vásquez (23)
+                    <span class="introduction-chapter">Cap. 12</span>
+                </div>
+                <div class="character-details">
+                    Estudiante de veterinaria mexicana, descendiente reclamada durante la convergencia final.
+                </div>
+                <div class="character-role">Estudiante</div>
+                <span class="character-status status-transformed">Reclamada</span>
+            </div>
+        </div>
+
+        <!-- Figuras Clave del Desenlace -->
+        <div class="character-group">
+            <h3 class="group-title">🔮 Figuras Clave del Desenlace</h3>
+            
+            <div class="character-item">
+                <div class="character-title">
+                    Carlos Mendoza "El Genealogista"
+                    <span class="introduction-chapter">Cap. 11</span>
+                </div>
+                <div class="character-details">
+                    Distribuidor del polvo de hueso como test de reconocimiento. Figura central en decisión final de los 2,847 descendientes.
+                </div>
+                <div class="character-role">El Genealogista</div>
+                <span class="character-status status-alive">Clave</span>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    David Alejandro Mendoza (†19)
+                    <span class="introduction-chapter">Cap. 11</span>
+                </div>
+                <div class="character-details">
+                    Hijo fallecido de Carlos Mendoza, estudiante de música. Su muerte motiva las acciones de "El Genealogista".
+                </div>
+                <div class="character-role">Motivación</div>
+                <span class="character-status status-dead">Fallecido</span>
+            </div>
+
+            <div class="character-item">
+                <div class="character-title">
+                    Los 2,847 Descendientes
+                    <span class="introduction-chapter">Cap. 13</span>
+                </div>
+                <div class="character-details">
+                    Portadores de fragmentos de esencia primordial distribuidos por el mundo. Deben elegir entre transformación o extinción.
+                </div>
+                <div class="character-role">Descendientes</div>
+                <span class="character-status status-alive">En Decisión</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navegación -->
+    <div class="chapter-navigation">
+        <a href="index.html" class="nav-button">← Índice Principal</a>
+        <a href="capitulo_00.html" class="nav-button">Prólogo</a>
+        <a href="capitulo_01.html" class="nav-button">Capítulo 1 →</a>
+    </div>
+
+</body>
+</html>

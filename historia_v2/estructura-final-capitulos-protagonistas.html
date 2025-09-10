@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura Final: Destinos de Protagonistas por Capítulo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { max-width: 1400px !important; }
+        
+        .chapter-destiny {
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            border: 2px solid #333;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            position: relative;
+        }
+        
+        .chapter-destiny::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8b0000, #cd853f, #8b0000);
+        }
+        
+        .tier-system {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .tier-card {
+            background: rgba(42, 42, 42, 0.7);
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 4px solid;
+        }
+        
+        .tier-1 { border-left-color: #ff6b6b; }
+        .tier-2 { border-left-color: #ffd93d; }
+        .tier-3 { border-left-color: #6bcf7f; }
+        
+        .destiny-final { 
+            border-left-color: #9b59b6; 
+            background: rgba(155, 89, 182, 0.1);
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .chapter-summary {
+            background: rgba(42, 42, 42, 0.5);
+            border-radius: 8px;
+            padding: 15px;
+            border-left: 3px solid #555;
+        }
+        
+        .chapter-early { border-left-color: #4ecdc4; }
+        .chapter-middle { border-left-color: #ffd93d; }
+        .chapter-late { border-left-color: #ff6b6b; }
+        .chapter-final { border-left-color: #9b59b6; }
+        
+        .character-fate {
+            padding: 8px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin: 5px 0;
+            text-align: center;
+        }
+        
+        .survives { background: rgba(107, 207, 127, 0.2); color: #ccffcc; }
+        .transforms { background: rgba(155, 89, 182, 0.2); color: #e8d5ff; }
+        .dies { background: rgba(255, 107, 107, 0.2); color: #ffcccc; }
+        .transcends { background: rgba(255, 215, 0, 0.2); color: #fff3cd; }
+        
+        .emotional-impact {
+            background: rgba(139, 0, 0, 0.1);
+            border: 1px solid #8b0000;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .section-title {
+            font-family: 'Cinzel', serif;
+            color: #cd853f;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .destiny-title { color: #9b59b6; }
+        
+        .jonathan-arc {
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.2), #1a1a1a);
+            border: 2px solid #9b59b6;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .romance-end {
+            background: rgba(205, 133, 63, 0.1);
+            border: 1px solid #cd853f;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="chapter-header">
+        <h1>ESTRUCTURA FINAL DE CAPÍTULOS</h1>
+        <h2>Destinos de Protagonistas: Jonathan se Queda con la Reina</h2>
+        <p class="chapter-subtitle">Distribución emocional estratégica para máximo impacto narrativo</p>
+    </div>
+
+    <!-- Sistema de Tiers Revisado -->
+    <div class="chapter-destiny">
+        <div class="section-title">🎯 Sistema de Tiers Revisado - Destinos Finales</div>
+        
+        <div class="tier-system">
+            <div class="tier-card tier-1">
+                <h4>🔴 TIER 1: SUPERVIVENCIA ESTRATÉGICA</h4>
+                <p><strong>Thomas Kim</strong> - Supervivencia total como líder humano</p>
+                <div class="character-fate survives">SOBREVIVE - Líder de la Tierra</div>
+                
+                <p><strong>Sophie Yun</strong> - Supervivencia total como madre del futuro</p>
+                <div class="character-fate survives">SOBREVIVE - Madre Científica</div>
+                
+                <p><strong>Jonathan Morales</strong> - Supervivencia transformada</p>
+                <div class="character-fate transcends">TRASCIENDE - Compañero de Eloria</div>
+            </div>
+            
+            <div class="tier-card tier-2">
+                <h4>🟡 TIER 2: IMPACTO EMOCIONAL MÁXIMO</h4>
+                <p><strong>Miguel Santos</strong> - Devastado por "pérdida" de Jonathan</p>
+                <div class="character-fate survives">SOBREVIVE - Trauma de Separación</div>
+                
+                <p><strong>Maya Park</strong> - Muerte heroica documentando</p>
+                <div class="character-fate dies">MUERE - Sacrificio Heroico</div>
+                
+                <p><strong>Trevor Williams</strong> - Muerte investigativa</p>
+                <div class="character-fate dies">MUERE - Descubrimiento Fatal</div>
+                
+                <p><strong>Henry Lee</strong> - Supervivencia traumática</p>
+                <div class="character-fate survives">SOBREVIVE - PTSD Cósmico</div>
+            </div>
+            
+            <div class="tier-card tier-3">
+                <h4>🟢 TIER 3: SOPORTE NARRATIVO</h4>
+                <p><strong>Sarah Chen</strong> - Muerte en batalla</p>
+                <div class="character-fate dies">MUERE - Combate Táctico</div>
+                
+                <p><strong>Jason Lee</strong> - Supervivencia científica</p>
+                <div class="character-fate survives">SOBREVIVE - Documentación Médica</div>
+                
+                <p><strong>Michael Torres</strong> - Transformación completa</p>
+                <div class="character-fate transforms">TRANSFORMADO - Líder Esqueleto</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Arco de Jonathan -->
+    <div class="jonathan-arc">
+        <div class="section-title destiny-title">💫 El Arco de Jonathan Morales: De Soldado a Compañero Cósmico</div>
+        
+        <h4>CAPÍTULOS 1-4: EL SOLDADO HUMANO</h4>
+        <ul>
+            <li>Hermandad con Miguel como ancla emocional central</li>
+            <li>Soldado mexicano de Tepito, background militar</li>
+            <li>Tatuaje Virgen de Guadalupe, cicatriz en ceja izquierda</li>
+            <li>Síntomas iniciales de despertar ancestral</li>
+        </ul>
+        
+        <h4>CAPÍTULOS 5-8: EL DESPERTAR</h4>
+        <ul>
+            <li><strong>Cap 5:</strong> Primera transformación consciente, "recuerda" a los Cantantes de Huesos</li>
+            <li><strong>Cap 6-7:</strong> Lucha interna entre humanidad y llamado cósmico</li>
+            <li><strong>Cap 8:</strong> Acepta gradualmente su naturaleza ancestral</li>
+        </ul>
+        
+        <h4>CAPÍTULOS 9-12: LA DECISIÓN IMPOSIBLE</h4>
+        <ul>
+            <li><strong>Cap 9-10:</strong> Desarrolla poderes musicales cósmicos</li>
+            <li><strong>Cap 11:</strong> Momento crucial - debe elegir entre Miguel y Eloria</li>
+            <li><strong>Cap 12:</strong> Conversación final con Miguel - "Hermanos hasta el final y más allá"</li>
+        </ul>
+        
+        <h4>CAPÍTULOS 13-14: LA TRASCENDENCIA</h4>
+        <ul>
+            <li><strong>Cap 13:</strong> Acepta su destino como compañero de Eloria</li>
+            <li><strong>Cap 14:</strong> Transformación final - se convierte en Compositor Cósmico</li>
+            <li><strong>Epílogo:</strong> Lidera las expediciones interestelares con Eloria</li>
+        </ul>
+    </div>
+
+    <!-- Distribución por Capítulos -->
+    <div class="chapter-destiny">
+        <div class="section-title">📚 Distribución de Destinos por Capítulos</div>
+        
+        <div class="chapter-grid">
+            <div class="chapter-summary chapter-early">
+                <h4>CAPÍTULOS 1-4: ESTABLECIMIENTO</h4>
+                <p><strong>Muertes:</strong> Ninguna protagonista principal</p>
+                <p><strong>Enfoque:</strong> Presentar personajes y vínculos</p>
+                <p><strong>Jonathan:</strong> Soldado humano normal, hermandad con Miguel</p>
+            </div>
+            
+            <div class="chapter-summary chapter-early">
+                <h4>CAPÍTULOS 5-6: DESPERTAR</h4>
+                <p><strong>Transformaciones:</strong> Jonathan comienza cambio</p>
+                <p><strong>Enfoque:</strong> Horror de la transformación</p>
+                <p><strong>Jonathan:</strong> Primeros recuerdos ancestrales</p>
+            </div>
+            
+            <div class="chapter-summary chapter-middle">
+                <h4>CAPÍTULOS 7-8: DESARROLLO</h4>
+                <p><strong>Muertes Tier 3:</strong> Sarah Chen (batalla)</p>
+                <p><strong>Enfoque:</strong> Stakes reales, consecuencias</p>
+                <p><strong>Jonathan:</strong> Acepta gradualmente su naturaleza</p>
+            </div>
+            
+            <div class="chapter-summary chapter-middle">
+                <h4>CAPÍTULOS 9-10: ESCALADA</h4>
+                <p><strong>Muertes Tier 2:</strong> Trevor Williams (investigación fatal)</p>
+                <p><strong>Enfoque:</strong> Pérdidas devastadoras</p>
+                <p><strong>Jonathan:</strong> Desarrolla poderes musicales cósmicos</p>
+            </div>
+            
+            <div class="chapter-summary chapter-late">
+                <h4>CAPÍTULOS 11-12: CLÍMAX EMOCIONAL</h4>
+                <p><strong>Decisión Crucial:</strong> Jonathan debe elegir</p>
+                <p><strong>Muertes Tier 2:</strong> Maya Park (sacrificio heroico)</p>
+                <p><strong>Jonathan:</strong> Conversación final con Miguel</p>
+            </div>
+            
+            <div class="chapter-summary chapter-final">
+                <h4>CAPÍTULOS 13-14: RESOLUCIÓN</h4>
+                <p><strong>Trascendencia:</strong> Jonathan se une a Eloria</p>
+                <p><strong>Enfoque:</strong> Nuevo orden mundial</p>
+                <p><strong>Jonathan:</strong> Compositor Cósmico, liderando exploración interestelar</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Impacto Emocional Estratégico -->
+    <div class="chapter-destiny">
+        <div class="section-title">💔 Impacto Emocional Estratégico por Capítulo</div>
+        
+        <div class="emotional-impact">
+            <h4>CAPÍTULO 8: Primera Pérdida Significativa</h4>
+            <p><strong>Sarah Chen muere en combate táctico</strong> - Establece que la muerte es real sin devastar la narrativa principal. Trevor pierde interés romántico, pero puede desarrollar nueva conexión.</p>
+        </div>
+        
+        <div class="emotional-impact">
+            <h4>CAPÍTULO 10: Pérdida Investigativa</h4>
+            <p><strong>Trevor Williams muere descubriendo verdad crucial</strong> - Su investigación del polvo de hueso llega demasiado lejos. Muerte heroica que impulsa la trama, pero no rompe vínculos centrales.</p>
+        </div>
+        
+        <div class="emotional-impact">
+            <h4>CAPÍTULO 12: Sacrificio Heroico</h4>
+            <p><strong>Maya Park muere documentando la verdad</strong> - Su muerte asegura que la historia se preserve. Sacrificio que sirve a su propósito como cronista, máximo impacto por su juventud y determinación.</p>
+        </div>
+        
+        <div class="emotional-impact">
+            <h4>CAPÍTULO 13: Separación Devastadora</h4>
+            <p><strong>Jonathan elige a Eloria sobre Miguel</strong> - NO muere, pero deja de ser humano. Miguel surviva pero queda devastado. Es pérdida sin muerte, dolor sin desesperanza.</p>
+        </div>
+    </div>
+
+    <!-- Romances Finales -->
+    <div class="chapter-destiny">
+        <div class="section-title">💕 Resolución de Romances</div>
+        
+        <div class="romance-end">
+            <h4>❤️ ROMANCE PRINCIPAL - Thomas × Sophie</h4>
+            <p><strong>Final:</strong> Superviven juntos, lideran nueva sociedad humana-transformada. Crían al bebé híbrido como símbolo del futuro.</p>
+        </div>
+        
+        <div class="romance-end">
+            <h4>💔 ROMANCE TRÁGICO - Jonathan × Maya</h4>
+            <p><strong>Final:</strong> Maya muere en Cap 12, Jonathan la recuerda mientras trasciende. Su amor queda como memoria pura en la consciencia cósmica.</p>
+        </div>
+        
+        <div class="romance-end">
+            <h4>🤝 HERMANDAD ÉPICA - Jonathan × Miguel</h4>
+            <p><strong>Final:</strong> Separación devastadora pero no muerte. Miguel aprende a relacionarse con la nueva forma de Jonathan. Hermandad trasciende forma física.</p>
+        </div>
+        
+        <div class="romance-end">
+            <h4>💫 ROMANCE CÓSMICO - Jonathan × Eloria</h4>
+            <p><strong>Final:</strong> Jonathan se convierte en compañero eterno de Eloria. Juntos lideran expediciones a nuevos mundos, explorando el amor que trasciende especies.</p>
+        </div>
+    </div>
+
+    <!-- Navegación -->
+    <div class="chapter-navigation">
+        <a href="analisis-protagonistas-engagement.html" class="nav-button">← Análisis Protagonistas</a>
+        <a href="index.html" class="nav-button">Índice Principal</a>
+        <a href="personajes-linea-tiempo.html" class="nav-button">Personajes →</a>
+    </div>
+
+</body>
+</html>
