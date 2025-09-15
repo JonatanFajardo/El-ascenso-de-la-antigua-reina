@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Botón de cambio de tema -->
+    <div class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema día/noche">
+        <span class="theme-icon-sun">☀️</span>
+        <span class="theme-icon-moon">🌙</span>
+    </div>
+
     <div class="chapter-header">
         <h1>CAPÍTULO 2</h1>
         <h2>EL NOVATO Y LA INVESTIGADORA</h2>
@@ -20,101 +26,141 @@
         
         <p class="location-marker"><em>Centro de Comando Conjunto - 09:30 hrs</em></p>
 
-        <p class="opening-line"><strong>"General Kim, tenemos confirmación visual de la primera conversión completa,"</strong></p> <p>reportó el Mayor Sarah Chen mientras ajustaba las imágenes del dron de reconocimiento en la pantalla principal.</p>
+        <p class="opening-line"><strong>"General Kim, tenemos confirmación visual de... algo que no entiendo,"</strong></p> <p>reportó el Mayor Sarah Chen, su voz mostrando por primera vez en quince años de servicio militar una incertidumbre que la perturbaba profundamente.</p>
 
-        <p>El General Thomas Kim se inclinó sobre la mesa de operaciones, estudiando las imágenes con la intensidad de alguien que sabe que está presenciando el comienzo de algo que podría cambiar el mundo para siempre.</p>
+        <p>El General Thomas Kim sintió que el aire se le atascaba en la garganta. Treinta años de comando militar lo habían preparado para invasiones, terrorismo, incluso guerra nuclear. Pero mientras estudiaba las imágenes del dron de reconocimiento, se dio cuenta de que todo su entrenamiento era completamente irrelevante para lo que estaba viendo.</p>
 
-        <p class="dialogue thomas-tactical-analysis">"La estructura ósea que emergió del centro del valle mide aproximadamente 200 metros de altura,"</p> <p>murmuró, trazando medidas en la pantalla. <p class="dialogue">"No es aleatorio. Es... arquitectónico. Como si algo estuviera construyendo una catedral desde abajo hacia arriba."</p>
+        <p class="dialogue thomas-struggling">"¿Cuánto mide?"</p> <p>preguntó, tratando de mantener su voz profesional mientras su mente luchaba por procesar estructuras que desafiaban las leyes de la ingeniería básica.</p>
+
+        <p class="dialogue sarah-overwhelmed">"Aproximadamente 200 metros de altura, señor. Pero..."</p> <p>Sarah se detuvo, sabiendo que lo que estaba a punto de decir sonaba imposible. <p class="dialogue">"Los análisis indican que creció 180 metros en las últimas seis horas. Eso es físicamente imposible para cualquier estructura conocida."</p>
 
         <div class="parallel-scene-break">
             <p class="location-marker"><em>Policía Metropolitana de Seúl - 09:35 hrs</em></p>
         </div>
 
-        <p>El Oficial Henry Lee, a los veintiocho años y en su primera semana oficial como policía, había soñado con una carrera dedicada a ayudar a la gente. Lo que no había soñado era recibir órdenes de investigar "anomalías biológicas con potencial de seguridad nacional."</p>
+        <p>El Oficial Henry Lee llevaba exactamente cinco días como policía oficial. Cinco días de patrullajes rutinarios, reportes de accidentes menores, y la satisfacción creciente de que había encontrado su vocación. Había dormido bien por primera vez en meses la noche anterior, sintiendo que finalmente estaba contribuyendo a su comunidad de manera significativa.</p>
 
-        <p class="dialogue henry-dispatch">"Unidad 23, proceda inmediatamente a coordenadas que le serán enviadas por GPS. Investigación prioritaria: granja Kim, Valle Cheongmyeong. Sospecha de... actividad inusual con restos humanos,"</p> <p>crepitó la radio a las 9:47 AM.</p>
+        <p>Esa sensación de propósito estaba a punto de ser completamente destruida.</p>
 
-        <p class="dialogue henry-response">"Recibido. ¿Actividad inusual con restos humanos? ¿Podrían ser más específicos?"</p>
+        <p class="dialogue henry-dispatch">"Unidad 23, proceda inmediatamente a coordenadas que le serán enviadas por GPS. Investigación de persona desaparecida: granja Kim, Valle Cheongmyeong. Reportes de... bueno, necesitamos que vea la escena usted mismo,"</p> <p>crepitó la radio a las 9:47 AM. Henry notó que la voz del despachador sonaba tensa, lo cual era inusual para el veterano Sargento Choi.</p>
 
-        <p class="dialogue dispatch-ominous">"Negativo, Unidad 23. Use extrema precaución. Reporte cada observación sin importar qué tan... improbable pueda parecer."</p>
+        <p class="dialogue henry-response">"Recibido. ¿Persona desaparecida desde cuándo? ¿Hay familiares en el sitio?"</p>
+
+        <p class="dialogue dispatch-hesitant">"Desde ayer por la noche. Y no, Henry... no hay familiares. Solo... solo documente todo lo que vea, ¿de acuerdo? Y manténgase en contacto cada veinte minutos."</p>
+
+        <p>Henry frunció el ceño. En su entrenamiento, los reportes de personas desaparecidas eran procedimientos estándar. No requerían contacto cada veinte minutos.</p>
 
         <div class="parallel-scene-break">
             <p class="location-marker"><em>Laboratorio de la DEA, Seúl - 09:45 hrs</em></p>
         </div>
 
-        <p>El Dr. Trevor Williams había analizado todo tipo de drogas durante sus quince años con la DEA: cocaína sintética, heroína modificada genéticamente, estimulantes diseñados en laboratorios clandestinos. Pero el "polvo de hueso" que había llegado a su laboratorio desde cinco continentes diferentes era algo completamente fuera de su experiencia.</p>
+        <p>El Dr. Trevor Williams se frotó los ojos por cuarta vez en la última hora. Quince años analizando narcóticos para la DEA lo habían familiarizado con sustancias que desafiaban la lógica: drogas sintéticas diseñadas para evadir detección, compuestos que alteraban la química cerebral de maneras que apenas comenzaban a entender.</p>
 
-        <p class="dialogue trevor-analysis">"Los resultados son imposibles,"</p> <p>murmuró mientras revisaba los datos por sexta vez. <p class="dialogue">"Esta sustancia contiene material genético de especies que se extinguieron hace 230 millones de años—mucho antes que los dinosaurios, antes que cualquier forma de vida compleja que conozcamos—pero la degradación del ADN indica que fue producida recientemente. Como si una criatura prehistórica hubiera despertado después de millones de años y hubiera comenzado a crear copias frescas de su propio material genético."</p>
+        <p>Pero el "polvo de hueso" que había aparecido simultáneamente en laboratorios de cinco continentes diferentes era algo que no tenía precedente en toda su carrera.</p>
+
+        <p class="dialogue trevor-confusion">"Esto no tiene sentido,"</p> <p>murmuró por sexta vez, sabiendo que sonar como un disco rayado no ayudaba pero incapaz de detener su necesidad de verbalizar su confusión. Los análisis indicaban material orgánico, pero material orgánico que no coincidía con ninguna base de datos de especies conocidas.</p>
+
+        <p>Y lo más perturbador: cada muestra había llegado con reportes de personas que habían desaparecido inmediatamente después de entrar en contacto con la sustancia.</p>
 
         <div class="parallel-scene-break">
             <p class="location-marker"><em>Ruta a Granja Kim - 10:15 hrs</em></p>
         </div>
 
-        <p>Henry conducía hacia la granja Kim con una sensación creciente de inquietud. A medida que se acercaba al Valle Cheongmyeong, notó algo perturbador: no había animales—como si todas las criaturas vivientes hubieran huido instintivamente de la zona. No había pájaros en los cables, no había perros ladrando en las granjas que pasaba, no había ganado en los campos.</p>
+        <p>La primera cosa que Henry notó mientras conducía hacia la granja Kim fue el silencio. No el silencio normal del campo, que siempre incluye el zumbido de insectos, el ladrido ocasional de perros, el sonido del ganado en campos distantes. Este era un silencio absoluto que hizo que el ronroneo de su motor sonara obscenamente fuerte.</p>
 
-        <p class="dialogue henry-observation">"Control, esto es Unidad 23. Algo raro está pasando aquí. Los animales domésticos parecen haber... abandonado el área completamente."</p>
+        <p>Redujo la velocidad y bajó la ventanilla, esperando oír algo—cualquier cosa—que le diera una sensación de normalidad. Pero mientras más escuchaba, más perturbado se volvía el silencio.</p>
+
+        <p class="dialogue henry-uneasy">"Control, esto es Unidad 23. La zona está... muy silenciosa. ¿Han recibido otros reportes del Valle Cheongmyeong?"</p>
+
+        <p class="dialogue dispatch-pause">Una pausa larga antes de la respuesta. "Henry, solo... mantenga los protocolos estándar, ¿de acuerdo? Y no se aleje del vehículo más de lo necesario."</p>
+
+        <p>Eso definitivamente no era protocolo estándar para una persona desaparecida.</p>
 
         <div class="page-marker">
             <h3>PÁGINA 14</h3>
         </div>
 
-        <p>Para cuando llegó a la propiedad de Daniel Kim, Henry había comenzado a notar anomalías que su entrenamiento en la academia no lo había preparado para identificar. Los pájaros no cantaban. Los insectos no zumbaban. Incluso el viento parecía evitar el área, creando una quietud tan completa que el sonido de su motor sonaba obscenamente fuerte en el aire inmóvil.</p>
+        <p>Cuando Henry llegó a la propiedad de Daniel Kim, tuvo que apagar el motor y quedarse sentado en su patrulla por un momento completo para procesar lo que estaba viendo.</p>
 
-        <p>Estacionó su patrulla a una distancia segura de la casa principal y salió, ajustando automáticamente su cinturón de servicio y verificando que su radio funcionara. Procedimiento estándar para una investigación de persona desaparecida: aproximarse con precaución, observar el entorno, documentar cualquier evidencia visible.</p>
+        <p>Su entrenamiento le decía que documentara la escena sistemáticamente: fotografías del perímetro, búsqueda de señales de lucha, entrevistas con testigos. Procedimiento estándar que había practicado decenas de veces durante sus estudios.</p>
 
-        <p>Lo que vio en el suelo frente a la casa de Daniel Kim no estaba cubierto en ningún manual de procedimientos policiales.</p>
+        <p>Pero nada en su entrenamiento lo había preparado para encontrar lo que claramente eran restos humanos organizados en patrones geométricos complejos en el suelo frente a la casa principal.</p>
 
-        <p class="hook">🎯 <strong>GANCHO PÁGINA 15:</strong> Henry descubre mandala de huesos con ecuaciones imposibles</p>
+        <p>Henry sacó su cámara reglamentaria con manos que temblaban ligeramente, preguntándose si esto clasificaba como escena de homicidio o algo completamente diferente que no tenía nombre en los manuales policiales.</p>
 
-        <p>El mandala de huesos era impresionante en su complejidad geométrica. Henry había estudiado matemáticas en la universidad antes de cambiar a justicia criminal, y reconoció inmediatamente que los patrones no eran aleatorios. Había ecuaciones grabadas directamente en los huesos más grandes—fórmulas matemáticas complejas que reconocía de cálculo avanzado mezcladas con símbolos que nunca había visto pero que, extrañamente, su mente parecía entender intuitivamente.</p>
+        <p>Lo que Henry encontró desafió inmediatamente su comprensión de lo que era físicamente posible. Los huesos—y había muchos huesos—estaban organizados en círculos concéntricos alrededor del punto donde debería haber estado la puerta principal de la casa de Daniel Kim.</p>
 
-        <p>Sacó su cámara reglamentaria y comenzó a documentar la escena, siguiendo el protocolo estándar para evidencia física. Pero mientras fotografiaba, se dio cuenta de que había un problema con lo que estaba viendo.</p>
+        <p>Henry había estudiado matemáticas durante dos años antes de cambiar a justicia criminal, lo suficiente para reconocer patrones complejos cuando los veía. Y esto definitivamente tenía patrones, pero patrones que le daban dolor de cabeza solo de mirarlos.</p>
 
-        <p>Los huesos estaban organizados en patrones fractales perfectos—estructuras geométricas que se repiten a sí mismas en escalas más pequeñas, como los copos de nieve o las hojas de helecho, pero con una precisión matemática que requeriría software de computadora especializado y horas de planificación cuidadosa. Pero según el reporte que había recibido, Daniel Kim había sido visto por última vez apenas doce horas antes.</p>
+        <p>Comenzó a tomar fotografías sistemáticamente, siguiendo el protocolo que había memorizado: primero tomas generales de la escena completa, luego acercamientos de evidencia específica, siempre documentando desde múltiples ángulos.</p>
 
-        <p>¿Cómo había alguien creado algo tan elaborado en tan poco tiempo?</p>
+        <p>Pero mientras fotografiaba, una pregunta lo molestaba: según el reporte que había recibido, Daniel Kim había sido visto por última vez ayer por la noche. ¿Cómo había alguien organizado tantos huesos en patrones tan complejos en menos de veinticuatro horas?</p>
+
+        <p>Y una pregunta aún más perturbadora: ¿de dónde habían venido tantos huesos?</p>
 
         <div class="page-marker">
             <h3>PÁGINA 15</h3>
         </div>
 
-        <p>Henry estaba tan absorto en documentar el mandala que casi no escuchó el vehículo que se aproximaba por el camino rural. Cuando levantó la vista, vio un jeep deteniéndose a unos metros de su patrulla. Una mujer joven salió del vehículo con confianza, llevando equipo de grabación profesional.</p>
+        <p>Henry estaba tan concentrado tratando de entender qué estaba documentando que casi no notó el sonido de otro vehículo acercándose por el camino de tierra. Cuando levantó la vista, vio un jeep deteniéndose a unos metros de su patrulla. Una mujer joven salió, llevando una cámara profesional que claramente costaba más que el salario mensual de Henry.</p>
 
-        <p class="dialogue">"¿Oficial?" gritó, acercándose con la cámara ya encendida. "Soy Maya Park, de MinJung Oscura. Tengo permisos de prensa para investigar las desapariciones en esta área."</p>
+        <p class="dialogue maya-introducing">"¿Oficial?"</p> <p>gritó, acercándose con pasos confiados. <p class="dialogue">"Soy Maya Park. Estoy investigando las desapariciones en esta área para mi canal de documentales."</p>
 
-        <p>Henry había escuchado hablar del canal de YouTube de Maya Park. Su compañero de cuarto había mencionado algunos de sus videos sobre fenómenos paranormales en universidades de Seúl. Lo que no sabía era que su video más reciente había causado una crisis global que estaba desarrollándose en tiempo real.</p>
+        <p>Henry inmediatamente adoptó la postura que había practicado durante semanas en la academia: profesional pero firme.</p>
 
-        <p class="dialogue">"Señorita Park," dijo Henry, adoptando automáticamente el tono profesional que había practicado durante semanas en la academia. "Esta es una escena de crimen activa. Necesito que mantenga distancia mientras conduzco mi investigación."</p>
+        <p class="dialogue henry-protocol">"Señorita Park, esta es una investigación policial activa. Necesito que mantenga distancia mientras proceso la escena."</p>
 
-        <p>Maya sonrió, pero Henry pudo ver tensión alrededor de sus ojos.</p>
+        <p>Pero mientras hablaba, Henry se dio cuenta de que la presencia de Maya le daba una extraña sensación de alivio. Había estado solo con algo que no podía explicar durante más de una hora, y tener a otra persona—incluso una civil—le hacía sentir menos como si estuviera perdiendo la cordura.</p>
 
-        <p class="dialogue">"Por supuesto, oficial. Pero puede que quiera saber que mi video sobre este lugar ha generado reportes similares de incidentes idénticos en veintitrés países diferentes. Y en las últimas seis horas, veintitrés personas en diferentes países han cometido suicidio inmediatamente después de ver el video completo."</p>
+        <p>Maya asintió, pero Henry pudo ver que estaba claramente tensa. Sus movimientos eran demasiado cuidadosos, demasiado controlados, como alguien que estaba luchando por mantener la compostura.</p>
 
-        <p>Henry sintió que algo frío se asentaba en su estómago.</p>
+        <p class="dialogue maya-nervous">"Por supuesto, oficial. Solo... ¿puedo preguntarle si esto es lo que esperaba encontrar?"</p>
 
-        <p class="dialogue">"¿Perdón?"</p>
+        <p>Henry miró los patrones de huesos, luego de vuelta a Maya.</p>
 
-        <p class="dialogue">"Mi canal tiene 850,000 suscriptores," continuó Maya, manteniendo su cámara enfocada en el mandala de huesos. "El video que subí anoche sobre las desapariciones aquí ha sido visto por 4.7 millones de personas en menos de veinticuatro horas. Un video normal mío recibe tal vez 50,000 visualizaciones en una semana. Esto no es viral—eso es una epidemia global."</p>
+        <p class="dialogue henry-honest">"Señorita Park, en cinco días como policía, esto es lo más extraño que he visto. No tengo idea de qué esperaba encontrar, pero definitivamente no era esto."</p>
+
+        <p class="dialogue maya-relief">"Okay, entonces no soy la única que piensa que esto es... anormal."</p>
+
+        <p>Algo en su tono hizo que Henry la mirara más de cerca. Había un temblor casi imperceptible en su voz, como alguien que había visto algo que la había sacudido profundamente.</p>
+
+        <p class="dialogue henry-concerned">"¿Usted ha estado aquí antes?"</p>
+
+        <p class="dialogue maya-hesitant">"Ayer. Filmé... filmé algo aquí ayer que no entiendo completamente."</p>
 
         <div class="page-marker">
             <h3>PÁGINA 16</h3>
         </div>
 
-        <p>Maya le mostró su teléfono a Henry, quien pudo ver el contador de visualizaciones aumentando en tiempo real. Pero lo que realmente lo alarmó fueron los comentarios. Cientos de personas reportando sueños idénticos, familiares desaparecidos, patrones de huesos encontrados en ubicaciones que iban desde México hasta Siberia.</p>
+        <p>Maya sacó su teléfono, pero Henry notó que sus manos temblaban ligeramente mientras navegaba por la pantalla.</p>
 
-        <p class="dialogue">"Esto tiene que ser algún tipo de broma coordinada," murmuró Henry, pero incluso mientras decía las palabras, sabía que no se sentían verdaderas.</p>
+        <p class="dialogue maya-showing-phone">"Oficial Lee,"</p> <p>dijo, leyendo su placa de identificación, <p class="dialogue">"mi video de ayer sobre este lugar ha recibido más visualizaciones que todo mi canal completo en el último año. Y los comentarios son... perturbadores."</p>
 
-        <p class="dialogue">"Oficial Lee," dijo Maya, leyendo su placa de identificación. "¿Puede ver las ecuaciones en esos huesos?"</p>
+        <p>Henry miró la pantalla del teléfono y pudo ver comentarios en múltiples idiomas, muchos reportando sueños extraños o encuentros similares en lugares completamente diferentes.</p>
 
-        <p>Henry miró más de cerca el mandala. Las inscripciones que había notado antes ahora parecían estar... moviéndose. No era posible, por supuesto. Los huesos eran objetos sólidos, inanimados. Pero hubiera jurado que los símbolos matemáticos estaban reordenándose mientras los observaba.</p>
+        <p class="dialogue henry-skeptical">"Los comentarios de internet no son exactamente evidencia confiable, señorita Park."</p>
 
-        <p class="dialogue">"Eso es..." comenzó, luego se detuvo. En su entrenamiento, había aprendido que los oficiales de policía debían mantener objetividad profesional en todo momento. Reportar alucinaciones no era exactamente lo que tenía en mente cuando había jurado proteger y servir.</p>
+        <p class="dialogue maya-insistent">"Lo sé. Pero... ¿puede ver los símbolos grabados en esos huesos más grandes?"</p>
 
-        <p class="dialogue">"Son secuencias de Fibonacci," dijo Maya suavemente. "Una progresión matemática donde cada número es la suma de los dos anteriores: 1, 1, 2, 3, 5, 8, 13... Pero no cualquier secuencia de Fibonacci. Están calculando algo específico. Como si los huesos fueran una computadora orgánica procesando un problema matemático que no entendemos."</p>
+        <p>Henry siguió su mirada hacia los huesos que formaban el círculo exterior del patrón. Había marcas que había notado antes pero que había asumido eran daño natural o marcas de herramientas.</p>
 
-        <p>Henry se acercó más, y mientras lo hacía, sintió una vibración extraña en sus propios huesos. Era casi imperceptible al principio, como cuando se pone la mano sobre un altavoz y se siente la vibración del sonido, pero esta vibración venía desde dentro de su propio esqueleto. Mientras más tiempo pasaba cerca del mandala, más intensa se volvía la sensación.</p>
+        <p>Henry se acercó más, enfocando su cámara en las marcas que Maya había señalado. Cuando miró a través del visor, las marcas parecían más claras, más definidas. Como si la cámara pudiera ver detalles que sus ojos estaban perdiendo.</p>
 
-        <p>Sus costillas estaban... vibrando en armonía, como cuerdas de piano que responden a una nota musical tocada en otra habitación.</p>
+        <p class="dialogue henry-concentrating">"Parecen... números? ¿O tal vez letras?"</p>
+
+        <p class="dialogue maya-uncertain">"No estoy segura. Pero tengo la extraña sensación de que deberían significar algo para mí. Como cuando tienes una palabra en la punta de la lengua pero no puedes recordarla completamente."</p>
+
+        <p>Henry bajó su cámara y miró a Maya más cuidadosamente. Había algo en su expresión—una mezcla de fascinación y miedo que reconocía porque estaba sintiendo exactamente lo mismo.</p>
+
+        <p class="dialogue henry-admitting">"Señorita Park, ¿ha tenido sueños extraños últimamente?"</p>
+
+        <p>La pregunta lo sorprendió a él mismo. No había planeado preguntarlo, pero algo sobre estar en este lugar, mirando estos patrones imposibles, hacía que la conversación normal pareciera irrelevante.</p>
+
+        <p>Mientras Henry se movía alrededor del patrón de huesos, fotografiando desde diferentes ángulos, comenzó a notar algo inquietante. Había una sensación extraña en su pecho, como si hubiera estado corriendo, pero no había exerción física que lo justificara.</p>
+
+        <p>Se detuvo y puso una mano sobre su corazón, pensando que tal vez el estrés de ver algo tan perturbador estaba afectando su sistema cardiovascular. Pero no era su corazón lo que se sentía extraño.</p>
+
+        <p>Era como si sus costillas estuvieran... respondiendo a algo. Una resonancia sutil que se hacía más fuerte mientras más tiempo pasaba cerca de los huesos organizados.</p>
 
         <div class="page-marker">
             <h3>PÁGINA 17</h3>
@@ -126,121 +172,137 @@
 
         <p>Maya asintió, pero no se alejó. En cambio, siguió filmando, capturando cada detalle del mandala desde múltiples ángulos.</p>
 
-        <p class="dialogue">"Oficial Lee, ¿ha tenido sueños extraños últimamente? ¿Música que no reconoce? ¿La sensación de que está recordando algo que había olvidado?"</p>
+        <p class="dialogue maya-startled">"Sí,"</p> <p>respondió Maya inmediatamente, con una urgencia que sorprendió a ambos. <p class="dialogue">"Durante las últimas tres noches. Sueños con... música? Pero música que no reconozco. Como si fuera de una cultura completamente diferente, pero de alguna manera sabía todas las palabras."</p>
 
-        <p>Henry se quedó helado. Había tenido exactamente esos sueños durante las últimas tres noches. Sueños llenos de voces cantando en armonías imposiblemente complejas, en idiomas que no conocía pero que entendía intuitivamente. Había despertado cada mañana con las melodías todavía resonando en su cabeza.</p>
+        <p>Henry se quedó quieto, sintiendo que algo frío se asentaba en su estómago.</p>
 
-        <p class="dialogue">"¿Cómo lo sabía?"</p>
+        <p class="dialogue henry-whisper">"Yo también."</p>
 
-        <p class="dialogue">"Porque yo también los he tenido," respondió Maya. "Y según los comentarios en mi video, también los han tenido miles de otras personas alrededor del mundo."</p>
+        <p>Se miraron por un momento, ambos procesando la improbabilidad de que dos extraños estuvieran teniendo los mismos sueños específicos y extraños.</p>
 
-        <p>Mientras hablaban, Henry comenzó a realizar un examen más meticuloso del área alrededor de la casa de Daniel Kim. Lo que encontró desafió toda lógica.</p>
+        <p class="dialogue maya-connecting">"Y los comentarios en mi video... docenas de personas reportando sueños similares. Todos desde que comenzaron las desapariciones aquí."</p>
 
-        <p class="skeleton-sighting">Grabadas en la tierra misma, apenas visibles a menos que uno supiera dónde buscar, había más ecuaciones. Pero estas no estaban talladas con picos o palas. Parecían haber brotado directamente desde el suelo, como si la tierra se hubiera transformado orgánicamente en símbolos matemáticos, como cuando las plantas crecen siguiendo patrones naturales.</p>
+        <p>Mientras hablaban, Henry continuó fotografiando el área, expandiendo su búsqueda más allá del patrón central de huesos. Fue entonces cuando notó algo que lo hizo detenerse completamente.</p>
 
-        <p>Y todas las ecuaciones parecían estar resolviendo el mismo problema: calculando trayectorias orbitales, prediciendo la llegada de algo masivo que viajaba hacia la Tierra desde las profundidades del espacio.</p>
+        <p>En la tierra alrededor de la casa de Daniel Kim, apenas visibles a menos que se mirara desde el ángulo correcto, había más marcas. No parecían haber sido hechas con herramientas—eran demasiado orgánicas, demasiado fluidas, como si hubieran crecido naturalmente desde el suelo.</p>
+
+        <p class="dialogue henry-discovery">"Maya, ¿puede ver esto?"</p>
+
+        <p>Maya se acercó y siguió la dirección de su cámara. Cuando vio las marcas en la tierra, su expresión cambió completamente.</p>
+
+        <p class="dialogue maya-recognizing">"Esas marcas... las he visto antes. En mis sueños."</p>
 
         <div class="page-marker">
             <h3>PÁGINA 18</h3>
         </div>
 
-        <p class="dialogue">"Maya," dijo Henry, abandonando finalmente la formalidad profesional. "Creo que necesito ver ese video tuyo."</p>
+        <p class="dialogue henry-decision">"Maya,"</p> <p>dijo Henry, abandonando completamente el protocolo formal porque la situación había ido mucho más allá de cualquier cosa que cubrieran los manuales policiales, <p class="dialogue">"creo que necesito ver ese video que filmó ayer."</p>
 
-        <p>Mientras Maya preparaba su teléfono, Henry se dio cuenta de que había cruzado una línea invisible. Una hora antes, había sido un policía novato investigando un reporte rutinario de persona desaparecida. Ahora estaba colaborando con una YouTuber para entender algo que no tenía precedente en la experiencia humana.</p>
+        <p>Mientras Maya preparaba su teléfono, Henry se dio cuenta de que algo fundamental había cambiado en su comprensión de lo que significaba ser policía. Una hora antes, había pensado que su trabajo consistía en documentar evidencia y escribir reportes. Ahora estaba enfrentando algo que desafiaba la propia definición de lo que constituía evidencia.</p>
 
-        <p>El video de Maya era inquietantemente profesional para algo que había sido filmado por una sola persona. Sus tomas eran estables, su narración era clara, y había logrado capturar detalles que habrían requerido múltiples cámaras y considerable planificación.</p>
+        <p>El video de Maya era sorprendentemente profesional para algo filmado con equipo portátil. Henry había visto muchos videos de cámaras corporales durante su entrenamiento, y reconocía buena técnica cinematográfica cuando la veía.</p>
 
-        <p>Pero lo que realmente lo perturbó fue su propia reacción al verlo.</p>
+        <p>Pero mientras miraba las imágenes del valle que Maya había capturado el día anterior, algo extraño comenzó a pasar. La sensación de resonancia en su pecho que había notado antes se intensificó considerablemente.</p>
 
-        <p>En el momento en que las imágenes del Valle Oscuro aparecieron en la pantalla del teléfono, Henry sintió que cada hueso en su cuerpo comenzaba a vibrar en respuesta, como diapasones que resuenan cuando otro diapasón de la misma frecuencia es golpeado cerca. No era dolor, exactamente. Era más como reconocimiento—como si su esqueleto hubiera estado esperando toda su vida para ver esas imágenes específicas.</p>
+        <p>No era dolor, exactamente, pero definitivamente no era normal. Era como si su cuerpo estuviera reconociendo algo en las imágenes que su mente consciente no podía identificar.</p>
 
-        <p class="dialogue">"¿Lo sientes también, verdad?" preguntó Maya, observando su expresión.</p>
+        <p class="dialogue maya-observing">"También lo siente, ¿verdad?"</p> <p>preguntó Maya, estudiando su expresión cuidadosamente.</p>
 
-        <p class="dialogue">"Es como si..." Henry buscó las palabras correctas. "Como si mis huesos guardaran memorias más antiguas que mi cerebro—como si hubiera información almacenada en mi esqueleto que mi mente consciente nunca había conocido."</p>
+        <p class="dialogue henry-struggling">"Siento... algo. No sé cómo describirlo. Como si mi cuerpo reconociera estas imágenes pero mi cerebro no supiera por qué."</p>
 
-        <p class="dialogue">"Exactamente."</p>
+        <p class="dialogue maya-understanding">"Exactamente lo que yo sentí ayer cuando estaba filmando. Como un déjà vu, pero más profundo."</p>
 
-        <p>Mientras terminaba de ver el video, Henry se dio cuenta de algo que cambió fundamentalmente su comprensión de la situación. En las imágenes finales que Maya había capturado del valle, había algo en el fondo que ella aparentemente no había notado mientras filmaba.</p>
+        <p>Mientras terminaba de ver el video, Henry se dio cuenta de algo que lo hizo revisar las imágenes más cuidadosamente. En una de las tomas finales del valle, había algo en el fondo que Maya aparentemente no había notado mientras filmaba.</p>
 
-        <p>Una figura. Alta, delgada, claramente no humana. Y parecía estar observándolos directamente a través de la cámara.</p>
+        <p>Una sombra. O tal vez una figura. Era difícil de distinguir, pero definitivamente había algo allí que no se parecía a la vegetación natural del área.</p>
 
         <div class="page-marker">
             <h3>PÁGINA 19</h3>
         </div>
 
-        <p class="dialogue">"Maya," dijo Henry cuidadosamente, "¿notaste algo inusual en el fondo cuando estabas filmando?"</p>
+        <p class="dialogue henry-pointing">"Maya, ¿notó esto cuando estaba filmando?"</p>
 
-        <p>Maya frunció el ceño y revisó las imágenes en su cámara.</p>
+        <p>Henry pausó el video y señaló la forma en el fondo. Maya se acercó, entrecerró los ojos, y su expresión cambió.</p>
 
-        <p class="dialogue">"No vi nada cuando estaba grabando. ¿Por qué?"</p>
+        <p class="dialogue maya-confused">"No... no recuerdo haber visto eso. Pero es difícil de distinguir. ¿Qué piensa que es?"</p>
 
-        <p>Henry señaló la figura en la pantalla del teléfono. Maya se acercó, entrecerró los ojos, y Henry vio cómo su rostro se ponía pálido.</p>
+        <p class="dialogue henry-uncertain">"No estoy seguro. Tal vez solo sean sombras extrañas, o la forma como la luz estaba cayendo..."</p>
 
-        <p class="dialogue">"Eso no estaba ahí cuando estaba filmando," susurró. "Estoy segura. Habría notado algo así."</p>
+        <p>Pero incluso mientras decía las palabras, Henry sabía que no sonaban convincentes. Había algo deliberado sobre la forma, algo que sugería movimiento intencional en lugar de sombras aleatorias.</p>
 
-        <p class="dialogue">"¿Estás segura?"</p>
+        <p>Revisaron el video juntos, pausando en varias secciones para examinar las sombras más cuidadosamente. En algunas tomas, la forma era más clara; en otras, apenas visible.</p>
 
-        <p class="dialogue">"Completamente segura."</p>
+        <p>Henry sentía que su entrenamiento policial estaba luchando contra lo que estaba viendo. Todo en su educación le decía que buscara explicaciones racionales primero: efectos de luz, sombras naturales, tal vez incluso alguien que había estado en el área sin que Maya lo notara.</p>
 
-        <p>Revisaron las imágenes juntos, y se dieron cuenta de que la figura aparecía en múltiples tomas desde diferentes ángulos. No era un defecto de la cámara o una ilusión óptica. Algo había estado observando a Maya mientras filmaba, algo que había sido invisible para ella en tiempo real pero que había sido capturado por su equipo.</p>
+        <p>Pero la sensación persistente de que algo fundamental estaba mal con toda la situación no desaparecía.</p>
 
-        <p>Henry sintió que su entrenamiento policial luchaba contra lo que estaba viendo. Todo en su educación le decía que debía haber una explicación racional. Alguien jugándoles una broma elaborada. Un efecto óptico que no entendía. Cualquier cosa excepto la conclusión obvia.</p>
+        <p class="dialogue henry-decision">"Maya, creo que necesito reportar esto a mis superiores. Esto va más allá de lo que puedo manejar solo."</p>
 
-        <p>Pero mientras más tiempo pasaba estudiando las imágenes, más difícil se volvía negar lo que estaba viendo.</p>
+        <p class="dialogue maya-worried">"¿Reportar qué, exactamente? ¿Patrones extraños de huesos y sombras en un video?"</p>
 
-        <p class="dialogue">"Maya," dijo finalmente, "creo que necesitamos ayuda. Esto está más allá de lo que cualquiera de nosotros puede manejar solos."</p>
+        <p>Henry se dio cuenta de que tenía razón. ¿Cómo explicaría esto en un reporte oficial? ¿Cómo describiría la sensación de que sus propios huesos estaban respondiendo a algo que había encontrado en una escena de crimen?</p>
 
-        <p class="dialogue">"¿A quién podríamos llamar? ¿Quién nos creería?"</p>
+        <p class="dialogue henry-struggling">"No lo sé. Pero no puedo simplemente ignorar esto y seguir adelante como si fuera normal."</p>
 
-        <p>Henry pensó por un momento, luego sacó su radio.</p>
+        <p>Sacó su radio, dudando por un momento antes de presionar el botón de transmisión.</p>
 
-        <p class="dialogue">"Unidad 23 a despacho. Necesito que contacten al Centro de Comando Conjunto. Tengo evidencia de algo que podría ser relevante para la seguridad nacional."</p>
+        <p class="dialogue henry-radio">"Control, esto es Unidad 23. Necesito asistencia adicional en mi ubicación. La escena es... más compleja de lo inicialmente reportado."</p>
 
         <div class="page-marker">
             <h3>PÁGINA 20</h3>
         </div>
 
-        <p>La respuesta del despachador tardó varios minutos en llegar, y cuando lo hizo, el tono había cambiado completamente.</p>
+        <p>La respuesta tardó más de lo usual, y cuando llegó, el tono del Sargento Choi había cambiado notablemente.</p>
 
-        <p class="dialogue radio">"Unidad 23, mantenga posición. Unidades especializadas en camino. No abandone la escena bajo ninguna circunstancia. Confirmación de órdenes del nivel más alto."</p>
+        <p class="dialogue dispatch-serious">"Unidad 23, mantenga su posición exacta. No se aleje del área hasta que llegue asistencia adicional. ¿Está acompañado en la escena?"</p>
 
-        <p>Henry y Maya se miraron. El procedimiento estándar para un reporte de persona desaparecida no incluía "órdenes del nivel más alto."</p>
+        <p>Henry y Maya se miraron. En sus cinco días como policía, Henry nunca había escuchado ese nivel de urgencia del normalmente relajado Sargento Choi.</p>
 
-        <p class="dialogue">"¿Qué crees que significa eso?" preguntó Maya.</p>
+        <p class="dialogue henry-radio-response">"Afirmativo, Control. Hay una civil presente que estaba investigando independientemente el mismo caso."</p>
 
-        <p>Antes de que Henry pudiera responder, ambos oyeron algo que los hizo girarse hacia el valle.</p>
+        <p class="dialogue dispatch-instructions">"Mantenga a la civil en el sitio para entrevista. Unidades en camino. ETA quince minutos."</p>
 
-        <p>Música.</p>
+        <p class="dialogue maya-concerned">"¿Es normal que respondan así a un reporte de persona desaparecida?"</p>
 
-        <p>Era tenue al principio, apenas audible por encima del silencio antinatural del área. Pero mientras escuchaban, se hacía más clara. Voces cantando en armonías imposiblemente complejas, en idiomas que no existían pero que ambos entendían perfectamente.</p>
+        <p class="dialogue henry-honest">"No. Definitivamente no es normal."</p>
 
-        <p>Era la misma música de sus sueños.</p>
+        <p>Antes de que Henry pudiera responder, ambos escucharon algo que los hizo detenerse completamente.</p>
 
-        <p class="hook">🔥 <strong>PRIMER TWIST (PÁGINA 20):</strong> Patrones de muerte forman secuencia de Fibonacci perfecta</p>
+        <p>Un sonido distante, apenas audible por encima del silencio antinatural que había notado desde que llegó al área. Al principio pensó que tal vez era el viento, pero mientras escuchaba más atentamente, se dio cuenta de que tenía un patrón, un ritmo.</p>
 
-        <p>Y entonces Henry se dio cuenta de algo que lo heló hasta el hueso. Mientras revisaba las fotografías que había tomado del mandala, notó que las ecuaciones no eran aleatorias. Cuando las organizó en orden, formaban una secuencia perfecta de Fibonacci—pero no cualquier secuencia de Fibonacci.</p>
+        <p>Casi como... música.</p>
 
-        <p>Era una secuencia que, cuando la analizó como un algoritmo predictivo, había calculado con precisión matemática exactamente cuándo y dónde había ocurrido cada desaparición reportada en el Valle Oscuro durante las últimas tres semanas—como un programa de computadora prediciendo eventos futuros.</p>
+        <p class="dialogue maya-whisper">"¿Escucha eso?"</p>
 
-        <p>Lo que significaba que quien había creado el mandala no solo sabía sobre las desapariciones—las había predicho.</p>
+        <p class="dialogue henry-listening">"Sí. ¿Qué es?"</p>
 
-        <p class="cliffhanger">🎯 <strong>CLIFFHANGER PÁGINA 20:</strong> Maya puede leer perfectamente inscripciones en idioma muerto</p>
+        <p>Era extrañamente familiar, como una melodía que había escuchado antes pero no podía ubicar exactamente dónde. Y mientras más la escuchaba, más intensamente sentía esa resonancia extraña en su pecho.</p>
 
-        <p class="dialogue">"Maya," dijo Henry, su voz apenas un susurro. "¿Puedes leer eso?"</p>
+        <p>Mientras esperaban a que llegaran las unidades adicionales, Henry continuó revisando las fotografías que había tomado. Algo sobre los patrones lo molestaba—no solo su complejidad, sino algo más específico que no podía identificar.</p>
 
-        <p>Señaló hacia una inscripción en latín que había notado grabada en uno de los huesos más grandes del mandala. Maya se acercó, entrecerró los ojos, y entonces su expresión cambió completamente.</p>
+        <p>Cuando organizó las fotos en orden cronológico según las había tomado, comenzó a notar algo perturbador. Los patrones no eran completamente aleatorios. Había una progresión, una secuencia que sugería algún tipo de lógica subyacente.</p>
 
-        <p class="dialogue important">"Viginta quattuor regna recordantur. Debitum solvetur. Regina Ossamentorum resurgit."</p>
+        <p class="dialogue henry-realization">"Maya, ¿cuándo exactamente comenzaron las desapariciones en esta área?"</p>
 
-        <p>Las palabras salieron de su boca con fluidez perfecta, pronunciando cada sílaba con la precisión de alguien que había estudiado latín clásico durante décadas—a pesar de que nunca había tomado una sola clase de latín.</p>
+        <p class="dialogue maya-checking-notes">"Según mis investigaciones, el primer reporte fue hace exactamente tres semanas. Luego cada caso adicional ha seguido un patrón específico..."</p>
 
-        <p class="dialogue">"¿Qué significa?" preguntó Henry.</p>
+        <p>Maya se detuvo, revisando sus notas con una expresión creciente de alarma.</p>
 
-        <p>Maya lo miró con ojos que ahora brillaban con un conocimiento que no debería haber tenido.</p>
+        <p class="dialogue maya-disturbed">"Henry, las fechas de las desapariciones forman una secuencia matemática específica. Como si alguien hubiera estado siguiendo un cronograma planificado."</p>
 
-        <p class="dialogue echo">"Los veinticuatro reinos recuerdan. La deuda será pagada. La Reina de los Huesos se levanta."</p>
+        <p>El sonido de vehículos acercándose por el camino de tierra interrumpió sus especulaciones. Henry pudo ver múltiples vehículos—más de los que esperaría para una simple investigación de persona desaparecida.</p>
 
-        <p>Y por primera vez en su vida, Henry Lee se dio cuenta de que había fuerzas en el universo que ningún entrenamiento policial podría haberlo preparado para enfrentar.</p>
+        <p class="dialogue henry-observing">"Esos no parecen vehículos policiales estándar."</p>
+
+        <p class="dialogue maya-nervous">"¿Qué cree que va a pasar ahora?"</p>
+
+        <p>Henry guardó su cámara y se aseguró de que su radio estuviera funcionando. Cinco días de experiencia policial definitivamente no lo habían preparado para explicar lo que habían encontrado a oficiales superiores.</p>
+
+        <p class="dialogue henry-uncertain">"Supongo que vamos a descubrir qué tan comprensivas pueden ser las autoridades cuando se trata de evidencia que no encaja en ninguna categoría estándar."</p>
+
+        <p>Mientras los vehículos se acercaban, tanto Henry como Maya sintieron que la extraña música distante se intensificaba, como si algo estuviera respondiendo a la llegada de más personas al área.</p>
+
+        <p>Y Henry se dio cuenta de que, independientemente de lo que pasara a continuación, su comprensión de lo que significaba ser policía—y de lo que era posible en el mundo—había cambiado permanentemente.</p>
     </div>
 
     <div class="chapter-navigation">
@@ -248,5 +310,22 @@
         <a href="index.html" class="nav-button">Índice</a>
         <a href="capitulo_03.html" class="nav-button">Capítulo 3 →</a>
     </div>
+
+    <script>
+        // Función para alternar entre modo día y noche
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Cargar tema guardado al iniciar
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        });
+    </script>
 </body>
 </html>
