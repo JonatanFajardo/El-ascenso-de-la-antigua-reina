@@ -543,50 +543,6 @@
 
         <p>Silencio.
 
-    <div class="intercapter-break">
-        <h2>INTERCAPÍTULO A: REPORTE FORENSE INICIAL</h2>
-        
-        <div class="document">
-            <div class="document-header">
-                <p><strong>DOCUMENTO CLASIFICADO</strong><br>
-                <strong>HOSPITAL NACIONAL UNIVERSITARIO DE SEÚL</strong><br>
-                <strong>DEPARTAMENTO DE MEDICINA FORENSE</strong></p>
-            </div>
-
-            <div class="document-details">
-                <p><strong>Para:</strong> Comisión de Investigación Valle Oscuro<br>
-                <strong>De:</strong> Dr. Jason Lee, Médico Forense Jefe<br>
-                <strong>Fecha:</strong> [REDACTADA]<br>
-                <strong>Asunto:</strong> Análisis Preliminar - Muestras de Hueso Valle Cheongmyeong</p>
-            </div>
-
-            <div class="document-content">
-                <p>Las muestras de tejido óseo recolectadas del sitio conocido como "Valle Oscuro" presentan características que desafían toda clasificación médica conocida. Los resultados iniciales son los siguientes:</p>
-
-                <p><strong>COMPOSICIÓN:</strong></p>
-                <ul>
-                    <li>Densidad ósea: 340% mayor que el promedio humano</li>
-                    <li>Contenido mineral: Incluye elementos que no aparecen en la tabla periódica estándar</li>
-                    <li>Estructura cristalina: Organizada en patrones fractales imposibles de replicar artificialmente</li>
-                </ul>
-
-                <p><strong>ANÁLISIS DE ADN:</strong></p>
-                <ul>
-                    <li>Secuencias que preceden la aparición de vida en la Tierra</li>
-                    <li>Código tricatenario en lugar del bicatenario estándar</li>
-                    <li>Contiene información genética de especies no identificadas</li>
-                </ul>
-
-                <p class="document-conclusion"><strong>RECOMENDACIÓN:</strong><br>
-                Se sugiere elevar este caso a nivel de seguridad nacional inmediatamente.</p>
-
-                <p class="document-warning">Este ADN no es terrestre.</p>
-
-                <p class="document-signature"><em>Dr. Jason Lee, M.D., Ph.D.</em><br>
-                <em>Medicina Forense - Universidad Nacional de Seúl</em></p>
-            </div>
-        </div>
-    </div>
 
     <div class="chapter-navigation">
         <a href="capitulo_00.html" class="nav-button">← Prólogo</a>
@@ -594,21 +550,6 @@
         <a href="capitulo_02.html" class="nav-button">Capítulo 2 →</a>
     </div>
 
-    <script>
-        // Función para alternar entre modo día y noche
-        function toggleTheme() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        }
-
-        // Cargar tema guardado al iniciar
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        });
-    </script>
+    <script src="theme-toggle.js"></script>
 </body>
 </html>
