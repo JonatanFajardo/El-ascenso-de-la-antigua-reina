@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcos Narrativos - El Reino de los Osamentales</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #0f0f1e);
+            color: #e0e0e0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #ff6b6b;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .filters {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .filter-btn {
+            background: #2a2a3e;
+            color: #fff;
+            border: 2px solid #ff6b6b;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover {
+            background: #ff6b6b;
+            transform: translateY(-2px);
+        }
+        
+        .filter-btn.active {
+            background: #ff6b6b;
+        }
+        
+        .character-arc {
+            background: rgba(42, 42, 62, 0.7);
+            border: 2px solid #333;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .character-arc:hover {
+            transform: translateX(10px);
+            border-color: #ff6b6b;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .character-name {
+            font-size: 1.4em;
+            color: #ffd93d;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .arc-summary {
+            color: #6bcf7f;
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+        
+        .timeline {
+            display: flex;
+            position: relative;
+            padding: 20px 0;
+            overflow-x: auto;
+            background: rgba(20, 20, 30, 0.5);
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #444;
+            z-index: 0;
+        }
+        
+        .chapter-point {
+            flex: 0 0 auto;
+            position: relative;
+            padding: 10px 15px;
+            margin: 0 10px;
+            background: #2a2a3e;
+            border: 2px solid #666;
+            border-radius: 10px;
+            z-index: 1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .chapter-point:hover {
+            background: #3a3a4e;
+            transform: scale(1.1);
+            border-color: #ffd93d;
+        }
+        
+        .chapter-num {
+            font-weight: bold;
+            color: #ff6b6b;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .chapter-event {
+            font-size: 0.85em;
+            color: #ddd;
+        }
+        
+        .death-point {
+            background: #8b0000;
+            border-color: #ff0000;
+        }
+        
+        .death-point:hover {
+            background: #a00000;
+        }
+        
+        .transformation-point {
+            background: #4a0080;
+            border-color: #9400d3;
+        }
+        
+        .transformation-point:hover {
+            background: #5a0090;
+        }
+        
+        .absent-point {
+            opacity: 0.5;
+            background: #1a1a1a;
+            border-style: dashed;
+        }
+        
+        .status-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        
+        .status-alive {
+            background: #2ecc71;
+            color: #000;
+        }
+        
+        .status-dead {
+            background: #e74c3c;
+            color: #fff;
+        }
+        
+        .status-transformed {
+            background: #9b59b6;
+            color: #fff;
+        }
+        
+        .status-unknown {
+            background: #f39c12;
+            color: #000;
+        }
+        
+        .problems-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(139, 0, 0, 0.2);
+            border: 2px solid #ff6b6b;
+            border-radius: 15px;
+        }
+        
+        .problems-title {
+            color: #ff6b6b;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .problem-item {
+            padding: 10px;
+            margin: 10px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 4px solid #ff0000;
+            border-radius: 5px;
+        }
+        
+        .problem-critical {
+            border-left-color: #ff0000;
+        }
+        
+        .problem-important {
+            border-left-color: #ffa500;
+        }
+        
+        .problem-minor {
+            border-left-color: #ffff00;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(42, 42, 62, 0.5);
+            border-radius: 10px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 15px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            margin-right: 8px;
+            border: 2px solid #666;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline {
+                padding: 10px 5px;
+            }
+            
+            .chapter-point {
+                min-width: 100px;
+                margin: 0 5px;
+                padding: 8px 10px;
+            }
+            
+            .status-badge {
+                position: static;
+                display: inline-block;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🦴 ARCOS NARRATIVOS - EL REINO DE LOS OSAMENTALES 🦴</h1>
+        
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterCharacters('all')">Todos</button>
+            <button class="filter-btn" onclick="filterCharacters('alive')">Vivos</button>
+            <button class="filter-btn" onclick="filterCharacters('dead')">Muertos</button>
+            <button class="filter-btn" onclick="filterCharacters('transformed')">Transformados</button>
+            <button class="filter-btn" onclick="filterCharacters('main')">Principales</button>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #2a2a3e;"></div>
+                <span>Evento Normal</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #8b0000;"></div>
+                <span>Muerte</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #4a0080;"></div>
+                <span>Transformación</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #1a1a1a; border-style: dashed;"></div>
+                <span>Ausente</span>
+            </div>
+        </div>
+
+        <!-- MAYA PARK -->
+        <div class="character-arc" data-status="dead" data-category="main">
+            <div class="character-name">MAYA PARK</div>
+            <div class="arc-summary">Investigadora Amateur → Testigo → Transformada → Mártir de la Verdad</div>
+            <span class="status-badge status-dead">MUERTA</span>
+            
+            <div class="timeline">
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 1</span>
+                    <span class="chapter-event">Busca respuestas sobre Jung-ho</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 2</span>
+                    <span class="chapter-event">Primera desaparición</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 3</span>
+                    <span class="chapter-event">Regresa transformada</span>
+                </div>
+                <div class="chapter-point absent-point">
+                    <span class="chapter-num">Cap 4-11</span>
+                    <span class="chapter-event">Ausente/Transformándose</span>
+                </div>
+                <div class="chapter-point death-point">
+                    <span class="chapter-num">Cap 12</span>
+                    <span class="chapter-event">MUERTE - Transmisión final</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- GENERAL THOMAS KIM -->
+        <div class="character-arc" data-status="alive" data-category="main">
+            <div class="character-name">GENERAL THOMAS KIM</div>
+            <div class="arc-summary">Militar Escéptico → Comandante Sobrepasado → Líder Adaptativo → Protector Pragmático</div>
+            <span class="status-badge status-alive">VIVO</span>
+            
+            <div class="timeline">
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 1</span>
+                    <span class="chapter-event">Control militar tradicional</span>
+                </div>
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 2-3</span>
+                    <span class="chapter-event">Pérdida de control</span>
+                </div>
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 4-7</span>
+                    <span class="chapter-event">Acepta lo imposible</span>
+                </div>
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 8</span>
+                    <span class="chapter-event">Decisión sobre Sarah Chen</span>
+                </div>
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 9-14</span>
+                    <span class="chapter-event">Gestiona coexistencia</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TREVOR WILLIAMS -->
+        <div class="character-arc" data-status="unknown" data-category="main">
+            <div class="character-name">TREVOR WILLIAMS ⚠️</div>
+            <div class="arc-summary">Investigador DEA → Detective de lo Imposible → ¿Muerto? → ¿Rey Consorte?</div>
+            <span class="status-badge status-unknown">INCONSISTENTE</span>
+            
+            <div class="timeline">
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 4</span>
+                    <span class="chapter-event">Rastrea polvo de hueso</span>
+                </div>
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 5-9</span>
+                    <span class="chapter-event">Investiga conexiones</span>
+                </div>
+                <div class="chapter-point death-point">
+                    <span class="chapter-num">Cap 10</span>
+                    <span class="chapter-event">MUERTE por Carlos</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 11.5</span>
+                    <span class="chapter-event">¿RESURRECCIÓN? Romance</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 14</span>
+                    <span class="chapter-event">Rey Consorte</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- JONATHAN MORALES -->
+        <div class="character-arc" data-status="transformed" data-category="main">
+            <div class="character-name">JONATHAN MORALES</div>
+            <div class="arc-summary">Soldado → Receptor de Memorias → Transformado → Compañero Eterno de Eloria</div>
+            <span class="status-badge status-transformed">TRANSFORMADO</span>
+            
+            <div class="timeline">
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 4</span>
+                    <span class="chapter-event">Primer contacto</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 5</span>
+                    <span class="chapter-event">Toca hueso, recuerda</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 6</span>
+                    <span class="chapter-event">Acepta transformación</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 11</span>
+                    <span class="chapter-event">Colabora con Cantantes</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 13</span>
+                    <span class="chapter-event">Fusión con Eloria</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MIGUEL SANTOS -->
+        <div class="character-arc" data-status="alive" data-category="main">
+            <div class="character-name">MIGUEL SANTOS</div>
+            <div class="arc-summary">Soldado → Resistente → Anclaje Humano → Puente Emocional</div>
+            <span class="status-badge status-alive">VIVO</span>
+            
+            <div class="timeline">
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 4</span>
+                    <span class="chapter-event">Primer contacto</span>
+                </div>
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 5-6</span>
+                    <span class="chapter-event">Resiste transformación</span>
+                </div>
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 11</span>
+                    <span class="chapter-event">Mantiene humanidad</span>
+                </div>
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 13</span>
+                    <span class="chapter-event">Vínculo con Jonathan transformado</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOPHIE YUN -->
+        <div class="character-arc" data-status="alive" data-category="main">
+            <div class="character-name">DRA. SOPHIE YUN</div>
+            <div class="arc-summary">Científica Embarazada → Madre de lo Imposible → Puente Genético → Embajadora Interestelar</div>
+            <span class="status-badge status-alive">VIVA</span>
+            
+            <div class="timeline">
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 5</span>
+                    <span class="chapter-event">Sangre brilla</span>
+                </div>
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 6</span>
+                    <span class="chapter-event">Comprende embarazo</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 8.5</span>
+                    <span class="chapter-event">PARTO híbrido</span>
+                </div>
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 9</span>
+                    <span class="chapter-event">Cría hijo multidimensional</span>
+                </div>
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 14</span>
+                    <span class="chapter-event">Lidera misión</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BEBÉ DE SOPHIE -->
+        <div class="character-arc" data-status="transformed" data-category="main">
+            <div class="character-name">BEBÉ DE SOPHIE</div>
+            <div class="arc-summary">Feto Consciente → Nacimiento Imposible → Niño Puente → Coordinador Temporal</div>
+            <span class="status-badge status-transformed">HÍBRIDO</span>
+            
+            <div class="timeline">
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 5-7</span>
+                    <span class="chapter-event">Comunicación prenatal</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 8.5</span>
+                    <span class="chapter-event">Nace hablando</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 9</span>
+                    <span class="chapter-event">Ancla santuarios</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 10-14</span>
+                    <span class="chapter-event">Consciencia expandida</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- HENRY LEE -->
+        <div class="character-arc" data-status="transformed" data-category="secondary">
+            <div class="character-name">HENRY LEE</div>
+            <div class="arc-summary">Policía Novato → Investigador Confundido → Susurrador Despierto → Explorador Dimensional</div>
+            <span class="status-badge status-transformed">TRANSFORMADO</span>
+            
+            <div class="timeline">
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 2</span>
+                    <span class="chapter-event">Primera escena</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 7</span>
+                    <span class="chapter-event">Transformación Susurrador</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 14</span>
+                    <span class="chapter-event">Explora realidades</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SARAH CHEN -->
+        <div class="character-arc" data-status="dead" data-category="secondary">
+            <div class="character-name">SARAH CHEN</div>
+            <div class="arc-summary">Mayor Competente → Militar Sobrepasada → Sacrificio Heroico</div>
+            <span class="status-badge status-dead">MUERTA</span>
+            
+            <div class="timeline">
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 1-7</span>
+                    <span class="chapter-event">Apoyo al General</span>
+                </div>
+                <div class="chapter-point death-point">
+                    <span class="chapter-num">Cap 8</span>
+                    <span class="chapter-event">MUERTE - Elige morir humana</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ELORIA -->
+        <div class="character-arc" data-status="unknown" data-category="main">
+            <div class="character-name">ELORIA ⚠️</div>
+            <div class="arc-summary">Voz Misteriosa → Presencia Creciente → Manifestación → ¿Salvadora o Conquistadora?</div>
+            <span class="status-badge status-unknown">AMBIGUA</span>
+            
+            <div class="timeline">
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 3-7</span>
+                    <span class="chapter-event">Voces y susurros</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 8-11</span>
+                    <span class="chapter-event">Manifestación gradual</span>
+                </div>
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 11.5</span>
+                    <span class="chapter-event">Romance con Trevor</span>
+                </div>
+                <div class="chapter-point transformation-point">
+                    <span class="chapter-num">Cap 13</span>
+                    <span class="chapter-event">Fusión con Jonathan</span>
+                </div>
+                <div class="chapter-point">
+                    <span class="chapter-num">Cap 14</span>
+                    <span class="chapter-event">¿Victoria final?</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROBLEMAS IDENTIFICADOS -->
+        <div class="problems-section">
+            <h2 class="problems-title">⚠️ PROBLEMAS IDENTIFICADOS EN ARCOS</h2>
+            
+            <div class="problem-item problem-critical">
+                <strong>🔴 CRÍTICO:</strong> Trevor Williams muere en Cap 10 pero "revive" en Cap 11.5 sin explicación clara
+            </div>
+            
+            <div class="problem-item problem-critical">
+                <strong>🔴 CRÍTICO:</strong> Eloria - Ambigüedad no resuelta: ¿Es heroína o villana? Cap 14 sugiere conquista
+            </div>
+            
+            <div class="problem-item problem-critical">
+                <strong>🔴 CRÍTICO:</strong> Maya desaparece entre Cap 3-11, creando un vacío narrativo muy largo
+            </div>
+            
+            <div class="problem-item problem-important">
+                <strong>🟡 IMPORTANTE:</strong> Carlos Mendoza aparece tarde, mata a Trevor y desaparece sin desarrollo
+            </div>
+            
+            <div class="problem-item problem-important">
+                <strong>🟡 IMPORTANTE:</strong> Los Devoradores como amenaza principal están subdesarrollados
+            </div>
+            
+            <div class="problem-item problem-important">
+                <strong>🟡 IMPORTANTE:</strong> 2,847 descendientes - número específico sin justificación clara
+            </div>
+            
+            <div class="problem-item problem-minor">
+                <strong>🟢 MENOR:</strong> Tipos de esqueletos 8-10 sin definir claramente
+            </div>
+            
+            <div class="problem-item problem-minor">
+                <strong>🟢 MENOR:</strong> Subtramas románticas poco desarrolladas
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterCharacters(category) {
+            const arcs = document.querySelectorAll('.character-arc');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update active button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            arcs.forEach(arc => {
+                if (category === 'all') {
+                    arc.style.display = 'block';
+                } else if (category === 'main') {
+                    arc.style.display = arc.dataset.category === 'main' ? 'block' : 'none';
+                } else {
+                    arc.style.display = arc.dataset.status === category ? 'block' : 'none';
+                }
+            });
+        }
+        
+        // Add hover effects to timeline points
+        document.querySelectorAll('.chapter-point').forEach(point => {
+            point.addEventListener('click', function() {
+                const event = this.querySelector('.chapter-event').textContent;
+                const chapter = this.querySelector('.chapter-num').textContent;
+                alert(`${chapter}: ${event}`);
+            });
+        });
+    </script>
+</body>
+</html>

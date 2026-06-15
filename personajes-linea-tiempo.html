@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea de Tiempo de Personajes - El Reino de los Osamentales</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .timeline-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .timeline-section {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .timeline-header {
+            background-color: #8b0000;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .character-timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .character-timeline-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .character-timeline-card:hover {
+            border-color: #cd853f;
+            transform: translateY(-2px);
+        }
+        
+        .character-name {
+            color: #cd853f;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .character-info {
+            color: #a0a0a0;
+            font-size: 0.9em;
+            margin-bottom: 12px;
+        }
+        
+        .character-fate {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        
+        .fate-disappears {
+            background-color: #4a3a1a;
+            color: #ffa500;
+        }
+        
+        .fate-transforms {
+            background-color: #3a1a4a;
+            color: #da70d6;
+        }
+        
+        .fate-dies {
+            background-color: #4a1a1a;
+            color: #ff6b6b;
+        }
+        
+        .fate-survives {
+            background-color: #1a4a1a;
+            color: #90ee90;
+        }
+        
+        .fate-event {
+            color: #d0d0d0;
+            font-size: 0.85em;
+            line-height: 1.4;
+        }
+        
+        .chapter-reference {
+            color: #888;
+            font-style: italic;
+            font-size: 0.8em;
+            margin-top: 8px;
+        }
+        
+        .role-tag {
+            background-color: #2a2a2a;
+            color: #cd853f;
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-size: 0.75em;
+            margin-top: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="index.html">← Índice Principal</a>
+        <a href="personajes.html">Ver Análisis de Personajes</a>
+    </div>
+
+    <div class="timeline-container">
+        <h1>Línea de Tiempo de Personajes</h1>
+        
+        <div class="index-description">
+            <h3>Destinos de los Personajes por Sección</h3>
+            <p>Esta página muestra el arco completo y el destino final de cada personaje a través de los diferentes capítulos de la novela. Los eventos están organizados por secciones temáticas y incluyen referencias a capítulos específicos.</p>
+            <p><strong>Advertencia:</strong> Esta página contiene spoilers importantes sobre el desarrollo y destino de todos los personajes principales.</p>
+        </div>
+
+        <!-- SECCIÓN 1: LOS PRIMEROS SUSURROS -->
+        <div class="timeline-section">
+            <div class="timeline-header">
+                Sección 1: Los Primeros Susurros (Capítulos 1-2)
+            </div>
+            <div class="character-timeline-grid">
+                <div class="character-timeline-card">
+                    <div class="character-name">Maya Park</div>
+                    <div class="character-info">22 años • Youtuber (Canal: MinJung Oscura, 850K suscriptores)</div>
+                    <div class="character-fate fate-disappears">DESAPARECE</div>
+                    <div class="role-tag">Catalizador</div>
+                    <div class="character-fate">
+                        Su transmisión en vivo del Valle Oscuro se vuelve viral mundialmente. Desaparece durante la transmisión tras encontrar las primeras criaturas, iniciando el pánico global.
+                    </div>
+                    <div class="chapter-reference">Aparece: Cap. 1 • Desaparece: Cap. 2</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Daniel Kim</div>
+                    <div class="character-info">67 años • Agricultor del Valle Oscuro</div>
+                    <div class="character-fate fate-transforms">SE TRANSFORMA</div>
+                    <div class="role-tag">Primera Víctima</div>
+                    <div class="character-fate">
+                        Agricultor de tercera generación encontrado drenado con agujeros circulares. Se transforma en una de las primeras entidades, marcando el inicio de los eventos sobrenaturales.
+                    </div>
+                    <div class="chapter-reference">Muerte: Cap. 1 • Transformación: Cap. 1</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Dr. Jason Lee</div>
+                    <div class="character-info">45 años • Médico forense</div>
+                    <div class="character-fate fate-survives">SOBREVIVE</div>
+                    <div class="role-tag">Investigador</div>
+                    <div class="character-fate">
+                        Realiza las primeras autopsias de las víctimas del Valle Oscuro. Sus descubrimientos forenses sobre ADN imposible son cruciales para entender la amenaza. Sobrevive hasta el final.
+                    </div>
+                    <div class="chapter-reference">Activo: Cap. 1-14</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Henry Lee</div>
+                    <div class="character-info">28 años • Oficial de policía novato de Seúl</div>
+                    <div class="character-fate fate-survives">SOBREVIVE</div>
+                    <div class="role-tag">Testigo</div>
+                    <div class="character-fate">
+                        Oficial que responde a los primeros reportes de desapariciones. Testifica sobre anomalías en el Valle Oscuro. Sobrevive para contar la historia oficial.
+                    </div>
+                    <div class="chapter-reference">Aparece: Cap. 1 • Sobrevive hasta: Cap. 14</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 2: EL OJO QUE TODO LO VE -->
+        <div class="timeline-section">
+            <div class="timeline-header">
+                Sección 2: El Ojo que Todo lo Ve (Capítulo 3)
+            </div>
+            <div class="character-timeline-grid">
+                <div class="character-timeline-card">
+                    <div class="character-name">General Thomas Kim</div>
+                    <div class="character-info">58 años • Centro de Comando, Seúl</div>
+                    <div class="character-fate fate-survives">SOBREVIVE</div>
+                    <div class="role-tag">Comandante Supremo</div>
+                    <div class="character-fate">
+                        Veterano que lidera la respuesta militar. Testigo del primer contacto directo con la Reina a través de los sistemas de drones. Su decisión de cooperar es crucial para el desenlace pacífico.
+                    </div>
+                    <div class="chapter-reference">Líder activo: Cap. 3-14</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Comandante Paul Park</div>
+                    <div class="character-info">40 años • Oficial de drones y comunicaciones</div>
+                    <div class="character-fate fate-survives">SOBREVIVE</div>
+                    <div class="role-tag">Operador Técnico</div>
+                    <div class="character-fate">
+                        Operador principal de sistemas de drones que documenta las primeras apariciones de la Reina. Sus grabaciones se vuelven evidencia crucial para las fuerzas internacionales.
+                    </div>
+                    <div class="chapter-reference">Activo: Cap. 3-8</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Teniente John Song</div>
+                    <div class="character-info">26 años • Prodigio de KAIST, operador de sistemas</div>
+                    <div class="character-fate fate-survives">SOBREVIVE</div>
+                    <div class="role-tag">Genio Técnico</div>
+                    <div class="character-fate">
+                        Joven genio que analiza los patrones matemáticos en los sistemas comprometidos. Su trabajo revela la selectividad de la interferencia alienígena con la tecnología.
+                    </div>
+                    <div class="chapter-reference">Aparece: Cap. 3 • Contribuye hasta: Cap. 10</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Dr. Matthew Choi</div>
+                    <div class="character-info">32 años • Asistente de la Dra. Sophie Yun</div>
+                    <div class="character-fate fate-transforms">AFECTADO/INCIERTO</div>
+                    <div class="role-tag">Científico Auxiliar</div>
+                    <div class="character-fate">
+                        Asistente que reporta transformaciones masivas en el ala de cuarentena. Comienza a escuchar voces en idiomas inexistentes al tocar pacientes. Su destino final es incierto.
+                    </div>
+                    <div class="chapter-reference">Afectado: Cap. 3 • Destino incierto: Cap. 6+</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 3: SECRETOS ENTERRADOS -->
+        <div class="timeline-section">
+            <div class="timeline-header">
+                Sección 3: Secretos Enterrados (Capítulos 4-5)
+            </div>
+            <div class="character-timeline-grid">
+                <div class="character-timeline-card">
+                    <div class="character-name">Coronel Dmitri Volkov</div>
+                    <div class="character-info">42 años • Spetsnaz, Moscú, Rusia</div>
+                    <div class="character-fate fate-transforms">SE TRANSFORMA</div>
+                    <div class="role-tag">Reino del Hierro Helado</div>
+                    <div class="character-fate">
+                        Oficial ruso que revela la verdadera historia de los veinticuatro reinos. Su transformación le permite acceder a memorias ancestrales y exponer que la fragmentación fue un acto de amor.
+                    </div>
+                    <div class="chapter-reference">Revela secretos: Cap. 4 • Se transforma: Cap. 8-9</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Profesor Simon Park</div>
+                    <div class="character-info">55 años • Académico con conocimiento de archivos</div>
+                    <div class="character-fate fate-survives">SOBREVIVE</div>
+                    <div class="role-tag">Guardián del Conocimiento</div>
+                    <div class="character-fate">
+                        Académico que posee conocimientos sobre los archivos clasificados de los "veinticuatro reinos". Su información es crucial para entender la historia ancestral. Sobrevive para documentar los eventos.
+                    </div>
+                    <div class="chapter-reference">Revela información: Cap. 4-5 • Documenta hasta: Cap. 14</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Julie Lee</div>
+                    <div class="character-info">29 años • Analista de archivos clasificados</div>
+                    <div class="character-fate fate-survives">SOBREVIVE</div>
+                    <div class="role-tag">Investigadora</div>
+                    <div class="character-fate">
+                        Analista que descubre los archivos sobre los 2,847 descendientes. Su trabajo de investigación revela la red global de linajes ancestrales que han permanecido ocultos durante generaciones.
+                    </div>
+                    <div class="chapter-reference">Descubrimientos: Cap. 4-5 • Activa hasta: Cap. 12</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Miguel Santos</div>
+                    <div class="character-info">26 años • Soldado mexicano de Tepito</div>
+                    <div class="character-fate fate-transforms">INICIA TRANSFORMACIÓN</div>
+                    <div class="role-tag">Hermano de Armas</div>
+                    <div class="character-fate">
+                        Hermano de armas inseparable de Jonathan. Su transformación física comienza con huesos cristalizados y ojos prismáticos, pero su lazo emocional con Jonathan retrasa el proceso.
+                    </div>
+                    <div class="chapter-reference">Síntomas iniciales: Cap. 4 • Transformación completa: Cap. 10</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 4: EL SILENCIO DE LAS MÁQUINAS -->
+        <div class="timeline-section">
+            <div class="timeline-header">
+                Sección 4: El Silencio de las Máquinas (Capítulos 6-7)
+            </div>
+            <div class="character-timeline-grid">
+                <div class="character-timeline-card">
+                    <div class="character-name">Soldado Park</div>
+                    <div class="character-info">19 años • El más joven del equipo militar</div>
+                    <div class="character-fate fate-transforms">SE TRANSFORMA COMPLETAMENTE</div>
+                    <div class="role-tag">Voz de la Reina</div>
+                    <div class="character-fate">
+                        El soldado más joven se transforma completamente en el búnker. Experimenta envejecimiento acelerado y símbolos pulsantes en la piel. Se convierte en portavoz directo de la Reina.
+                    </div>
+                    <div class="chapter-reference">Transformado: Cap. 6 • Activo como heraldo: Cap. 6-11</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Trevor Williams</div>
+                    <div class="character-info">35 años • Agente de la DEA, Chicago</div>
+                    <div class="character-fate fate-transforms">SE INFECTA VOLUNTARIAMENTE</div>
+                    <div class="role-tag">Reino de los Susurros Pétreos</div>
+                    <div class="character-fate">
+                        Agente que investigaba el "polvo de hueso" durante 6 meses. Se infecta voluntariamente para entender la amenaza. Desarrolla símbolos brillantes en el antebrazo y visiones del fin del mundo.
+                    </div>
+                    <div class="chapter-reference">Se infecta: Cap. 6 • Activo hasta: Cap. 14</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Sargento Martinez</div>
+                    <div class="character-info">40 años • Veterano de sistemas de comunicación</div>
+                    <div class="character-fate fate-transforms">POSIBLEMENTE INFECTADO</div>
+                    <div class="role-tag">Personal del Búnker</div>
+                    <div class="character-fate">
+                        Veterano que se persigna ante lo inexplicable. Desarrolla símbolos tras contacto con Park transformado. Su destino final es incierto, posiblemente infectado.
+                    </div>
+                    <div class="chapter-reference">Síntomas: Cap. 6 • Destino incierto: Cap. 7+</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Técnico Williams</div>
+                    <div class="character-info">25 años • Personal técnico del centro de comando</div>
+                    <div class="character-fate fate-dies">PRIMERA VÍCTIMA DEL PÁNICO</div>
+                    <div class="role-tag">Personal Técnico</div>
+                    <div class="character-fate">
+                        Personal técnico que se convierte en la primera víctima del pánico masivo en el centro de comando cuando los sistemas son comprometidos por la entidad alienígena.
+                    </div>
+                    <div class="chapter-reference">Muere: Cap. 6</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 5: LOS FRAGMENTOS PERDIDOS -->
+        <div class="timeline-section">
+            <div class="timeline-header">
+                Sección 5: Los Fragmentos Perdidos (Capítulos 8-10)
+            </div>
+            <div class="character-timeline-grid">
+                <div class="character-timeline-card">
+                    <div class="character-name">Sargento Michael Torres</div>
+                    <div class="character-info">32 años • Veterano, Reino de las Lanzas Ardientes</div>
+                    <div class="character-fate fate-transforms">HERALDO DE LA REINA</div>
+                    <div class="role-tag">Transformado Consciente</div>
+                    <div class="character-fate">
+                        Líder del equipo Alpha que se transforma completamente tras contacto con altar orgánico. Se vuelve parcialmente intangible con estructuras cristalinas. Sirve como heraldo y emisario de Eloria.
+                    </div>
+                    <div class="chapter-reference">Transformado: Cap. 8-9 • Heraldo activo: Cap. 9-13</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Cabo Davis</div>
+                    <div class="character-info">29 años • Navy SEAL, segundo al mando</div>
+                    <div class="character-fate fate-transforms">INFECTADO, RESISTIENDO</div>
+                    <div class="role-tag">Equipo Alpha</div>
+                    <div class="character-fate">
+                        Segundo al mando del equipo Alpha infectado por contacto físico con Torres. Desarrolla símbolos en la piel pero resiste activamente la transformación completa.
+                    </div>
+                    <div class="chapter-reference">Infectado: Cap. 8 • Resistiendo: Cap. 8-12</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Grace Na (Moon-hee)</div>
+                    <div class="character-info">70 años • Guardiana ancestral, Seúl</div>
+                    <div class="character-fate fate-transforms">ENVEJECE DURANTE CONVERGENCIA</div>
+                    <div class="role-tag">Reino de las Estrellas Muertas</div>
+                    <div class="character-fate">
+                        Anciana guardiana que posee una vértebra original de los veinticuatro reyes. Envejece rápidamente durante la convergencia mientras transfiere su sabiduría ancestral a los descendientes.
+                    </div>
+                    <div class="chapter-reference">Sabiduría activa: Cap. 8-10 • Envejece: Cap. 10</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Sarah Mitchell</div>
+                    <div class="character-info">35 años • Reportera de CNN Internacional</div>
+                    <div class="character-fate fate-transforms">FRAGMENTADA TEMPORALMENTE</div>
+                    <div class="role-tag">Víctima del Tiempo</div>
+                    <div class="character-fate">
+                        Reportera que documenta la transformación de Busan. Su transmisión final muestra fragmentación temporal que la hace existir en todas sus edades simultáneamente.
+                    </div>
+                    <div class="chapter-reference">Reporta: Cap. 8-9 • Fragmentada: Cap. 9</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 6: LA CONVERGENCIA FINAL -->
+        <div class="timeline-section">
+            <div class="timeline-header">
+                Sección 6: La Convergencia Final (Capítulos 11-14)
+            </div>
+            <div class="character-timeline-grid">
+                <div class="character-timeline-card">
+                    <div class="character-name">Dra. Sophie Yun</div>
+                    <div class="character-info">34 años • Genetista embarazada</div>
+                    <div class="character-fate fate-survives">MADRE DEL FUTURO HÍBRIDO</div>
+                    <div class="role-tag">Reino de las Estrellas Muertas</div>
+                    <div class="character-fate">
+                        Científica brillante que resiste hasta el final. Su hija no nacida está destinada a ser el puente entre el mundo viejo y el nuevo. Representa la esperanza del futuro híbrido humano-alienígena.
+                    </div>
+                    <div class="chapter-reference">Resiste hasta: Cap. 14 • Futuro: Próxima generación</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Cabo Jonathan Morales</div>
+                    <div class="character-info">28 años • Soldado mexicano, Tepito</div>
+                    <div class="character-fate fate-survives">FUSIÓN VOLUNTARIA</div>
+                    <div class="role-tag">Hermano de Armas</div>
+                    <div class="character-fate">
+                        Su hermandad con Miguel le permite resistir más tiempo. Finalmente acepta la fusión voluntaria como acto de amor fraternal, representando la elección consciente de la humanidad.
+                    </div>
+                    <div class="chapter-reference">Resiste: Cap. 1-13 • Fusión voluntaria: Cap. 13-14</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Carlos Mendoza "El Genealogista"</div>
+                    <div class="character-info">45 años • Distribuidor del polvo, Reino de los Ecos Perpetuos</div>
+                    <div class="character-fate fate-transforms">CONSUMIDO POR FRAGMENTOS</div>
+                    <div class="role-tag">Antagonista Trágico</div>
+                    <div class="character-fate">
+                        Descendiente consumido por su misión. Sacrificó a su hijo David para la causa. Facilitador clave en la reunión de descendientes, pero su método representa la versión distorsionada del sacrificio.
+                    </div>
+                    <div class="chapter-reference">Activo hasta: Desenlace final • Consumido por fragmentos</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">María Carmen Vásquez</div>
+                    <div class="character-info">23 años • Estudiante de veterinaria mexicana</div>
+                    <div class="character-fate fate-transforms">RECLAMADA</div>
+                    <div class="role-tag">Descendiente</div>
+                    <div class="character-fate">
+                        Estudiante de veterinaria que es identificada y reclamada como descendiente durante la convergencia final. Su transformación representa la nueva generación de híbridos.
+                    </div>
+                    <div class="chapter-reference">Reclamada: Cap. 12</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Mayor Sarah Chen</div>
+                    <div class="character-info">38 años • Analista de inteligencia, California</div>
+                    <div class="character-fate fate-survives">SOBREVIVE COMO TESTIGO</div>
+                    <div class="role-tag">Traductora/Analista</div>
+                    <div class="character-fate">
+                        Analista de inteligencia que traduce los mensajes en latín de las entidades. Primera en reconocer los patrones de danza. Sobrevive para documentar y explicar los eventos a la humanidad.
+                    </div>
+                    <div class="chapter-reference">Activa: Cap. 3-14 • Testigo superviviente</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Coronel Marcus Thompson</div>
+                    <div class="character-info">45 años • Navy SEALs, comandante de fuerzas especiales</div>
+                    <div class="character-fate fate-survives">LÍDER DE LA NUEVA ERA</div>
+                    <div class="role-tag">Comandante</div>
+                    <div class="character-fate">
+                        Líder de las fuerzas especiales internacionales que comprende que no es una guerra convencional. Su liderazgo en el aprendizaje sobre coexistencia es vital para el futuro híbrido.
+                    </div>
+                    <div class="chapter-reference">Lidera: Cap. 3-14 • Arquitecto del futuro</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">Eloria - La Reina de los Osamentales</div>
+                    <div class="character-info">230 millones de años • Valle Oscuro</div>
+                    <div class="character-fate fate-transforms">SÍNTESIS COOPERATIVA</div>
+                    <div class="role-tag">Entidad Cósmica</div>
+                    <div class="character-fate">
+                        Entidad fragmentada que recupera sus memorias perdidas. Se revela como refugiada que sacrificó su integridad para proteger la Tierra. Logra síntesis cooperativa con los descendientes conscientes.
+                    </div>
+                    <div class="chapter-reference">Despertar: Cap. 1-8 • Recuperación: Cap. 9-12 • Síntesis: Cap. 13-14</div>
+                </div>
+
+                <div class="character-timeline-card">
+                    <div class="character-name">James Kim</div>
+                    <div class="character-info">25 años • Descendiente consciente</div>
+                    <div class="character-fate fate-transforms">PUENTE NEGOCIADOR</div>
+                    <div class="role-tag">Reino del Hierro Helado</div>
+                    <div class="character-fate">
+                        Joven descendiente que mantiene consciencia durante transformaciones parciales. Propone fusión voluntaria en lugar de consumo forzado. Clave en las negociaciones finales entre especies.
+                    </div>
+                    <div class="chapter-reference">Negocia: Cap. 11-13 • Puente permanente: Cap. 14+</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESUMEN DE LOS 2,847 DESCENDIENTES -->
+        <div class="timeline-section">
+            <div class="timeline-header">
+                Destino Final: Los 2,847 Descendientes
+            </div>
+            <div class="character-timeline-grid">
+                <div class="character-timeline-card" style="grid-column: 1 / -1;">
+                    <div class="character-name">La Decisión Final Colectiva</div>
+                    <div class="character-info">Capítulos 13-14 • La Convergencia Global</div>
+                    <div class="character-fate fate-transforms">FUSIÓN VOLUNTARIA CONSCIENTE</div>
+                    <div class="role-tag">Nueva Humanidad</div>
+                    <div class="character-fate">
+                        Los 2,847 descendientes dispersos globalmente toman la decisión final de fusionarse voluntariamente con Eloria. Esta elección consciente, motivada por amor en lugar de miedo, transforma fundamentalmente tanto a la humanidad como a la entidad cósmica. El resultado no es extinción sino evolución: una nueva forma de existencia que preserva lo mejor de ambas especies mientras trasciende las limitaciones de cada una.
+                        <br><br>
+                        <strong>Resultado:</strong> Ni victoria ni derrota, sino transformación mutua que abre un nuevo capítulo en la historia tanto terrestre como cósmica.
+                    </div>
+                    <div class="chapter-reference">Decisión colectiva: Cap. 13-14 • Nueva era: Futuro indeterminado</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <a href="index.html">← Índice Principal</a>
+        <a href="personajes.html">Ver Análisis de Personajes</a>
+    </div>
+</body>
+</html>

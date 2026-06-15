@@ -1,0 +1,259 @@
+/* Estilos Generales para Líneas de Tiempo - El Reino de los Osamentales */
+
+.timeline-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.timeline-section {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.timeline-header {
+    background-color: #8b0000;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.event-timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.event-card {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.event-card:hover {
+    border-color: #cd853f;
+    transform: translateY(-2px);
+}
+
+.event-time {
+    color: #cd853f;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.event-location {
+    color: #a0a0a0;
+    font-size: 0.9em;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.event-type {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Tipos de Eventos */
+.type-military {
+    background-color: #4a1a1a;
+    color: #ff6b6b;
+}
+
+.type-personal {
+    background-color: #1a4a4a;
+    color: #6bb6ff;
+}
+
+.type-supernatural {
+    background-color: #4a1a4a;
+    color: #da70d6;
+}
+
+.type-investigation {
+    background-color: #4a4a1a;
+    color: #ffd700;
+}
+
+.type-scientific {
+    background-color: #1a4a1a;
+    color: #90ee90;
+}
+
+.type-discovery {
+    background-color: #1a3a4a;
+    color: #6bb6ff;
+}
+
+.type-convergence {
+    background-color: #4a3a1a;
+    color: #ffa500;
+}
+
+.type-transformation {
+    background-color: #3a1a4a;
+    color: #ff69b4;
+}
+
+.type-resistance {
+    background-color: #1a3a2a;
+    color: #32cd32;
+}
+
+.type-surrender {
+    background-color: #3a2a1a;
+    color: #daa520;
+}
+
+.type-revelation {
+    background-color: #2a1a3a;
+    color: #9370db;
+}
+
+.type-decision {
+    background-color: #3a3a1a;
+    color: #ffd700;
+}
+
+.event-description {
+    color: #d0d0d0;
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.event-participants {
+    color: #cd853f;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.event-significance {
+    background-color: #1a1a2e;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #b0b0b0;
+    border-left: 3px solid #cd853f;
+}
+
+.page-reference {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #cd853f;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7em;
+}
+
+.timeline-summary {
+    background-color: #2a2a2a;
+    border: 2px solid #cd853f;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.summary-title {
+    color: #cd853f;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.summary-text {
+    color: #d0d0d0;
+    line-height: 1.6;
+}
+
+/* Conexiones entre capítulos */
+.connection-cap1, .connection-prev {
+    background-color: #2a1a1a;
+    border: 1px solid #8b0000;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: #ff9999;
+}
+
+.pattern-alert {
+    background-color: #4a1a4a;
+    color: #da70d6;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 8px;
+    font-size: 0.8em;
+    border-left: 3px solid #da70d6;
+}
+
+.osamental-type {
+    background-color: #3a1a1a;
+    color: #ff4444;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 8px;
+    font-size: 0.8em;
+    border-left: 3px solid #ff4444;
+}
+
+.transformation-stage {
+    background-color: #1a3a1a;
+    color: #44ff44;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 8px;
+    font-size: 0.8em;
+    border-left: 3px solid #44ff44;
+}
+
+.guardian-awakening {
+    background-color: #1a1a3a;
+    color: #4444ff;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 8px;
+    font-size: 0.8em;
+    border-left: 3px solid #4444ff;
+}
+
+/* Específicos para momentos críticos */
+.critical-moment {
+    border: 2px solid #ff6b6b !important;
+    background-color: #2a1a1a !important;
+}
+
+.world-changing {
+    border: 2px solid #da70d6 !important;
+    background-color: #2a1a2a !important;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .event-timeline-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-container {
+        padding: 10px;
+    }
+}

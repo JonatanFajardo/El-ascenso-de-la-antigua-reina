@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout:*)",
+      "Bash(start historia_v2capitulo_01_nuevo.html)",
+      "Bash(mkdir:*)"
+    ],
+    "deny": []
+  }
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice de Líneas de Tiempo - El Reino de los Osamentales</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="timeline-styles.css">
+    <style>
+        .timeline-index {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .chapter-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .chapter-card:hover {
+            border-color: #cd853f;
+            transform: translateY(-5px);
+            background-color: #333;
+        }
+
+        .chapter-number {
+            color: #cd853f;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .chapter-title {
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .chapter-description {
+            color: #d0d0d0;
+            font-size: 0.9em;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .key-events {
+            color: #a0a0a0;
+            font-size: 0.8em;
+            font-style: italic;
+        }
+
+        .special-chapter {
+            border: 2px solid #8b0000;
+        }
+
+        .prologue-chapter {
+            border: 2px solid #da70d6;
+        }
+
+        .finale-chapter {
+            border: 2px solid #ffd700;
+        }
+
+        .intro-section {
+            background-color: #1a1a1a;
+            border: 2px solid #cd853f;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .intro-title {
+            color: #cd853f;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .intro-subtitle {
+            color: #fff;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .intro-description {
+            color: #d0d0d0;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Los botones de desarrollo se agregan automáticamente via theme-toggle.js -->
+    <div class="navigation">
+        <a href="../index.html">← Índice Principal</a>
+        <a href="../personajes-linea-tiempo.html">Ver Línea Completa</a>
+    </div>
+
+    <div class="timeline-index">
+        <div class="intro-section">
+            <div class="intro-title">LÍNEAS DE TIEMPO</div>
+            <div class="intro-subtitle">El Reino de los Osamentales</div>
+            <div class="intro-description">
+                Navegación completa por las líneas de tiempo de cada capítulo. Cada timeline documenta los eventos críticos,
+                transformaciones de personajes, apariciones de diferentes tipos de Osamentales, y la evolución del conflicto
+                desde el primer contacto hasta la resolución final en amor cósmico.
+            </div>
+        </div>
+
+        <div class="chapter-grid">
+            <a href="linea-tiempo-capitulo-00.html" class="chapter-card prologue-chapter">
+                <div class="chapter-number">PRÓLOGO</div>
+                <div class="chapter-title">"ECOS ANCESTRALES"</div>
+                <div class="chapter-description">
+                    Contexto histórico ancestral: la fragmentación de la Reina hace 230 millones de años y el establecimiento
+                    del plan evolutivo de los Veinticuatro Reinos.
+                </div>
+                <div class="key-events">
+                    • Fragmentación primordial • Distribución de esencia • Guardianes ancestrales
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-01.html" class="chapter-card">
+                <div class="chapter-number">CAPÍTULO 1</div>
+                <div class="chapter-title">"PRIMERA SANGRE"</div>
+                <div class="chapter-description">
+                    Primer contacto documentado: Maya Park transmite encuentro sobrenatural mientras sistemas militares fallan sistemáticamente.
+                </div>
+                <div class="key-events">
+                    • Transmisión viral de Maya • Fallas tecnológicas • Primera criatura documentada
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-02.html" class="chapter-card">
+                <div class="chapter-number">CAPÍTULO 2</div>
+                <div class="chapter-title">"EL NOVATO Y LA INVESTIGADORA"</div>
+                <div class="chapter-description">
+                    Convergencia entre investigación oficial y civil: Henry Lee descubre patrones imposibles mientras Maya expande su documentación.
+                </div>
+                <div class="key-events">
+                    • Mandalas de huesos • Convergencia Henry-Maya • Polvo de hueso global
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-03.html" class="chapter-card">
+                <div class="chapter-number">CAPÍTULO 3</div>
+                <div class="chapter-title">"EL OJO QUE TODO LO VE"</div>
+                <div class="chapter-description">
+                    Primera aparición confirmada de la Reina y escalada hacia crisis global con compromiso masivo de sistemas militares.
+                </div>
+                <div class="key-events">
+                    • Manifestación de la Reina • Osamentales Huecos • Resonancia global
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-04.html" class="chapter-card">
+                <div class="chapter-number">CAPÍTULO 4</div>
+                <div class="chapter-title">"SECRETOS ENTERRADOS"</div>
+                <div class="chapter-description">
+                    Revelación de archivos clasificados sobre los Veinticuatro Reinos y descubrimiento de los 2,847 descendientes predestinados.
+                </div>
+                <div class="key-events">
+                    • Archivos ancestrales • Linajes guardianes • Osamentales Fragmentados
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-05.html" class="chapter-card">
+                <div class="chapter-number">CAPÍTULO 5</div>
+                <div class="chapter-title">"TRANSFORMACIONES ACELERADAS"</div>
+                <div class="chapter-description">
+                    Transformación de Jonathan tras contacto directo y revelación del embarazo especial de Sophie con características híbridas.
+                </div>
+                <div class="key-events">
+                    • Transformación de Jonathan • Embarazo híbrido • Osamentales Articulados
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-06.html" class="chapter-card">
+                <div class="chapter-number">CAPÍTULO 6</div>
+                <div class="chapter-title">"EL SILENCIO DE LAS MÁQUINAS"</div>
+                <div class="chapter-description">
+                    Colapso sistemático de tecnología avanzada y aparición de Osamentales Perforadores como amenaza letal directa.
+                </div>
+                <div class="key-events">
+                    • Falla tecnológica selectiva • Osamentales Perforadores • Comprensión maternal
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-07.html" class="chapter-card">
+                <div class="chapter-number">CAPÍTULO 7</div>
+                <div class="chapter-title">"LOS SUSURRADORES"</div>
+                <div class="chapter-description">
+                    Henry se transforma en Susurrador, estableciendo comunicación entre especies, mientras se revelan las comunicaciones ancestrales en latín.
+                </div>
+                <div class="key-events">
+                    • Transformación de Henry • Osamentales Espinales • Comunicaciones en latín
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-08.html" class="chapter-card special-chapter">
+                <div class="chapter-number">CAPÍTULO 8</div>
+                <div class="chapter-title">"LA DECISIÓN IMPOSIBLE"</div>
+                <div class="chapter-description">
+                    Muerte de Sarah Chen y fracaso total de estrategias militares. Aparición de Osamentales Calcificados marca obsolescencia de resistencia convencional.
+                </div>
+                <div class="key-events">
+                    • Sacrificio de Sarah Chen • Osamentales Calcificados • Propuesta de colaboración
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-08_5.html" class="chapter-card special-chapter">
+                <div class="chapter-number">CAPÍTULO 8.5</div>
+                <div class="chapter-title">"EL NACIMIENTO DEL FUTURO"</div>
+                <div class="chapter-description">
+                    Nacimiento del primer híbrido humano-sobrenatural estable, demostrando que la coexistencia evolutiva es posible y exitosa.
+                </div>
+                <div class="key-events">
+                    • Nacimiento híbrido • Capacidades integradas • Confirmación de viabilidad
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-09.html" class="chapter-card">
+                <div class="chapter-number">CAPÍTULO 9</div>
+                <div class="chapter-title">"LOS FRAGMENTOS PERDIDOS"</div>
+                <div class="chapter-description">
+                    Revelación de la dispersión ancestral y aparición de Osamentales Larvarios. Busan se revela como zona de distorsión temporal.
+                </div>
+                <div class="key-events">
+                    • Verdad sobre fragmentación • Osamentales Larvarios • Convergencia en Busan
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-10.html" class="chapter-card">
+                <div class="chapter-number">CAPÍTULO 10</div>
+                <div class="chapter-title">"EL GENEALOGISTA"</div>
+                <div class="chapter-description">
+                    Carlos Mendoza mata a Trevor Williams, revelándose como guardián de registros ancestrales. Osamentales Fusionados demuestran poder destructivo.
+                </div>
+                <div class="key-events">
+                    • Muerte de Trevor • Osamentales Fusionados • Revelación genealógica
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-11.html" class="chapter-card">
+                <div class="chapter-number">CAPÍTULO 11</div>
+                <div class="chapter-title">"LA CONVERGENCIA FINAL"</div>
+                <div class="chapter-description">
+                    Colaboración con los Cantantes y revelación de herencia multi-especies. Osamentales Amalgama demuestran alcance cósmico del fenómeno.
+                </div>
+                <div class="key-events">
+                    • Alianza con Cantantes • Osamentales Amalgama • Herencia multi-especies
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-11_5.html" class="chapter-card special-chapter">
+                <div class="chapter-number">CAPÍTULO 11.5</div>
+                <div class="chapter-title">"EL MOMENTO DE LA ELECCIÓN"</div>
+                <div class="chapter-description">
+                    Momento contemplativo donde los 2,847 descendientes deliberan sobre la decisión más importante de la historia humana.
+                </div>
+                <div class="key-events">
+                    • Deliberación personal • Despedidas finales • Decisión unánime
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-12.html" class="chapter-card special-chapter">
+                <div class="chapter-number">CAPÍTULO 12</div>
+                <div class="chapter-title">"LA TRANSMISIÓN FINAL"</div>
+                <div class="chapter-description">
+                    Maya Park realiza transmisión final sacrificando su vida. Convergencia de todos los tipos de Osamentales como protectores del proceso evolutivo.
+                </div>
+                <div class="key-events">
+                    • Sacrificio de Maya • Asalto convergente • Transformación mundial
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-13.html" class="chapter-card">
+                <div class="chapter-number">CAPÍTULO 13</div>
+                <div class="chapter-title">"EL NUEVO ORDEN"</div>
+                <div class="chapter-description">
+                    Establecimiento del nuevo orden mundial con Osamentales integrados funcionalmente y activación de defensas cósmicas planetarias.
+                </div>
+                <div class="key-events">
+                    • Reconocimiento oficial • Integración osamental • Defensas cósmicas
+                </div>
+            </a>
+
+            <a href="linea-tiempo-capitulo-14.html" class="chapter-card finale-chapter">
+                <div class="chapter-number">CAPÍTULO 14</div>
+                <div class="chapter-title">"EL AMOR CÓSMICO"</div>
+                <div class="chapter-description">
+                    Revelación final del amor como fuerza cósmica universal. Transformación completa del mundo hacia armonía entre todas las formas de existencia.
+                </div>
+                <div class="key-events">
+                    • Amor cósmico revelado • Evolución planetaria • Paz eterna
+                </div>
+            </a>
+        </div>
+
+        <div class="timeline-summary" style="margin-top: 40px;">
+            <div class="summary-title">NAVEGACIÓN RÁPIDA</div>
+            <div class="summary-text">
+                <strong>Capítulos de Crisis:</strong> 1-7 (Descubrimiento y escalada)<br>
+                <strong>Capítulos de Decisión:</strong> 8-11.5 (Transformación y elección)<br>
+                <strong>Capítulos de Resolución:</strong> 12-14 (Convergencia y nuevo orden)<br><br>
+                <strong>Capítulos Especiales:</strong> 8.5 (Nacimiento), 11.5 (Elección), 12 (Transmisión Final)<br>
+                <strong>Tipos de Osamentales:</strong> Aparecen progresivamente del Cap 2 al Cap 12<br>
+                <strong>Guardianes Híbridos:</strong> Evolución completa del Cap 8.5 al Cap 14
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <a href="../index.html">← Índice Principal</a>
+        <a href="../personajes-linea-tiempo.html">Ver Línea Completa</a>
+    </div>
+    <script src="../theme-toggle.js"></script>
+</body>
+</html>
