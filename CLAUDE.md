@@ -200,3 +200,125 @@ Novela de ciencia ficción/terror en español sobre "La Reina de los Osamentales
 
 **ACTO IV - RESOLUCIÓN (Cap 13-14)**
 - Cap 13-14: Evolución final (Los Osamentales ya no son amenaza sino parte del nuevo orden, transformación completa del mundo)
+
+---
+
+## REGLAS DE ESTILO NARRATIVO
+
+### 1. Sin símiles
+**NUNCA** usar comparaciones del tipo "A como B" en la prosa.
+
+❌ `avanzó como una sombra`
+❌ `sus ojos brillaban como astillas de hielo`
+❌ `el sonido resonó como un eco del fin del mundo`
+
+✅ Describir directamente la acción, la textura, el movimiento real.
+
+Excepciones neutrales permitidas: "como siempre", "como cualquier otra vez" (idiomáticos, no imágenes).
+
+---
+
+### 2. Sin construcciones aposicionales elaboradas
+Evitar frases del tipo `con la X de alguien/algo que Y`, `el tipo de X que Y`, `los mismos que Y cuando Z`.
+
+❌ `con la calma propia de quien ha visto demasiado para asustarse`
+❌ `el tipo de silencio que se instala cuando nadie sabe si seguirá vivo`
+
+✅ Nombrar directamente: `calma`, `silencio`.
+
+---
+
+### 3. Sin repetición de descriptores
+Un rasgo físico o término específico de un personaje: nombrarlo una vez para establecerlo, luego variar.
+
+- Primera ocurrencia: define
+- Segunda ocurrencia: recuerda
+- Tercera en adelante: variar o eliminar
+
+❌ Repetir "ojos [característica]", "voz [característica]", o cualquier descriptor físico único más de 2 veces por sección.
+
+---
+
+### 4. Usar agentes para revisiones
+Para cualquier búsqueda de patrones (símiles, repeticiones, construcciones), lanzar un agente dedicado con el archivo específico. Incluso para una sola sección — los agentes enfocados son más precisos.
+
+---
+
+### 5. Vocabulario accesible
+Evitar términos poco conocidos sin contexto. Si un concepto técnico, nombre de lugar o término especializado no es de conocimiento común, explicarlo brevemente o reemplazarlo por algo más reconocible.
+
+---
+
+## REGLAS DE NARRATIVA
+
+### 6. Clímax emocional sin llanto
+El lector no necesita que el personaje llore para sentir. La emoción se construye con:
+- **Gesto físico cargado** (soltar un objeto que se cargó años, una mano que no termina de extenderse)
+- **Objeto que se suelta o se retiene** (la decisión encarnada en lo que las manos hacen)
+- **Testigo inmóvil** (otro personaje que no dice nada — el silencio como respuesta)
+- **Silencio deliberado** antes o después del beat
+- **Dos palabras** que contienen una historia entera
+
+❌ "Lloró. Con lágrimas enormes. —Gracias."
+✅ Bajó la vista. Dejó caer lo que llevaba en la mano. No dijo nada.
+
+---
+
+### 7. Setup-payoff: no dejar promesas sin cobrar
+Cada objeto, descripción cargada o detalle inusual introducido en una escena es una promesa al lector. Debe pagarse antes del final.
+
+Regla de control: al cerrar un capítulo, listar los setups nuevos y verificar dónde se pagan. Si no tienen destino, eliminarlos o convertirlos en algo que sí tenga.
+
+---
+
+### 8. Tres niveles de resolución
+Toda historia con conflicto necesita resolver en tres niveles, y los tres deben aparecer:
+
+- **Físico** — con una elección difícil, no solo trabajo (una decisión que cuesta algo)
+- **Social** — el grupo afectado debe procesar el error, aunque sea una sola interacción
+- **Emocional** — semilla, no solución mágica (el personaje cambiado, no curado)
+
+Si solo resuelves uno, la historia se siente incompleta. Si los tres son explícitos, se siente sermón. Equilibrar.
+
+---
+
+### 9. WANT externo + NEED interno
+El protagonista debe tener:
+- Un **deseo externo** que mueve la trama (objetivo visible, acción concreta)
+- Una **necesidad interna** ligada a una creencia equivocada o un duelo no resuelto
+
+Sin el segundo, la historia es demostración de tema, no arco. Los personajes que solo quieren cosas externas no generan identificación.
+
+---
+
+### 10. Curva emocional: el pico va donde duele más
+El clímax emocional del libro pertenece al personaje con más dolor acumulado — no necesariamente al protagonista, no al desenlace social.
+
+Regla de control: dibujar la curva de intensidad emocional del capítulo final. Si el enunciado temático pesa más que el clímax emocional, la curva está invertida.
+
+---
+
+### 11. La reversión de lo establecido
+Lo que se introdujo como chiste, debilidad o limitación se convierte en la razón del triunfo. Carga elementos al inicio y págalos en clave inversa al final, sin subrayarlo.
+
+Regla: nombrar la reversión una vez en la escena. Si la subrayas, mueres.
+
+---
+
+### 12. El tema lo dice un secundario, una vez
+La línea temática de la historia no la dice el protagonista ni el narrador. La dice un personaje secundario, una sola vez, sin explicación posterior.
+
+- Después de esa línea, el narrador se calla. El tema queda en el aire.
+
+❌ Hacer que el protagonista reflexione sobre el mensaje
+❌ Repetir la idea en otras palabras al final
+✅ Dejar que el silencio que sigue al enunciado haga el trabajo
+
+---
+
+### 13. Transiciones con cuerpo
+Entre escenas con peso emocional, una oración física que ancle el paso del tiempo o el espacio. Sin eso, el lector siente corte de cámara, no tiempo que pasó.
+
+- Ancla: el cuerpo (cansancio, peso, temperatura, sensación), no la emoción.
+
+Regla: si una escena emocional termina y la siguiente empieza en otro lugar, una oración física entre las dos. Mínimo.
