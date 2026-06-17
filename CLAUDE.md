@@ -23,18 +23,20 @@
 
 ### Trabajo Activo en Historia V2
 - **Directorio activo**: `historia_v2/` - Versión actualizada de la historia
-- **Capítulos 1-2 revisados profesionalmente**: Aplicadas todas las técnicas de las guías narrativas
-- **Capítulos completos**: 00 (prólogo), 01-14, más capítulos intermedios (8.5, 11.5)
-- **Versiones múltiples**: Capítulos 1 y 3 tienen versiones nueva/vieja para comparación
+- **Capítulos completos**: 01-14, más capítulos intermedios (8.5, 11.5)
+- **Capítulo 00**: existe como archivo pero fue eliminado de la navegación — la historia empieza en cap 1
+- **Versiones múltiples**: Capítulo 1 tiene versión nueva (`capitulo_01_nuevo.html`) que es la activa
 - **Estilos**: `historia_v2/styles.css` - Hoja de estilos específica para la versión V2
 
-### Mejoras Profesionales Implementadas (Capítulos 1-2)
-- **Realismo psicológico**: Maya se comporta como persona real de 22 años con miedo auténtico
-- **Eliminación de palabras de relleno**: Frases concisas e impactantes sin redundancias
-- **Transiciones narrativas fluidas**: Conectores temporales y espaciales claros entre escenas
-- **Descripciones ambientales detalladas**: Entornos específicos y sensoriales para inmersión completa
-- **División de párrafos sobrecargados**: Texto que respira con foco único por párrafo
-- **Claridad contextual**: Términos técnicos explicados sin perder impacto
+### Mejoras Profesionales Implementadas
+- **Realismo psicológico**: personajes con miedo auténtico y reacciones físicas en lugar de emocionales
+- **Eliminación de palabras de relleno**: frases concisas e impactantes sin redundancias
+- **Transiciones narrativas fluidas**: conectores temporales y espaciales claros entre escenas
+- **Descripciones ambientales detalladas**: entornos específicos y sensoriales para inmersión completa
+- **División de párrafos sobrecargados**: texto que respira con foco único por párrafo
+- **Claridad contextual**: términos técnicos explicados sin perder impacto
+- **Voz de Eloria reescrita**: alien, sin saludos, con pausas inesperadas — ya no suena corporativa
+- **Estructura dos lecturas**: cap 14 confirma conquista; caps 11.5, 13, 7 se releen diferente
 
 ---
 
@@ -47,87 +49,79 @@ Novela de ciencia ficción/terror en español sobre "La Reina de los Osamentales
 - **Género**: Horror cósmico, ciencia ficción, thriller militar
 
 ### Estructura de navegación web:
-- Página principal → Capítulos individuales O Secciones temáticas
-- Página de personajes separada para análisis detallado
+- Página principal → Capítulos individuales
 - Diseño responsivo para diferentes dispositivos
 - Estilo temático oscuro acorde al género de horror cósmico
 
 ---
 
 ## Conceptos Centrales de la Historia
-- **La Reina de los Osamentales (Eloria)** - Entidad cósmica fragmentada hace 230 millones de años
-  - *Naturaleza*: Parásito cósmico que se alimenta de civilizaciones
-  - *Forma*: Belleza imposible que oculta horror geometricamente alienígena
-  - *Poder*: Puede hablar directamente en las mentes, crear grietas dimensionales
+- **La Reina de los Osamentales (Eloria)** - Entidad cósmica que usa el amor como herramienta de conquista
+  - *Naturaleza*: Conquistadora que convierte civilizaciones creyéndolas "evolutivas"
+  - *Forma*: Belleza imposible que oculta horror geométricamente alienígena
+  - *Poder*: Habla directamente en las mentes, crea grietas dimensionales
 - **Los Veinticuatro Reinos** - Civilizaciones ancestrales que sellaron a la Reina
   - *Reino de las Lanzas Ardientes*: Linaje ancestral de Torres
-  - *Otros reinos*: Guardianes dispersos por todo el mundo
 - **Los 2,847 Descendientes** - Portadores de fragmentos de esencia primordial
   - *Identificación*: Polvo de hueso actúa como test de reconocimiento
   - *Síntomas*: Dolor óseo, estructuras cristalinas, ojos prismáticos
   - *Resistencia*: Vínculos emocionales fuertes pueden retrasar transformación
-- **Transformación vs. Extinción** - La elección fundamental de la humanidad
-- **Amor Cósmico** - El sacrificio que trasciende especies y tiempo
+- **Transformación vs. Extinción** - La elección fundamental (que resulta no ser libre)
+- **La conquista a través del amor** - El tema real de la historia: el amor puede ser la herramienta de dominio más efectiva
 
-## Estructura de Secciones HTML
+## Estructura Narrativa — 4 Actos
 
-### Sección 1: Los Primeros Susurros (Capítulos 1-2)
-- Primeras muertes misteriosas en el Valle Oscuro
-- Maya Park documenta su encuentro fatal
-- Descubrimientos forenses imposibles
+**ACTO I — Los primeros susurros (Cap 1–4)**
+- Cap 1: Maya va al valle por culpa (su hermano Jung-ho). Thomas Kim monitorea desde el búnker.
+- Cap 2: La torre crece 400m. Henry Lee investiga. Él también está en la lista.
+- Cap 3: Maya transformada establece contacto. El Osamental gira la cabeza hacia Thomas específicamente.
+- Cap 4: La criatura conoce los nombres de los soldados. Ha estado esperando.
 
-### Sección 2: El Ojo que Todo lo Ve (Capítulo 3)
-- Centro de comando militar detecta anomalías
-- Primera aparición confirmada de la Reina
-- Compromiso de sistemas militares
+**ACTO II — La escalada (Cap 5–8)**
+- Cap 5: Sophie descubre que su sangre reacciona. Jonathan toca una criatura y recibe 230 millones de años de memoria.
+- Cap 6: Miguel cede — no por miedo sino por reconocimiento.
+- Cap 7: Eloria habla por primera vez. "Ya saben." Henry detecta: ya no son 3 años, son 8 meses.
+- Cap 8: Sarah Chen muere. Ambos bandos hacen pausa. Luto compartido entre especies.
 
-### Sección 3: Secretos Enterrados (Capítulos 4-5)
-- Revelación de archivos clasificados sobre los "veinticuatro reinos"
-- Alianzas militares internacionales
-- Descubrimiento de los 2,847 descendientes
+**ACTO III — El punto de no retorno (Cap 8.5–12)**
+- Cap 8.5: Sophie da a luz. El bebé la mira fijo sin llorar. Sophie dice "Los devoradores llegan en dos años" sin saber por qué.
+- Cap 9: El reloj corre. Los que van a morir tienen nombre.
+- Cap 10: Trevor muere después de transmitir la verdad. La grabación ya no se puede borrar.
+- Cap 11.5 (flashback): Tres semanas antes, Eloria seduce a Trevor con "amor intelectual".
+- Cap 11: "Cuatro días. Eso es lo que hay."
+- Cap 12: Maya transmite a 180 millones. La matan durante la señal. Ya es tarde para borrarla.
 
-### Sección 4: El Silencio de las Máquinas (Capítulos 6-7)
-- Transformación de soldados
-- Falla de sistemas tecnológicos
-- Revelación del "polvo de hueso"
-
-### Sección 5: Los Fragmentos Perdidos (Capítulos 8-10)
-- Verdad sobre la dispersión de la esencia primordial
-- Busan como zona de distorsión temporal
-- Reunión de descendientes guardianes
-
-### Sección 6: La Convergencia Final (Capítulos 11-14)
-- Decisión final de los 2,847 descendientes
-- Encuentro con "El Genealogista"
-- Transformación del mundo por elección consciente
+**ACTO IV — La resolución (Cap 13–14)**
+- Cap 13: Jonathan se convierte en compañero eterno de Eloria. Eloria habla con su voz. Miguel no sabe que ya no es solo su hermano.
+- Cap 14: Sophie cree que ganaron. El 73% eligió "voluntariamente". Trevor es Rey Consorte. El epílogo imperial confirma la conquista. 198 especies extintas por resistencia.
 
 ---
 
 ## Personajes Principales
 
-### Protagonistas Centrales
-- **La Reina de los Osamentales (Eloria)** - Entidad cósmica fragmentada
-- **Dra. Sophie Yun** - Científica embarazada, descendiente clave
-- **Jonathan Morales & Miguel Santos** - Soldados mexicanos unidos por fraternidad
-- **Trevor Williams** - Agente de la DEA investigando el "polvo de hueso"
-- **General Thomas Kim** (58 años) - Líder militar enfrentando lo imposible
+### Protagonista Central
+- **Dra. Sophie Yun** — Científica embarazada, descendiente clave. **Es la protagonista principal**: la única que llega viva al cap 14. Su arco define la historia. WANT: proteger a su hijo y a la humanidad. NEED (pendiente de establecer con claridad desde cap 5): aceptar que no puede controlar lo que no puede medir.
+
+### Personajes de Arco Completo
+- **Maya Park** (22 años) — Youtuber, canal "MinJung Oscura", 850K suscriptores. Va al valle por culpa de su hermano Jung-ho. Muere en cap 12 usando exactamente lo que siempre fue. WANT: encontrar la verdad. NEED: perdonarse por no haber creído a Jung-ho.
+- **Jonathan Morales** — Soldado mexicano. Se transforma en compañero eterno de Eloria en cap 13. WANT: proteger a Miguel. NEED: aceptar que hay amor más allá de lo individual.
+- **Miguel Santos** — Soldado mexicano, hermano de armas de Jonathan. El más resistente que cede por reconocimiento. Sobrevive como humano.
+- **Trevor Williams** — Agente de la DEA. Muere en cap 10, aparece en cap 14 como Rey Consorte (bajo conquista). WANT: exponer la red. NEED: nunca resuelto — fue seducido antes de poder resolverlo.
 
 ### Personajes Secundarios Clave
-- **Daniel Kim** (67 años) - Agricultor, primera víctima
-- **Maya Park** (22 años) - Youtuber (canal "MinJung Oscura", 850K suscriptores)
-- **Henry Lee** (28 años) - Oficial de policía novato de Seúl
-- **Dr. Jason Lee** (45 años) - Médico forense
-- **Mayor Sarah Chen** (38 años) - Analista de inteligencia estadounidense
-- **Ministro Samuel Park** (62 años) - Ministro de Defensa
-- **Coronel Dmitri Volkov** - Oficial ruso, guardián de secretos
-- **Carlos Mendoza (El Genealogista)** - Personaje clave en el desenlace
+- **General Thomas Kim** (58 años) — Líder militar. Hace la acción más importante: no corta la señal de Maya. Su arco necesita un NEED establecido temprano (pendiente).
+- **Daniel Kim** (67 años) — Agricultor, primera víctima.
+- **Henry Lee** (28 años) — Policía novato de Seúl, descendiente. Desaparece del relato después de cap 7 (pendiente de resolución).
+- **Dr. Jason Lee** (45 años) — Médico forense.
+- **Mayor Sarah Chen** (38 años) — Muere en cap 8. No debe aparecer en caps posteriores.
+- **Carlos Mendoza (El Genealogista)** — Mata a Trevor en cap 10. Sin arco propio (pendiente).
 
 ## Ubicaciones Clave
 - **Valle Oscuro** (anteriormente Valle Cheongmyeong - "Valle de la Claridad")
-- **Daegu y Seúl** - Ciudades donde se extienden los rumores
-- **Centro de Comando Conjunto** - Búnker militar subterráneo
-- **Universidad Yonsei** - Donde estudia Maya Park
-- **Base Conjunta** - Instalación militar multinacional
+- **Daegu y Seúl** — Ciudades donde se extienden los rumores
+- **Centro de Comando Conjunto** — Búnker militar subterráneo
+- **Universidad Yonsei** — Donde estudia Maya Park
+- **Base Conjunta** — Instalación militar multinacional
 
 ## Temas Recurrentes
 - Transformación corporal (huesos que crecen donde no deberían)
@@ -143,63 +137,37 @@ Novela de ciencia ficción/terror en español sobre "La Reina de los Osamentales
 - Descripciones detalladas y atmosféricas
 - Nombres coreanos mezclados con nombres occidentales (contexto coreano-internacional)
 
-## Notas de Trabajo
-- La historia combina elementos de horror lovecraftiano con ciencia ficción militar
-- Fuerte componente de body horror y transformaciones físicas
-- Setting en Corea del Sur con participación internacional
-- La trama involucra tanto aspectos místicos como científicos/militares
-
 ---
 
 ## Archivos HTML del Proyecto
 
-### Estructura Principal
-- **`index.html`** - Página principal con resumen e índice de secciones
-- **`personajes.html`** - Página de análisis de personajes
-- **`styles.css`** - Hoja de estilos para el diseño web
-
 ### Capítulos Individuales (historia_v2/)
-- **`capitulo_00.html`** a **`capitulo_14.html`** - Capítulos completos
-- **`capitulo_08_5.html`** y **`capitulo_11_5.html`** - Capítulos intermedios
-- **`epilogo.html`** - Epílogo (directorio raíz)
-- **`styles.css`** - Estilos específicos para historia_v2
-- **`theme-toggle.js`** - Funcionalidad de cambio de tema
+- **`capitulo_01_nuevo.html`** — Cap 1 activo (versión revisada)
+- **`capitulo_02.html`** a **`capitulo_14.html`** — Capítulos completos
+- **`capitulo_08_5.html`** y **`capitulo_11_5.html`** — Capítulos intermedios
+- **`capitulo_00.html`** — Existe pero no está en la navegación
+- **`resumen-capitulos.html`** — Mapa de la historia para revisión rápida
+- **`styles.css`** — Estilos específicos para historia_v2
+- **`theme-toggle.js`** — Funcionalidad de cambio de tema
 
 ## 10 Tipos de Osamentales (Formas Esqueléticas Post-Transformación)
-**Versión Horror Corporal Realista**
 
-1. **Osamentales Rastreros** - Esqueletos con columnas alargadas que se mueven en cuatro extremidades
-2. **Osamentales Fusionados** - Múltiples esqueletos parcialmente fundidos en una masa ósea
-3. **Osamentales Articulados** - Huesos con articulaciones extras en lugares imposibles
-4. **Osamentales Huecos** - Esqueletos con cavidades torácicas expandidas que resuenan
-5. **Osamentales Fragmentados** - Huesos que se separan y reensamblan constantemente
-6. **Osamentales Calcificados** - Esqueletos con crecimiento óseo excesivo como armadura
-7. **Osamentales Perforadores** - Falanges alargadas como agujas, costillas como púas
-8. **Osamentales Amalgama** - Huesos humanos mezclados con estructuras no-humanas
-9. **Osamentales Larvarios** - Esqueletos en posición fetal permanente que se arrastran
-10. **Osamentales Espinales** - Solo columna vertebral y cráneo, sin extremidades
+1. **Osamentales Rastreros** — Esqueletos con columnas alargadas, cuatro extremidades
+2. **Osamentales Fusionados** — Múltiples esqueletos parcialmente fundidos
+3. **Osamentales Articulados** — Huesos con articulaciones extras en lugares imposibles
+4. **Osamentales Huecos** — Cavidades torácicas expandidas que resuenan
+5. **Osamentales Fragmentados** — Huesos que se separan y reensamblan constantemente
+6. **Osamentales Calcificados** — Crecimiento óseo excesivo como armadura
+7. **Osamentales Perforadores** — Falanges como agujas, costillas como púas
+8. **Osamentales Amalgama** — Huesos humanos mezclados con estructuras no-humanas
+9. **Osamentales Larvarios** — Posición fetal permanente que se arrastra
+10. **Osamentales Espinales** — Solo columna vertebral y cráneo
 
-### Distribución por Capítulos (Actos Narrativos)
-
-**ACTO I - INTRODUCCIÓN AL HORROR (Cap 2-4)**
-- Cap 2: Osamentales Rastreros (Primera desaparición de Maya, Henry Lee encuentra la primera escena)
-- Cap 3: Osamentales Huecos (Maya regresa transformada, resonancia = comunicación no-humana)
-- Cap 4: Osamentales Fragmentados (Primer contacto Jonathan/Miguel, Trevor investiga polvo de hueso)
-
-**ACTO II - ESCALADA (Cap 5-8)**
-- Cap 5: Osamentales Articulados (Transformación de Jonathan tocando hueso, sangre de Sophie brilla)
-- Cap 6: Osamentales Perforadores (Amenaza directa mientras Sophie comprende embarazo)
-- Cap 7: Osamentales Espinales (Transformación de Henry a Susurrador, minimalismo antes de decisión crítica)
-- Cap 8: Osamentales Calcificados (Muerte de Sarah Chen, enemigos "acorazados" = decisión imposible)
-
-**ACTO III - CLÍMAX (Cap 9-12)**
-- Cap 9: Osamentales Larvarios (Después del parto híbrido 8.5, contraste bebé nuevo vs. esqueletos fetales)
-- Cap 10: Osamentales Fusionados (Muerte de Trevor por Carlos, masa de huesos = brutalidad)
-- Cap 11: Osamentales Amalgama (Colaboración con Cantantes, revelación: no son solo humanos)
-- Cap 12: Osamentales (TODOS TIPOS) (Muerte/transmisión final de Maya, asalto total convergente)
-
-**ACTO IV - RESOLUCIÓN (Cap 13-14)**
-- Cap 13-14: Evolución final (Los Osamentales ya no son amenaza sino parte del nuevo orden, transformación completa del mundo)
+### Distribución por Actos
+- **Acto I** (Cap 1–4): Rastreros → Huecos → Fragmentados
+- **Acto II** (Cap 5–8): Articulados → Perforadores → Espinales → Calcificados
+- **Acto III** (Cap 9–12): Larvarios → Fusionados → Amalgama → Todos los tipos
+- **Acto IV** (Cap 13–14): Ya no son amenaza — son parte del nuevo orden imperial
 
 ---
 
@@ -282,12 +250,19 @@ Si solo resuelves uno, la historia se siente incompleta. Si los tres son explíc
 
 ---
 
-### 9. WANT externo + NEED interno
-El protagonista debe tener:
-- Un **deseo externo** que mueve la trama (objetivo visible, acción concreta)
-- Una **necesidad interna** ligada a una creencia equivocada o un duelo no resuelto
+### 9. WANT externo + NEED interno + herida del pasado
+El protagonista necesita tres capas:
 
-Sin el segundo, la historia es demostración de tema, no arco. Los personajes que solo quieren cosas externas no generan identificación.
+- **Herida del pasado**: una pérdida o trauma específico que ocurrió antes de que empiece la historia
+- **Creencia falsa**: lo que el personaje concluyó de esa herida — una verdad que funciona hasta que deja de funcionar
+- **WANT externo**: el objetivo visible que mueve la trama (acción concreta)
+- **NEED interno**: lo que el personaje necesita aprender para poder resolver el WANT — casi siempre lo opuesto a la creencia falsa
+
+El WANT mueve la trama. El NEED la hace inevitable. La herida explica por qué el personaje tiene esa creencia falsa y no otra.
+
+Sin el NEED, la historia es demostración de tema. Sin la herida, el NEED parece arbitrario.
+
+El clímax requiere que el personaje use el NEED, no el WANT. No puede ganar con las herramientas con las que empezó.
 
 ---
 
@@ -322,3 +297,65 @@ Entre escenas con peso emocional, una oración física que ancle el paso del tie
 - Ancla: el cuerpo (cansancio, peso, temperatura, sensación), no la emoción.
 
 Regla: si una escena emocional termina y la siguiente empieza en otro lugar, una oración física entre las dos. Mínimo.
+
+---
+
+## ESTRUCTURA PIXAR
+
+Estos principios son de nivel estructural — aplican a la historia completa, no a escenas individuales. Se revisan cuando se crea o evalúa un capítulo nuevo, no línea por línea.
+
+### 14. El antagonista refleja al protagonista
+El antagonista no es el enemigo — es la versión del protagonista que eligió distinto, o que representa a dónde lleva la creencia falsa si nunca se corrige.
+
+En esta historia: Eloria representa lo que Sophie sería si decidiera que controlar el resultado vale más que respetar la elección ajena. Sophie cree que protege. Eloria también cree que protege.
+
+---
+
+### 15. El punto de no retorno es una pérdida, no un obstáculo
+En el centro del Acto 2 hay un momento donde el protagonista pierde algo que creía que era la solución. No un enemigo que bloquea — una pérdida real que lo deja sin el plan A.
+
+En esta historia: la muerte de Sarah Chen (cap 8) o el nacimiento del bebé (cap 8.5) son candidatos. Verificar cuál cierra más puertas para Sophie.
+
+---
+
+### 16. El clímax requiere usar el NEED, no el WANT
+Sophie solo puede llegar al final si usa lo que aprendió — no las herramientas con las que empezó. Si en cap 14 Sophie resuelve el problema externo con las mismas habilidades del cap 5, el arco no está completo.
+
+Regla: identificar exactamente qué capacidad nueva (surgida del NEED) usa Sophie en el clímax. Si no hay una, el arco está roto.
+
+---
+
+### 17. La promesa del mundo
+Las primeras páginas del cap 1 establecen el tono, el género y las reglas del mundo. El lector hace un contrato. Si se rompe ese contrato sin preparación, el lector se siente traicionado.
+
+En esta historia: el cap 1 promete horror cósmico + thriller investigativo. El cap 14 entrega conquista imperial. La transición debe estar sembrada — no anunciada, pero visible en segunda lectura.
+
+---
+
+### 18. El tema se demuestra, no se declara
+La historia no dice su tema — lo demuestra a través de lo que le cuesta al protagonista llegar al final. Si el tema se puede subrayar con una frase del narrador, no está bien integrado.
+
+En esta historia: el tema es "el amor puede ser la herramienta de conquista más efectiva". Nunca lo dice el narrador. Lo demuestra el arco completo de Sophie sin que ella lo sepa.
+
+---
+
+### 19. El protagonista único sostiene toda la estructura
+Pixar siempre tiene un solo personaje cuyo WANT + NEED el público sigue de inicio a fin. Los demás son ensemble — iluminan al protagonista desde distintos ángulos.
+
+En esta historia: **Sophie es la protagonista**. Todos los demás arcos (Maya, Jonathan, Trevor, Miguel) son espejos de la elección que Sophie enfrentará en cap 14. Maya elige la verdad sobre la vida. Trevor elige el amor sobre la desconfianza. Jonathan elige la fusión sobre la individualidad. Sophie elige... creer que ganaron.
+
+Regla: si un nuevo personaje o escena no ilumina el arco de Sophie, evaluar si pertenece a la historia.
+
+---
+
+### 20. Story Spine — verificación global
+Antes de revisar capítulos individuales, verificar que la historia completa responde estas preguntas:
+
+- **Había una vez**: ¿quién es Sophie y qué cree sobre el mundo?
+- **Cada día**: ¿cuál era su vida antes del Valle Oscuro?
+- **Hasta que un día**: ¿qué rompe ese mundo?
+- **Por eso**: ¿qué cadena de consecuencias se desencadena?
+- **Hasta que finalmente**: ¿qué elección inevitable enfrenta Sophie?
+- **Desde entonces**: ¿cómo es el mundo después — y qué no sabe Sophie que el lector sí?
+
+Si cualquier eslabón de esta cadena está roto o es débil, ese es el capítulo que necesita trabajo primero.
