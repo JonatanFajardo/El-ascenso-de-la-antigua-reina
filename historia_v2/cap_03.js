@@ -73,6 +73,8 @@ const CAPITULO = {
     "Permanecía completamente inmóvil. No mostraba signos de agresión. Tampoco de retirada.",
     "Entonces, en el minuto veintiuno, giró la cabeza.",
     "No hacia la cámara. Hacia Thomas. Hacia el hombre específico que estaba mirando la pantalla a cinco pisos bajo tierra, a quince kilómetros de distancia. Thomas se apartó del monitor antes de darse cuenta de que lo había hecho.",
+    "—Chen, borre los últimos cuarenta segundos de la grabación satelital. Lo que acaba de pasar no sale de esta sala.",
+    "No esperó respuesta. Avanzó hacia la siguiente pantalla.",
     "[HTML]<p><strong>Interior de la Estructura - 09:00 hrs</strong></p>",
     "Finalmente, la transmisión de Maya se reanudó.",
     "—General, las voces dicen que... que el guardián está esperando. Que quiere que sepan que no van a hacer daño si no se sienten amenazados.",
@@ -142,6 +144,7 @@ const CAPITULO = {
     "Pero una cosa quedaba clara: esto era solo el primer paso. Algo que había estado planeándose durante mucho tiempo.",
     "En algún lugar profundo de su mente transformada, Maya comprendió algo fundamental.",
     "Su trabajo como investigadora había terminado. Ahora era algo nuevo: un traductor entre mundos que apenas estaban comenzando a conocerse, actuando de puente entre dos formas de existencia.",
+    "Intentó formular la pregunta: ¿quién le había dado ese trabajo? Las voces no respondieron. La pregunta se disolvió antes de terminar de pensarla.",
     "[HOOK]Las voces le susurraron algo más.",
     "Pronto, muy pronto, otros como ella comenzarían a despertar. Personas que llevaban en su ADN fragmentos de algo anterior a la humanidad—latente, esperando la señal correcta para activarse.",
     "Cuando eso pasara, el verdadero trabajo podría comenzar."

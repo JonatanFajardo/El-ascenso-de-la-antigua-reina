@@ -121,6 +121,7 @@ const CAPITULO = {
     "Sarah Chen había sido una de sus mejores oficiales. Una mujer brillante que había elegido la muerte antes que entregar su humanidad.",
     "[HTML]<p class=\"dialogue thomas-memorial\">—Que se registre en los archivos militares que la Mayor Sarah Chen murió defendiendo el derecho fundamental de la humanidad a seguir siendo humana, sin importar el costo.</p>",
     "[HTML]<p class=\"dialogue thomas-resolve\">—Y que se registre también que su sacrificio no será en vano. Ahora sabemos que pueden ser heridos, que sienten pérdida, que no son invencibles.</p>",
+    "—El nombre de Chen no sale de este búnker. Nada de esto sale de este búnker. Los aliados reciben el reporte estándar: pérdida de contacto con equipo de reconocimiento, causa bajo investigación.",
     "Miró hacia las pantallas que mostraban las estructuras óseas ahora más quietas. Como si las entidades estuvieran procesando lo que había pasado.",
     "[HTML]<p class=\"final-observation\">La guerra había comenzado oficialmente. Y la primera baja había sido alguien que había elegido morir como humana antes que vivir como algo más.</p>",
     "[HTML]<p class=\"hook final-hook\">Pero mientras Thomas planificaba los próximos movimientos tácticos, no sabía que la muerte de Sarah Chen había hecho algo que ninguno de los dos bandos esperaba: había unido a ambas especies en el luto.</p>"

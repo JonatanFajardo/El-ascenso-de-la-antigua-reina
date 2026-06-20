@@ -55,6 +55,7 @@ const CAPITULO = {
     "—Si conocen a alguien que ha tenido sueños en idiomas que no reconocen, si han visto a personas que parecen saber cosas que nunca aprendieron, si han notado que ciertos individuos no se enferman nunca o sanan más rápido de lo normal, esas personas podrían ser descendientes.",
     "—No los forcen a despertar. No los lleven a las autoridades. Déjenlos elegir cuando estén listos. Pero si eligen transformarse, apóyenlos. Van a necesitar conexiones humanas que los anclen durante el proceso.",
     "Los sonidos de combate se acercaban. Maya podía escuchar botas militares en los corredores exteriores, órdenes gritadas en múltiples idiomas, el sonido distintivo de granadas flash being preparadas.",
+    "—Jung-ho tenía razón. Lo supe desde el primer día que entré al valle, y tardé demasiado en decírselo.",
     "—A mi familia, si están viendo esto: lo siento por no haber podido explicar esto antes. Pero espero que entiendan que esto era más grande que cualquier elección personal.",
     "—A todos los que han seguido MinJung Oscura durante estos años: gracias por acompañarme en esta investigación. Resulta que el misterio más grande era el que estábamos viviendo sin saberlo.",
     "[P100]",

@@ -57,6 +57,7 @@ const CAPITULO = {
     "Sophie había tomado la decisión más difícil de su vida. Se acercó a Eloria, cuya manifestación ahora era lo suficientemente completa como para comunicarse directamente sin intermediarios.",
     "—Quiero saber la verdad completa. Si todos los 2,847 elegimos la transformación total, ¿qué pasa exactamente con nuestras identidades individuales?",
     "—Vuestras memorias, experiencias, y esencias fundamentales se convertirían en parte de mí. No moriríais en el sentido tradicional, pero dejaríais de existir como individuos separados.",
+    "Dijo «en el sentido tradicional» sin pausa. Sin esperar a que Sophie procesara la diferencia entre los sentidos.",
     "—¿Y mi hijo?",
     "—Tu hijo es único. Fue concebido durante el despertar, nacido como un puente. Él podría mantener una identidad individual incluso dentro de mi consciencia unificada. Se convertiría en mi voz, mi forma de interactuar con realidades que requieren perspectiva individual.",
     "[HTML]<p>Sophie miró a su bebé, que ahora la observaba con ojos que parecían contener galaxias enteras. <p class=\"dialogue\">\"¿Qué quieres hacer?\"</p>",

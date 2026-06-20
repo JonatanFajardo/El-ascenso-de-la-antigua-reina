@@ -32,7 +32,7 @@ const CAPITULO = {
     "Nunca imaginó estar relacionada con él.",
     "—¿2,847 qué?",
     "Preguntó, recuperando el teléfono con manos incontrolables, resbaladizo por el sudor.",
-    "—Descendientes, doctora. Portadores de material genético latente, patrones que han permanecido inactivos en ciertas líneas familiares durante milenios. Su sangre contiene secuencias que nuestros científicos denominan 'ADN sombra —secuencias genéticas ocultas que normalmente permanecen inactivas—' - información genética que fue insertada artificialmente hace aproximadamente 230 millones de años —mucho antes que los dinosaurios, antes que cualquier forma de vida compleja que conozcamos— por entidades que precedieron a la vida compleja en la Tierra. Y con los eventos actuales, esas secuencias se están... despertando.",
+    "—Descendientes, doctora. Portadores de material genético latente, patrones que han permanecido inactivos en ciertas líneas familiares durante milenios. Su sangre contiene secuencias que nuestros científicos denominan 'ADN sombra' —información genética que fue insertada artificialmente hace aproximadamente 230 millones de años por entidades que precedieron a la vida compleja en la Tierra. Y con los eventos actuales, esas secuencias se están... despertando.",
     "Sophie miró la muestra brillante, luego su reflejo en la ventana.",
     "Sus ojos, siempre marrones oscuros, ahora tenían motas doradas que pulsaban al ritmo de sus latidos.",
     "[P39]",
