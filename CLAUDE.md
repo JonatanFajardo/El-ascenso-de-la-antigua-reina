@@ -37,6 +37,11 @@
 - **Claridad contextual**: términos técnicos explicados sin perder impacto
 - **Voz de Eloria reescrita**: alien, sin saludos, con pausas inesperadas — ya no suena corporativa
 - **Estructura dos lecturas**: cap 14 confirma conquista; caps 11.5, 13, 7 se releen diferente
+- **Arcos de personaje completados**: herida + NEED explícitos para todos los personajes principales (ver sección Personajes)
+- **Semillas de desconfianza ante Eloria**: caps 3, 7 y 11 tienen líneas que el lector nota en segunda lectura
+- **Thomas preparado para C12**: caps 3 y 8 establecen su patrón de controlar información — cuando no corta la señal de Maya, el lector sabe qué está rompiendo
+- **Patrón duda-aplastada en C11.5**: Eloria manipula a Trevor explotando puntos ciegos, no convenciéndolo con argumentos
+- **Jason Lee eliminado**: funciones absorbidas por Dra. Jennifer Park (caps 8.5 y 9)
 
 ---
 
@@ -100,21 +105,55 @@ Novela de ciencia ficción/terror en español sobre "La Reina de los Osamentales
 ## Personajes Principales
 
 ### Protagonista Central
-- **Dra. Sophie Yun** — Científica embarazada, descendiente clave. **Es la protagonista principal**: la única que llega viva al cap 14. Su arco define la historia. WANT: proteger a su hijo y a la humanidad. NEED (pendiente de establecer con claridad desde cap 5): aceptar que no puede controlar lo que no puede medir.
+- **Dra. Sophie Yun** — Científica embarazada, descendiente clave. **Es la protagonista principal**: la única que llega viva al cap 14. Su arco define la historia.
+  - **Herida**: su madre murió con todos los análisis dentro del rango normal. Sophie revisó los resultados tres veces buscando el error. Aprendió que si mides suficientemente bien, encuentras la causa — y descartó que hubiera cosas que los números no capturan.
+  - **Creencia falsa**: todo tiene una explicación técnica. Siempre la hay. (Plantada en cap 1: fragmento óseo que mide bien pero no clasifica → lo mete al estante y cierra el archivo.)
+  - **WANT**: proteger a su hijo y a la humanidad.
+  - **NEED**: aceptar que no puede controlar lo que no puede medir.
+  - **Pago del NEED en cap 14**: recibe el informe completo de la especie objetivo y lo devuelve sin abrirlo. "Si los datos la preparaban, también la limitarían." Primera vez en la novela que Sophie rechaza datos voluntariamente.
 
 ### Personajes de Arco Completo
-- **Maya Park** (22 años) — Youtuber, canal "MinJung Oscura", 850K suscriptores. Va al valle por culpa de su hermano Jung-ho. Muere en cap 12 usando exactamente lo que siempre fue. WANT: encontrar la verdad. NEED: perdonarse por no haber creído a Jung-ho.
-- **Jonathan Morales** — Soldado mexicano. Se transforma en compañero eterno de Eloria en cap 13. WANT: proteger a Miguel. NEED: aceptar que hay amor más allá de lo individual.
-- **Miguel Santos** — Soldado mexicano, hermano de armas de Jonathan. El más resistente que cede por reconocimiento. Sobrevive como humano.
-- **Trevor Williams** — Agente de la DEA. Muere en cap 10, aparece en cap 14 como Rey Consorte (bajo conquista). WANT: exponer la red. NEED: nunca resuelto — fue seducido antes de poder resolverlo.
+- **Maya Park** (22 años) — Youtuber, canal "MinJung Oscura", 850K suscriptores. Va al valle por culpa de su hermano Jung-ho. Muere en cap 12 usando exactamente lo que siempre fue.
+  - **Herida**: Jung-ho le dijo que había algo raro en el río. Maya no le creyó del todo. Tres días después él murió ahí.
+  - **Creencia falsa**: si hubiera ido con él, si lo hubiera tomado en serio, estaría vivo. La culpa como sustituto de la acción.
+  - **WANT**: encontrar la verdad sobre lo que le pasó a Jung-ho.
+  - **NEED**: perdonarse por no haberle creído.
+  - **Pago del NEED en cap 12**: una línea antes de las despedidas finales: "Jung-ho tenía razón. Lo supe desde el primer día que entré al valle, y tardé demasiado en decírselo."
+
+- **Jonathan Morales** — Soldado mexicano. Se transforma en compañero eterno de Eloria en cap 13.
+  - **WANT**: proteger a Miguel.
+  - **NEED**: aceptar que hay amor más allá de lo individual.
+  - **Costo establecido en cap 13**: antes de descender a la cámara de Eloria, saca una foto doblada y gastada del bolsillo. No la mira. Se la pone a Miguel en la mano y cierra los dedos de su amigo sobre ella. Ninguno habla.
+
+- **Miguel Santos** — Soldado mexicano, hermano de armas de Jonathan. El más resistente que cede por reconocimiento. **Sobrevive como humano** — único miembro del Consejo sin transformación en cap 14. Representa a los que eligieron seguir siendo solo humanos y todo lo que esa elección cuesta.
+  - ⚠️ No aparece en la Entidad Fusionada. No elegió la fusión. Esto debe mantenerse en cualquier edición futura de cap 13 y cap 14.
+
+- **Trevor Williams** — Agente de la DEA. Muere en cap 10, aparece en cap 14 como Rey Consorte (bajo conquista).
+  - **Herida**: soledad estructural. No había nadie a quien llamar a las tres de la mañana. Nunca lo había habido. (Plantada en cap 10.)
+  - **WANT**: exponer la red de distribución del polvo de hueso.
+  - **NEED**: nunca resuelto — Eloria explota la herida antes de que Trevor pueda nombrarla.
+  - **Manipulación en cap 11.5** (patrón duda-aplastada): Eloria usa frases privadas de Trevor que no están en ningún archivo; describe su carrera como él la recuerda internamente, no como aparece en los informes; Trevor nota la diferencia pero el espacio donde formaría la pregunta se llena de calor antes de que pueda hacerlo.
+  - **Espejo Carlos-Eloria en cap 10**: antes de morir, Trevor casi nombra la conexión — Carlos usa el mismo argumento que Eloria: "alguien que dice 'yo sé lo que necesitas mejor que tú' suena igual sin importar si lleva traje o tiene forma de hueso." El aire lo corta antes de que termine.
 
 ### Personajes Secundarios Clave
-- **General Thomas Kim** (58 años) — Líder militar. Hace la acción más importante: no corta la señal de Maya. Su arco necesita un NEED establecido temprano (pendiente).
+- **General Thomas Kim** (58 años) — Líder militar. Hace la acción más importante de la novela: no corta la señal de Maya en cap 12.
+  - **Patrón establecido**: cap 3 (ordena borrar 40 segundos de grabación satelital, no espera respuesta) + cap 8 (clasifica la muerte de Sarah, los aliados reciben "pérdida de contacto, causa bajo investigación"). Cuando en cap 12 no corta la señal, el lector sabe exactamente qué está rompiendo.
+  - ⚠️ Su NEED todavía no está establecido explícitamente — área pendiente si se requiere más profundidad.
+
 - **Daniel Kim** (67 años) — Agricultor, primera víctima.
-- **Henry Lee** (28 años) — Policía novato de Seúl, descendiente. Desaparece del relato después de cap 7 (pendiente de resolución).
-- **Dr. Jason Lee** (45 años) — Médico forense.
-- **Mayor Sarah Chen** (38 años) — Muere en cap 8. No debe aparecer en caps posteriores.
-- **Carlos Mendoza (El Genealogista)** — Mata a Trevor en cap 10. Sin arco propio (pendiente).
+
+- **Henry Lee** (28 años) — Policía novato de Seúl, descendiente. Desaparece físicamente del relato después de cap 7.
+  - **Explicación en cap 9**: "El oficial Lee cruzó al espacio entre corrientes durante la transformación. No puede ser localizado por canales convencionales mientras las anomalías temporales sigan activas. Está operando. Solo no desde aquí."
+  - En cap 14 aparece como miembro del Consejo con línea propia.
+
+- **Mayor Sarah Chen** (38 años) — Muere en cap 8. **No debe aparecer en caps posteriores.**
+  - **Humanización en cap 6**: tiene una foto laminada en el lateral de su tableta. La cubre con el pulgar antes de reportar: "Entre los que cantan... está el Teniente Rao. Es mi cuñado, señor." Thomas no devuelve los auriculares.
+
+- **Dra. Jennifer Park** — Médica forense (absorbió las funciones del eliminado Dr. Jason Lee). Aparece en caps 8.5 y 9.
+  - ⚠️ Jason Lee fue eliminado completamente. Si aparece en algún cap futuro, reemplazar por Dra. Jennifer Park.
+
+- **Carlos Mendoza (El Genealogista)** — Mata a Trevor en cap 10.
+  - **Espejo de Eloria**: ambos toman la misma decisión — "yo sé lo que necesitas mejor que tú." Carlos con traje, Eloria con forma de hueso. El argumento es idéntico. Trevor casi lo nombra antes de morir.
 
 ## Ubicaciones Clave
 - **Valle Oscuro** (anteriormente Valle Cheongmyeong - "Valle de la Claridad")
